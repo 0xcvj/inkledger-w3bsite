@@ -3,348 +3,457 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — inkLedger</title>
+  <title>Terms of Service — inkLedger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; color: #111; background: #f7f7f7; }
-    .wrap { max-width: 820px; margin: 48px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-    h1 { margin-top: 0; }
-    h2 { margin-top: 28px; }
-    h3 { margin-top: 20px; }
-    p, li { line-height: 1.6; }
+    :root {
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --bg-primary: #f6f5f1;
+      --bg-surface: #edece8;
+      --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a;
+      --text-muted: #8a8a8a;
+      --accent: #1e1b4b;
+      --accent-hover: #2d2a5e;
+      --accent-glow: rgba(30, 27, 75, 0.3);
+      --accent-subtle: rgba(30, 27, 75, 0.08);
+      --border: rgba(0,0,0,0.08);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    .back-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246, 245, 241, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(20px, 5vw, 80px);
+    }
+    .back-bar-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 56px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .back-link:hover {
+      border-color: var(--accent);
+      background: var(--accent-subtle);
+      transform: translateX(-2px);
+    }
+    .back-link svg { transition: transform 0.3s ease; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px clamp(20px, 5vw, 40px) 80px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 52px);
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .last-updated {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 28px);
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      margin-top: 40px;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.4;
+    }
+
+    .contact-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 16px 0;
+      display: grid;
+      gap: 12px;
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+    }
+    .contact-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      min-width: 80px;
+    }
+    .contact-value {
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .contact-value a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-value a:hover { text-decoration: underline; }
+
+    .footer-bar {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .footer-link:hover { opacity: 0.7; }
+    .footer-divider {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
+  <div class="back-bar">
+    <div class="back-bar-inner">
+      <a href="https://inkledger.app" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7-7-7 7 7 7"/></svg>
+        Back to inkLedger
+      </a>
+    </div>
+  </div>
+
   <main class="wrap">
-              {/* Introduction */}
-          <Section title="1. Introduction">
-            <Paragraph>
-              Welcome to inkLedger. These Terms of Service ("Terms") govern your access to and use of the inkLedger platform, including our mobile application and website (collectively, the "Service").
-            </Paragraph>
-            <Paragraph>
-              inkLedger is a booking and payment management platform that connects tattoo artists ("Artists") with their clients ("Clients"). By using our Service, you agree to be bound by these Terms.
-            </Paragraph>
-            <Paragraph>
-              IMPORTANT: If you do not agree with these Terms, you must not use the Service.
-            </Paragraph>
-          </Section>
+    <h1>TERMS OF SERVICE</h1>
+    <p class="last-updated">Last updated: January 2025</p>
 
-          {/* Definitions */}
-          <Section title="2. Definitions">
-            <BulletPoint>"inkLedger", "we", "our", "us": refers to the inkLedger platform and company.</BulletPoint>
-            <BulletPoint>"Service": refers to the inkLedger mobile application, website, and all related services.</BulletPoint>
-            <BulletPoint>"User": any individual who accesses or uses the Service.</BulletPoint>
-            <BulletPoint>"Artist": a tattoo artist who has registered an account to manage bookings and receive payments.</BulletPoint>
-            <BulletPoint>"Client": an individual who books an appointment with an Artist through the Service.</BulletPoint>
-            <BulletPoint>"Deposit": a non-refundable advance payment made by a Client to secure an appointment.</BulletPoint>
-            <BulletPoint>"Platform Fee": the service fee (8%) charged on deposits to cover transaction and operational costs.</BulletPoint>
-          </Section>
+    <h2>1. INTRODUCTION</h2>
+    <p>Welcome to inkLedger. These Terms of Service ("Terms") govern your access to and use of the inkLedger platform, including our mobile application and website (collectively, the "Service").</p>
+    <p>inkLedger is a booking and payment management platform that connects tattoo artists ("Artists") with their clients ("Clients"). By using our Service, you agree to be bound by these Terms.</p>
+    <p><strong>IMPORTANT:</strong> If you do not agree with these Terms, you must not use the Service.</p>
 
-          {/* Eligibility */}
-          <Section title="3. Eligibility">
-            <Paragraph>To use the Service, you must:</Paragraph>
-            <BulletPoint>Be at least 18 years of age</BulletPoint>
-            <BulletPoint>Have the legal capacity to enter into binding agreements</BulletPoint>
-            <BulletPoint>Provide accurate and truthful information during registration</BulletPoint>
-            <BulletPoint>Not have been previously banned from the Service</BulletPoint>
-            <Paragraph>
-              The tattoo industry serves adult clients. Our Service is designed exclusively for users who are 18 years of age or older. We do not knowingly provide services to minors.
-            </Paragraph>
-          </Section>
+    <h2>2. DEFINITIONS</h2>
+    <ul>
+      <li>"inkLedger", "we", "our", "us": refers to the inkLedger platform and company.</li>
+      <li>"Service": refers to the inkLedger mobile application, website, and all related services.</li>
+      <li>"User": any individual who accesses or uses the Service.</li>
+      <li>"Artist": a tattoo artist who has registered an account to manage bookings and receive payments.</li>
+      <li>"Client": an individual who books an appointment with an Artist through the Service.</li>
+      <li>"Deposit": a non-refundable advance payment made by a Client to secure an appointment.</li>
+      <li>"Platform Fee": the service fee (8%) charged on deposits to cover transaction and operational costs.</li>
+    </ul>
 
-          {/* Account Registration */}
-          <Section title="4. Account Registration">
-            <Text style={styles.subTitle}>4.1 Account Creation</Text>
-            <Paragraph>
-              To access certain features, you must create an account. You agree to provide accurate, current, and complete information during registration and to update this information to maintain its accuracy.
-            </Paragraph>
+    <h2>3. ELIGIBILITY</h2>
+    <p>To use the Service, you must:</p>
+    <ul>
+      <li>Be at least 18 years of age</li>
+      <li>Have the legal capacity to enter into binding agreements</li>
+      <li>Provide accurate and truthful information during registration</li>
+      <li>Not have been previously banned from the Service</li>
+    </ul>
+    <p>The tattoo industry serves adult clients. Our Service is designed exclusively for users who are 18 years of age or older. We do not knowingly provide services to minors.</p>
 
-            <Text style={styles.subTitle}>4.2 Account Security</Text>
-            <Paragraph>
-              You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized access or use of your account. inkLedger is not liable for any loss or damage arising from your failure to protect your account credentials.
-            </Paragraph>
+    <h2>4. ACCOUNT REGISTRATION</h2>
+    <h3>4.1 Account Creation</h3>
+    <p>To access certain features, you must create an account. You agree to provide accurate, current, and complete information during registration and to update this information to maintain its accuracy.</p>
 
-            <Text style={styles.subTitle}>4.3 Account Termination</Text>
-            <Paragraph>
-              You may close your account at any time by contacting us at jace@inkledger.app. We reserve the right to suspend or terminate accounts that violate these Terms or for any other reasonable reason.
-            </Paragraph>
-          </Section>
+    <h3>4.2 Account Security</h3>
+    <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized access or use of your account. inkLedger is not liable for any loss or damage arising from your failure to protect your account credentials.</p>
 
-          {/* Platform Role */}
-          <Section title="5. Platform Role and Limitations">
-            <Paragraph>
-              inkLedger acts exclusively as an intermediary platform that facilitates bookings and payments between Artists and Clients. We are not a party to any agreement between Artists and Clients.
-            </Paragraph>
-            <BulletPoint>We do not employ, endorse, or recommend any Artist</BulletPoint>
-            <BulletPoint>We do not guarantee the quality, safety, or legality of tattoo services</BulletPoint>
-            <BulletPoint>We are not responsible for the actions or omissions of Artists or Clients</BulletPoint>
-            <BulletPoint>Any disputes between Artists and Clients must be resolved directly between the parties</BulletPoint>
-            <Paragraph>
-              inkLedger shall not be liable for any claims arising from or related to the contractual agreement between an Artist and a Client.
-            </Paragraph>
-          </Section>
+    <h3>4.3 Account Termination</h3>
+    <p>You may close your account at any time by contacting us at jace@inkledger.app. We reserve the right to suspend or terminate accounts that violate these Terms or for any other reasonable reason.</p>
 
-          {/* Deposits and Payments */}
-          <Section title="6. Deposits and Payments">
-            <Text style={styles.subTitle}>6.1 Deposit Requirements</Text>
-            <Paragraph>
-              When booking an appointment, Clients are required to pay a deposit to secure the appointment. The deposit amount is set by the Artist within the platform's allowed range (EUR 50 to EUR 500, in increments of EUR 10).
-            </Paragraph>
+    <h2>5. PLATFORM ROLE AND LIMITATIONS</h2>
+    <p>inkLedger acts exclusively as an intermediary platform that facilitates bookings and payments between Artists and Clients. We are not a party to any agreement between Artists and Clients.</p>
+    <ul>
+      <li>We do not employ, endorse, or recommend any Artist</li>
+      <li>We do not guarantee the quality, safety, or legality of tattoo services</li>
+      <li>We are not responsible for the actions or omissions of Artists or Clients</li>
+      <li>Any disputes between Artists and Clients must be resolved directly between the parties</li>
+    </ul>
+    <p>inkLedger shall not be liable for any claims arising from or related to the contractual agreement between an Artist and a Client.</p>
 
-            <Text style={styles.subTitle}>6.2 Non-Refundable Deposits</Text>
-            <Paragraph>
-              All deposits are NON-REFUNDABLE. By paying a deposit, Clients acknowledge and agree that:
-            </Paragraph>
-            <BulletPoint>The deposit will not be refunded under any circumstances, including cancellation or no-show</BulletPoint>
-            <BulletPoint>The deposit secures the Artist's time and preparation</BulletPoint>
-            <BulletPoint>The deposit will be deducted from the total cost of the tattoo upon completion</BulletPoint>
+    <h2>6. DEPOSITS AND PAYMENTS</h2>
+    <h3>6.1 Deposit Requirements</h3>
+    <p>When booking an appointment, Clients are required to pay a deposit to secure the appointment. The deposit amount is set by the Artist within the platform's allowed range (EUR 50 to EUR 500, in increments of EUR 10).</p>
 
-            <Text style={styles.subTitle}>6.3 Platform Fee</Text>
-            <Paragraph>
-              A platform fee of 8% is added on top of all deposits. This fee covers payment processing (Stripe), SMS notifications, and platform operational costs. The platform fee is paid by the Client and is non-refundable.
-            </Paragraph>
-            <BulletPoint>Example: EUR 100 deposit + EUR 8 platform fee (8%) = EUR 108 total charged to Client</BulletPoint>
-            <BulletPoint>Artist receives the full deposit amount</BulletPoint>
-            <BulletPoint>Platform fee is lower than competitor rates (8% vs 10%)</BulletPoint>
+    <h3>6.2 Non-Refundable Deposits</h3>
+    <p>All deposits are <strong>NON-REFUNDABLE</strong>. By paying a deposit, Clients acknowledge and agree that:</p>
+    <ul>
+      <li>The deposit will not be refunded under any circumstances, including cancellation or no-show</li>
+      <li>The deposit secures the Artist's time and preparation</li>
+      <li>The deposit will be deducted from the total cost of the tattoo upon completion</li>
+    </ul>
 
-            <Text style={styles.subTitle}>6.4 Payment Processing</Text>
-            <Paragraph>
-              Payments are processed securely through Stripe. Deposits are transferred directly to the Artist's connected Stripe account. inkLedger does not hold or manage Artist funds.
-            </Paragraph>
+    <h3>6.3 Platform Fee</h3>
+    <p>A platform fee of 8% is added on top of all deposits. This fee covers payment processing (Stripe), SMS notifications, and platform operational costs. The platform fee is paid by the Client and is non-refundable.</p>
+    <ul>
+      <li>Example: EUR 100 deposit + EUR 8 platform fee (8%) = EUR 108 total charged to Client</li>
+      <li>Artist receives the full deposit amount</li>
+      <li>Platform fee is lower than competitor rates (8% vs 10%)</li>
+    </ul>
 
-            <Text style={styles.subTitle}>6.5 Refunds</Text>
-            <Paragraph>
-              inkLedger has a strict no-refund policy on deposits. Artists may, at their sole discretion, choose to refund a deposit through their own Stripe dashboard. inkLedger is not responsible for facilitating refunds.
-            </Paragraph>
-          </Section>
+    <h3>6.4 Payment Processing</h3>
+    <p>Payments are processed securely through Stripe. Deposits are transferred directly to the Artist's connected Stripe account. inkLedger does not hold or manage Artist funds.</p>
 
-          {/* Booking Terms for Clients */}
-          <Section title="7. Booking Terms for Clients">
-            <Text style={styles.subTitle}>7.1 Booking Process</Text>
-            <Paragraph>
-              Clients can book appointments through an Artist's personal booking link. By completing a booking, Clients agree to:
-            </Paragraph>
-            <BulletPoint>Provide accurate contact information</BulletPoint>
-            <BulletPoint>Pay the required deposit</BulletPoint>
-            <BulletPoint>Attend the appointment at the scheduled date and time</BulletPoint>
-            <BulletPoint>Communicate any changes promptly to the Artist</BulletPoint>
+    <h3>6.5 Refunds</h3>
+    <p>inkLedger has a strict no-refund policy on deposits. Artists may, at their sole discretion, choose to refund a deposit through their own Stripe dashboard. inkLedger is not responsible for facilitating refunds.</p>
 
-            <Text style={styles.subTitle}>7.2 Appointment Changes and Cancellations</Text>
-            <BulletPoint>Changes requested more than 7 days (168 hours) before the appointment may be accommodated at the Artist's discretion</BulletPoint>
-            <BulletPoint>Changes requested within 7 days of the appointment are at the sole discretion of the Artist</BulletPoint>
-            <BulletPoint>Cancellations do not entitle the Client to a refund of the deposit</BulletPoint>
-            <BulletPoint>Clients may request to reschedule by contacting the Artist directly</BulletPoint>
+    <h2>7. BOOKING TERMS FOR CLIENTS</h2>
+    <h3>7.1 Booking Process</h3>
+    <p>Clients can book appointments through an Artist's personal booking link. By completing a booking, Clients agree to:</p>
+    <ul>
+      <li>Provide accurate contact information</li>
+      <li>Pay the required deposit</li>
+      <li>Attend the appointment at the scheduled date and time</li>
+      <li>Communicate any changes promptly to the Artist</li>
+    </ul>
 
-            <Text style={styles.subTitle}>7.3 No-Show Policy</Text>
-            <Paragraph>
-              A "no-show" occurs when a Client fails to attend a scheduled appointment without prior notice. In the event of a no-show:
-            </Paragraph>
-            <BulletPoint>The deposit is forfeited and non-refundable</BulletPoint>
-            <BulletPoint>The Artist may seek additional compensation for damages incurred</BulletPoint>
-            <BulletPoint>Repeated no-shows may result in the Client being banned from future bookings</BulletPoint>
+    <h3>7.2 Appointment Changes and Cancellations</h3>
+    <ul>
+      <li>Changes requested more than 7 days (168 hours) before the appointment may be accommodated at the Artist's discretion</li>
+      <li>Changes requested within 7 days of the appointment are at the sole discretion of the Artist</li>
+      <li>Cancellations do not entitle the Client to a refund of the deposit</li>
+      <li>Clients may request to reschedule by contacting the Artist directly</li>
+    </ul>
 
-            <Text style={styles.subTitle}>7.4 Tattoo Consent</Text>
-            <Paragraph>
-              By booking an appointment, Clients acknowledge that:
-            </Paragraph>
-            <BulletPoint>They are at least 18 years of age</BulletPoint>
-            <BulletPoint>They are not under the influence of alcohol or drugs</BulletPoint>
-            <BulletPoint>They understand tattooing involves inherent risks including pain, infection, and allergic reactions</BulletPoint>
-            <BulletPoint>They have disclosed any relevant medical conditions to the Artist</BulletPoint>
-            <BulletPoint>The Artist is not responsible for the meaning or spelling of symbols or text chosen by the Client</BulletPoint>
-            <BulletPoint>Tattoos are permanent and removal is difficult, expensive, and may not be fully effective</BulletPoint>
-          </Section>
+    <h3>7.3 No-Show Policy</h3>
+    <p>A "no-show" occurs when a Client fails to attend a scheduled appointment without prior notice. In the event of a no-show:</p>
+    <ul>
+      <li>The deposit is forfeited and non-refundable</li>
+      <li>The Artist may seek additional compensation for damages incurred</li>
+      <li>Repeated no-shows may result in the Client being banned from future bookings</li>
+    </ul>
 
-          {/* Terms for Artists */}
-          <Section title="8. Terms for Artists">
-            <Text style={styles.subTitle}>8.1 Artist Obligations</Text>
-            <Paragraph>By registering as an Artist, you agree to:</Paragraph>
-            <BulletPoint>Maintain accurate availability and booking information</BulletPoint>
-            <BulletPoint>Respond to booking requests in a timely manner</BulletPoint>
-            <BulletPoint>Provide professional tattoo services</BulletPoint>
-            <BulletPoint>Comply with all applicable laws and health regulations</BulletPoint>
-            <BulletPoint>Maintain appropriate licenses and insurance</BulletPoint>
-            <BulletPoint>Handle Client data in accordance with privacy laws</BulletPoint>
+    <h3>7.4 Tattoo Consent</h3>
+    <p>By booking an appointment, Clients acknowledge that:</p>
+    <ul>
+      <li>They are at least 18 years of age</li>
+      <li>They are not under the influence of alcohol or drugs</li>
+      <li>They understand tattooing involves inherent risks including pain, infection, and allergic reactions</li>
+      <li>They have disclosed any relevant medical conditions to the Artist</li>
+      <li>The Artist is not responsible for the meaning or spelling of symbols or text chosen by the Client</li>
+      <li>Tattoos are permanent and removal is difficult, expensive, and may not be fully effective</li>
+    </ul>
 
-            <Text style={styles.subTitle}>8.2 Stripe Connect</Text>
-            <Paragraph>
-              Artists must connect a Stripe account to receive payments. By connecting Stripe, Artists agree to Stripe's terms of service. inkLedger is not responsible for Stripe account issues, holds, or disputes.
-            </Paragraph>
+    <h2>8. TERMS FOR ARTISTS</h2>
+    <h3>8.1 Artist Obligations</h3>
+    <p>By registering as an Artist, you agree to:</p>
+    <ul>
+      <li>Maintain accurate availability and booking information</li>
+      <li>Respond to booking requests in a timely manner</li>
+      <li>Provide professional tattoo services</li>
+      <li>Comply with all applicable laws and health regulations</li>
+      <li>Maintain appropriate licenses and insurance</li>
+      <li>Handle Client data in accordance with privacy laws</li>
+    </ul>
 
-            <Text style={styles.subTitle}>8.3 Tax Responsibilities</Text>
-            <Paragraph>
-              Artists are solely responsible for reporting income and paying applicable taxes (including VAT/BTW). inkLedger provides bookkeeping tools for convenience but does not provide tax advice. Consult a tax professional for guidance.
-            </Paragraph>
+    <h3>8.2 Stripe Connect</h3>
+    <p>Artists must connect a Stripe account to receive payments. By connecting Stripe, Artists agree to Stripe's terms of service. inkLedger is not responsible for Stripe account issues, holds, or disputes.</p>
 
-            <Text style={styles.subTitle}>8.4 Design Approval</Text>
-            <Paragraph>
-              Artists may use the design approval feature to obtain Client sign-off before appointments. This creates a record of approval but does not transfer intellectual property rights.
-            </Paragraph>
-          </Section>
+    <h3>8.3 Tax Responsibilities</h3>
+    <p>Artists are solely responsible for reporting income and paying applicable taxes (including VAT/BTW). inkLedger provides bookkeeping tools for convenience but does not provide tax advice. Consult a tax professional for guidance.</p>
 
-          {/* Intellectual Property */}
-          <Section title="9. Intellectual Property">
-            <Text style={styles.subTitle}>9.1 Artist Content</Text>
-            <Paragraph>
-              All designs, drawings, and artistic content created by Artists remain the intellectual property of the respective Artist. Clients may not reproduce, distribute, or commercially use Artist designs without explicit written permission.
-            </Paragraph>
+    <h3>8.4 Design Approval</h3>
+    <p>Artists may use the design approval feature to obtain Client sign-off before appointments. This creates a record of approval but does not transfer intellectual property rights.</p>
 
-            <Text style={styles.subTitle}>9.2 Client-Provided Content</Text>
-            <Paragraph>
-              When Clients provide reference images or design ideas, they warrant that they have the right to use such content. Once a tattoo is completed based on Client-provided content, the resulting tattoo artwork becomes the intellectual property of the Artist as a unique creative adaptation.
-            </Paragraph>
+    <h2>9. INTELLECTUAL PROPERTY</h2>
+    <h3>9.1 Artist Content</h3>
+    <p>All designs, drawings, and artistic content created by Artists remain the intellectual property of the respective Artist. Clients may not reproduce, distribute, or commercially use Artist designs without explicit written permission.</p>
 
-            <Text style={styles.subTitle}>9.3 inkLedger Content</Text>
-            <Paragraph>
-              All content, features, and functionality of the inkLedger platform (including text, graphics, logos, icons, and software) are owned by inkLedger and protected by intellectual property laws. Users may not copy, modify, distribute, or reverse-engineer any part of the Service.
-            </Paragraph>
-          </Section>
+    <h3>9.2 Client-Provided Content</h3>
+    <p>When Clients provide reference images or design ideas, they warrant that they have the right to use such content. Once a tattoo is completed based on Client-provided content, the resulting tattoo artwork becomes the intellectual property of the Artist as a unique creative adaptation.</p>
 
-          {/* Prohibited Conduct */}
-          <Section title="10. Prohibited Conduct">
-            <Paragraph>Users agree not to:</Paragraph>
-            <BulletPoint>Use the Service for any illegal or unauthorized purpose</BulletPoint>
-            <BulletPoint>Provide false or misleading information</BulletPoint>
-            <BulletPoint>Impersonate another person or entity</BulletPoint>
-            <BulletPoint>Harass, abuse, or harm other Users</BulletPoint>
-            <BulletPoint>Attempt to gain unauthorized access to the Service or other accounts</BulletPoint>
-            <BulletPoint>Use automated systems (bots, scrapers) to access the Service</BulletPoint>
-            <BulletPoint>Interfere with or disrupt the Service or servers</BulletPoint>
-            <BulletPoint>Circumvent any security measures</BulletPoint>
-            <BulletPoint>Use the Service to spam or send unsolicited communications</BulletPoint>
-            <BulletPoint>Fail to attend appointments without cancellation (no-show)</BulletPoint>
-          </Section>
+    <h3>9.3 inkLedger Content</h3>
+    <p>All content, features, and functionality of the inkLedger platform (including text, graphics, logos, icons, and software) are owned by inkLedger and protected by intellectual property laws. Users may not copy, modify, distribute, or reverse-engineer any part of the Service.</p>
 
-          {/* Limitation of Liability */}
-          <Section title="11. Limitation of Liability">
-            <Text style={styles.subTitle}>11.1 Service Provided "As Is"</Text>
-            <Paragraph>
-              The Service is provided "as is" and "as available" without warranties of any kind, either express or implied. inkLedger does not guarantee uninterrupted or error-free access to the Service.
-            </Paragraph>
+    <h2>10. PROHIBITED CONDUCT</h2>
+    <p>Users agree not to:</p>
+    <ul>
+      <li>Use the Service for any illegal or unauthorized purpose</li>
+      <li>Provide false or misleading information</li>
+      <li>Impersonate another person or entity</li>
+      <li>Harass, abuse, or harm other Users</li>
+      <li>Attempt to gain unauthorized access to the Service or other accounts</li>
+      <li>Use automated systems (bots, scrapers) to access the Service</li>
+      <li>Interfere with or disrupt the Service or servers</li>
+      <li>Circumvent any security measures</li>
+      <li>Use the Service to spam or send unsolicited communications</li>
+      <li>Fail to attend appointments without cancellation (no-show)</li>
+    </ul>
 
-            <Text style={styles.subTitle}>11.2 No Guarantee of Artist Services</Text>
-            <Paragraph>
-              inkLedger does not guarantee the quality, safety, legality, or availability of any Artist's services. Users are responsible for verifying Artist credentials and suitability.
-            </Paragraph>
+    <h2>11. LIMITATION OF LIABILITY</h2>
+    <h3>11.1 Service Provided "As Is"</h3>
+    <p>The Service is provided "as is" and "as available" without warranties of any kind, either express or implied. inkLedger does not guarantee uninterrupted or error-free access to the Service.</p>
 
-            <Text style={styles.subTitle}>11.3 Limitation of Damages</Text>
-            <Paragraph>
-              To the maximum extent permitted by law, inkLedger shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the Service.
-            </Paragraph>
+    <h3>11.2 No Guarantee of Artist Services</h3>
+    <p>inkLedger does not guarantee the quality, safety, legality, or availability of any Artist's services. Users are responsible for verifying Artist credentials and suitability.</p>
 
-            <Text style={styles.subTitle}>11.4 Maximum Liability</Text>
-            <Paragraph>
-              In no event shall inkLedger's total liability exceed the amount of platform fees paid by you in the twelve (12) months preceding the claim.
-            </Paragraph>
-          </Section>
+    <h3>11.3 Limitation of Damages</h3>
+    <p>To the maximum extent permitted by law, inkLedger shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the Service.</p>
 
-          {/* Indemnification */}
-          <Section title="12. Indemnification">
-            <Paragraph>
-              You agree to indemnify, defend, and hold harmless inkLedger, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including legal fees) arising from:
-            </Paragraph>
-            <BulletPoint>Your use of the Service</BulletPoint>
-            <BulletPoint>Your violation of these Terms</BulletPoint>
-            <BulletPoint>Your violation of any rights of another party</BulletPoint>
-            <BulletPoint>Any dispute between you and an Artist or Client</BulletPoint>
-          </Section>
+    <h3>11.4 Maximum Liability</h3>
+    <p>In no event shall inkLedger's total liability exceed the amount of platform fees paid by you in the twelve (12) months preceding the claim.</p>
 
-          {/* Dispute Resolution */}
-          <Section title="13. Dispute Resolution">
-            <Text style={styles.subTitle}>13.1 Between Users</Text>
-            <Paragraph>
-              Disputes between Artists and Clients must be resolved directly between the parties. inkLedger is not responsible for mediating or resolving such disputes.
-            </Paragraph>
+    <h2>12. INDEMNIFICATION</h2>
+    <p>You agree to indemnify, defend, and hold harmless inkLedger, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including legal fees) arising from:</p>
+    <ul>
+      <li>Your use of the Service</li>
+      <li>Your violation of these Terms</li>
+      <li>Your violation of any rights of another party</li>
+      <li>Any dispute between you and an Artist or Client</li>
+    </ul>
 
-            <Text style={styles.subTitle}>13.2 With inkLedger</Text>
-            <Paragraph>
-              If you have a dispute with inkLedger, please contact us first at jace@inkledger.app to attempt resolution. We aim to resolve complaints within 30 days.
-            </Paragraph>
-          </Section>
+    <h2>13. DISPUTE RESOLUTION</h2>
+    <h3>13.1 Between Users</h3>
+    <p>Disputes between Artists and Clients must be resolved directly between the parties. inkLedger is not responsible for mediating or resolving such disputes.</p>
 
-          {/* Modifications */}
-          <Section title="14. Modifications to Terms">
-            <Paragraph>
-              inkLedger reserves the right to modify these Terms at any time. We will notify Users of significant changes by posting the updated Terms on the Service and updating the "Last updated" date.
-            </Paragraph>
-            <Paragraph>
-              Continued use of the Service after changes constitutes acceptance of the modified Terms. If you do not agree with the changes, you must stop using the Service.
-            </Paragraph>
-          </Section>
+    <h3>13.2 With inkLedger</h3>
+    <p>If you have a dispute with inkLedger, please contact us first at jace@inkledger.app to attempt resolution. We aim to resolve complaints within 30 days.</p>
 
-          {/* Termination */}
-          <Section title="15. Termination">
-            <Paragraph>
-              inkLedger may suspend or terminate your access to the Service at any time, with or without cause, with or without notice. Upon termination:
-            </Paragraph>
-            <BulletPoint>Your right to use the Service ceases immediately</BulletPoint>
-            <BulletPoint>Pending bookings may be cancelled</BulletPoint>
-            <BulletPoint>You remain liable for any outstanding obligations</BulletPoint>
-            <BulletPoint>Provisions that by nature should survive will remain in effect</BulletPoint>
-          </Section>
+    <h2>14. MODIFICATIONS TO TERMS</h2>
+    <p>inkLedger reserves the right to modify these Terms at any time. We will notify Users of significant changes by posting the updated Terms on the Service and updating the "Last updated" date.</p>
+    <p>Continued use of the Service after changes constitutes acceptance of the modified Terms. If you do not agree with the changes, you must stop using the Service.</p>
 
-          {/* Governing Law */}
-          <Section title="16. Governing Law">
-            <Paragraph>
-              These Terms are governed by and construed in accordance with the laws of the Netherlands. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of the Netherlands.
-            </Paragraph>
-          </Section>
+    <h2>15. TERMINATION</h2>
+    <p>inkLedger may suspend or terminate your access to the Service at any time, with or without cause, with or without notice. Upon termination:</p>
+    <ul>
+      <li>Your right to use the Service ceases immediately</li>
+      <li>Pending bookings may be cancelled</li>
+      <li>You remain liable for any outstanding obligations</li>
+      <li>Provisions that by nature should survive will remain in effect</li>
+    </ul>
 
-          {/* Severability */}
-          <Section title="17. Severability">
-            <Paragraph>
-              If any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect.
-            </Paragraph>
-          </Section>
+    <h2>16. GOVERNING LAW</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the Netherlands. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of the Netherlands.</p>
 
-          {/* Contact */}
-          <Section title="18. Contact Us">
-            <Paragraph>
-              For questions, concerns, or complaints about these Terms, please contact us:
-            </Paragraph>
-            <View style={styles.contactBox}>
-              <Text style={styles.contactLabel}>Email</Text>
-              <Text style={styles.contactValue}>jace@inkledger.app</Text>
-              
-              <Text style={styles.contactLabel}>Website</Text>
-              <Text style={styles.contactValue}>https://inkledger.app</Text>
-              
-              <Text style={styles.contactLabel}>Subject</Text>
-              <Text style={styles.contactValue}>Terms of Service Inquiry</Text>
-            </View>
-          </Section>
+    <h2>17. SEVERABILITY</h2>
+    <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect.</p>
 
-          {/* Acknowledgment */}
-          <Section title="19. Acknowledgment">
-            <Paragraph>
-              By using the Service, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you are using the Service on behalf of an organization, you represent that you have authority to bind that organization to these Terms.
-            </Paragraph>
-          </Section>
+    <h2>18. CONTACT US</h2>
+    <p>For questions, concerns, or complaints about these Terms, please contact us:</p>
+    <div class="contact-box">
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:jace@inkledger.app">jace@inkledger.app</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Website</span>
+        <span class="contact-value"><a href="https://inkledger.app">https://inkledger.app</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Subject</span>
+        <span class="contact-value">Terms of Service Inquiry</span>
+      </div>
+    </div>
 
-{/* Footer */}
-<View style={styles.footer}>
-  <View style={styles.footerLinks}>
-    <TouchableOpacity onPress={() => handleNavigation('/privacy')}>
-      <Text style={styles.footerLink}>Privacy Policy</Text>
-    </TouchableOpacity>
-    <Text style={styles.footerDivider}>•</Text>
-    <TouchableOpacity onPress={() => handleNavigation('/terms')}>
-      <Text style={styles.footerLink}>Terms of Service</Text>
-    </TouchableOpacity>
-    <Text style={styles.footerDivider}>•</Text>
-    <TouchableOpacity onPress={() => Linking.openURL('mailto:jace@inkledger.app')}>
-      <Text style={styles.footerLink}>Support</Text>
-    </TouchableOpacity>
-  </View>
-  <Text style={styles.footerText}>
-    © 2025 inkLedger. All rights reserved.
-  </Text>
-  <Text style={styles.footerText}>
-    Made with ❤️ in the Netherlands
-  </Text>
-</View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <h2>19. ACKNOWLEDGMENT</h2>
+    <p>By using the Service, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you are using the Service on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
   </main>
+
+  <footer class="footer-bar">
+    <div class="footer-links">
+      <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+      <span class="footer-divider">&bull;</span>
+      <a href="/terms.html" class="footer-link">Terms of Service</a>
+      <span class="footer-divider">&bull;</span>
+      <a href="mailto:jace@inkledger.app" class="footer-link">Support</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 inkLedger. All rights reserved.</p>
+  </footer>
 </body>
 </html>

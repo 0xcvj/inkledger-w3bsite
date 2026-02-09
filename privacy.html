@@ -4,226 +4,375 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — inkLedger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; color: #111; background: #f7f7f7; }
-    .wrap { max-width: 820px; margin: 48px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-    h1 { margin-top: 0; }
-    h2 { margin-top: 28px; }
-    h3 { margin-top: 20px; }
-    p, li { line-height: 1.6; }
+    :root {
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --bg-primary: #f6f5f1;
+      --bg-surface: #edece8;
+      --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a;
+      --text-muted: #8a8a8a;
+      --accent: #1e1b4b;
+      --accent-hover: #2d2a5e;
+      --accent-glow: rgba(30, 27, 75, 0.3);
+      --accent-subtle: rgba(30, 27, 75, 0.08);
+      --border: rgba(0,0,0,0.08);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    .back-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246, 245, 241, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(20px, 5vw, 80px);
+    }
+    .back-bar-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 56px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .back-link:hover {
+      border-color: var(--accent);
+      background: var(--accent-subtle);
+      transform: translateX(-2px);
+    }
+    .back-link svg { transition: transform 0.3s ease; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px clamp(20px, 5vw, 40px) 80px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 52px);
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .last-updated {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 28px);
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      margin-top: 40px;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.4;
+    }
+
+    .contact-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 16px 0;
+      display: grid;
+      gap: 12px;
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+    }
+    .contact-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      min-width: 80px;
+    }
+    .contact-value {
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .contact-value a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-value a:hover { text-decoration: underline; }
+
+    .footer-bar {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .footer-link:hover { opacity: 0.7; }
+    .footer-divider {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
+  <div class="back-bar">
+    <div class="back-bar-inner">
+      <a href="https://inkledger.app" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7-7-7 7 7 7"/></svg>
+        Back to inkLedger
+      </a>
+    </div>
+  </div>
+
   <main class="wrap">
-            {/* Introduction */}
-          <Section title="1. Introduction">
-            <Paragraph>
-              Welcome to inkLedger ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website (collectively, the "Service").
-            </Paragraph>
-            <Paragraph>
-              inkLedger is a booking and payment management platform designed for tattoo artists and their clients. By using our Service, you agree to the collection and use of information in accordance with this policy.
-            </Paragraph>
-          </Section>
+    <h1>PRIVACY POLICY</h1>
+    <p class="last-updated">Last updated: January 2025</p>
 
-          {/* Information We Collect */}
-          <Section title="2. Information We Collect">
-            <Text style={styles.subTitle}>2.1 Information You Provide</Text>
-            <Paragraph>We collect information you provide directly to us:</Paragraph>
-            <BulletPoint>Account information: name, email address, phone number, artist/business name</BulletPoint>
-            <BulletPoint>Profile information: bio, location, social media links, profile picture</BulletPoint>
-            <BulletPoint>Booking information: appointment dates, times, tattoo descriptions, placement, size preferences</BulletPoint>
-            <BulletPoint>Client information: client names, contact details, booking history, notes</BulletPoint>
-            <BulletPoint>Payment information: processed securely through Stripe (we do not store full card details)</BulletPoint>
-            <BulletPoint>Reference photos and design images uploaded for bookings</BulletPoint>
-            <BulletPoint>Communications: messages, feedback, and support inquiries</BulletPoint>
+    <h2>1. INTRODUCTION</h2>
+    <p>Welcome to inkLedger ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website (collectively, the "Service").</p>
+    <p>inkLedger is a booking and payment management platform designed for tattoo artists and their clients. By using our Service, you agree to the collection and use of information in accordance with this policy.</p>
 
-            <Text style={styles.subTitle}>2.2 Information Collected Automatically</Text>
-            <Paragraph>When you use our Service, we automatically collect:</Paragraph>
-            <BulletPoint>Device information: device type, operating system, unique device identifiers</BulletPoint>
-            <BulletPoint>Log information: access times, pages viewed, app features used</BulletPoint>
-            <BulletPoint>Location information: general location based on IP address</BulletPoint>
-          </Section>
+    <h2>2. INFORMATION WE COLLECT</h2>
+    <h3>2.1 Information You Provide</h3>
+    <p>We collect information you provide directly to us:</p>
+    <ul>
+      <li>Account information: name, email address, phone number, artist/business name</li>
+      <li>Profile information: bio, location, social media links, profile picture</li>
+      <li>Booking information: appointment dates, times, tattoo descriptions, placement, size preferences</li>
+      <li>Client information: client names, contact details, booking history, notes</li>
+      <li>Payment information: processed securely through Stripe (we do not store full card details)</li>
+      <li>Reference photos and design images uploaded for bookings</li>
+      <li>Communications: messages, feedback, and support inquiries</li>
+    </ul>
 
-          {/* How We Use Your Information */}
-          <Section title="3. How We Use Your Information">
-            <Paragraph>We use the information we collect to:</Paragraph>
-            <BulletPoint>Provide, maintain, and improve our Service</BulletPoint>
-            <BulletPoint>Process bookings and facilitate payments between artists and clients</BulletPoint>
-            <BulletPoint>Send transactional notifications (booking confirmations, design approvals, reminders) via SMS and email</BulletPoint>
-            <BulletPoint>Generate financial reports and VAT/BTW calculations for artists</BulletPoint>
-            <BulletPoint>Provide customer support and respond to inquiries</BulletPoint>
-            <BulletPoint>Send service-related announcements and updates</BulletPoint>
-            <BulletPoint>Detect, prevent, and address technical issues and fraud</BulletPoint>
-            <BulletPoint>Comply with legal obligations</BulletPoint>
-          </Section>
+    <h3>2.2 Information Collected Automatically</h3>
+    <p>When you use our Service, we automatically collect:</p>
+    <ul>
+      <li>Device information: device type, operating system, unique device identifiers</li>
+      <li>Log information: access times, pages viewed, app features used</li>
+      <li>Location information: general location based on IP address</li>
+    </ul>
 
-          {/* Payment Processing */}
-          <Section title="4. Payment Processing">
-            <Paragraph>
-              We use Stripe as our payment processor for handling deposits and payments. When you make a payment:
-            </Paragraph>
-            <BulletPoint>Payment card details are collected and processed directly by Stripe</BulletPoint>
-            <BulletPoint>We do not store complete credit card numbers on our servers</BulletPoint>
-            <BulletPoint>Stripe's privacy policy applies to payment data: stripe.com/privacy</BulletPoint>
-            <BulletPoint>We support iDEAL, credit/debit cards, and Apple Pay</BulletPoint>
-            <Paragraph>
-              For artists: deposits are transferred directly to your connected Stripe account. A platform fee (8%) is added on top of the deposit and paid by the client to cover transaction costs and service fees.
-            </Paragraph>
-          </Section>
+    <h2>3. HOW WE USE YOUR INFORMATION</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Provide, maintain, and improve our Service</li>
+      <li>Process bookings and facilitate payments between artists and clients</li>
+      <li>Send transactional notifications (booking confirmations, design approvals, reminders) via SMS and email</li>
+      <li>Generate financial reports and VAT/BTW calculations for artists</li>
+      <li>Provide customer support and respond to inquiries</li>
+      <li>Send service-related announcements and updates</li>
+      <li>Detect, prevent, and address technical issues and fraud</li>
+      <li>Comply with legal obligations</li>
+    </ul>
 
-          {/* Data Sharing */}
-          <Section title="5. Data Sharing and Disclosure">
-            <Paragraph>We may share your information in the following circumstances:</Paragraph>
-            
-            <Text style={styles.subTitle}>5.1 Between Artists and Clients</Text>
-            <BulletPoint>Client contact information is shared with artists for booking purposes</BulletPoint>
-            <BulletPoint>Artist business information is visible to clients during booking</BulletPoint>
+    <h2>4. PAYMENT PROCESSING</h2>
+    <p>We use Stripe as our payment processor for handling deposits and payments. When you make a payment:</p>
+    <ul>
+      <li>Payment card details are collected and processed directly by Stripe</li>
+      <li>We do not store complete credit card numbers on our servers</li>
+      <li>Stripe's privacy policy applies to payment data: stripe.com/privacy</li>
+      <li>We support iDEAL, credit/debit cards, and Apple Pay</li>
+    </ul>
+    <p>For artists: deposits are transferred directly to your connected Stripe account. A platform fee (8%) is added on top of the deposit and paid by the client to cover transaction costs and service fees.</p>
 
-            <Text style={styles.subTitle}>5.2 Service Providers</Text>
-            <Paragraph>We work with third-party services to operate our platform:</Paragraph>
-            <BulletPoint>Stripe: Payment processing</BulletPoint>
-            <BulletPoint>Bird (MessageBird): SMS notifications</BulletPoint>
-            <BulletPoint>Supabase: Database and authentication</BulletPoint>
-            <BulletPoint>Expo: Mobile app infrastructure</BulletPoint>
+    <h2>5. DATA SHARING AND DISCLOSURE</h2>
+    <p>We may share your information in the following circumstances:</p>
 
-            <Text style={styles.subTitle}>5.3 Legal Requirements</Text>
-            <Paragraph>
-              We may disclose information if required by law, court order, or government request, or to protect the rights, property, or safety of inkLedger, our users, or others.
-            </Paragraph>
-          </Section>
+    <h3>5.1 Between Artists and Clients</h3>
+    <ul>
+      <li>Client contact information is shared with artists for booking purposes</li>
+      <li>Artist business information is visible to clients during booking</li>
+    </ul>
 
-          {/* Data Retention */}
-          <Section title="6. Data Retention">
-            <Paragraph>
-              We retain your personal information for as long as your account is active or as needed to provide services. Financial records are retained for 7 years to comply with tax regulations. You may request deletion of your account and associated data at any time.
-            </Paragraph>
-          </Section>
+    <h3>5.2 Service Providers</h3>
+    <p>We work with third-party services to operate our platform:</p>
+    <ul>
+      <li>Stripe: Payment processing</li>
+      <li>Bird (MessageBird): SMS notifications</li>
+      <li>Supabase: Database and authentication</li>
+      <li>Expo: Mobile app infrastructure</li>
+    </ul>
 
-          {/* Data Security */}
-          <Section title="7. Data Security">
-            <Paragraph>
-              We implement appropriate technical and organizational measures to protect your personal information:
-            </Paragraph>
-            <BulletPoint>Encryption of data in transit (HTTPS/TLS)</BulletPoint>
-            <BulletPoint>Secure database storage with access controls</BulletPoint>
-            <BulletPoint>Regular security assessments</BulletPoint>
-            <BulletPoint>Limited employee access to personal data</BulletPoint>
-            <Paragraph>
-              However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security of your data.
-            </Paragraph>
-          </Section>
+    <h3>5.3 Legal Requirements</h3>
+    <p>We may disclose information if required by law, court order, or government request, or to protect the rights, property, or safety of inkLedger, our users, or others.</p>
 
-          {/* Your Rights (GDPR) */}
-          <Section title="8. Your Rights (GDPR)">
-            <Paragraph>
-              Under the General Data Protection Regulation (GDPR), if you are in the European Economic Area, you have the following rights:
-            </Paragraph>
-            <BulletPoint>Access: Request a copy of your personal data</BulletPoint>
-            <BulletPoint>Rectification: Request correction of inaccurate data</BulletPoint>
-            <BulletPoint>Erasure: Request deletion of your data ("right to be forgotten")</BulletPoint>
-            <BulletPoint>Restriction: Request limited processing of your data</BulletPoint>
-            <BulletPoint>Portability: Receive your data in a structured, machine-readable format</BulletPoint>
-            <BulletPoint>Objection: Object to processing based on legitimate interests</BulletPoint>
-            <BulletPoint>Withdraw consent: Withdraw consent at any time where processing is based on consent</BulletPoint>
-            <Paragraph>
-              To exercise these rights, contact us at jace@inkledger.app. We will respond within 30 days.
-            </Paragraph>
-          </Section>
+    <h2>6. DATA RETENTION</h2>
+    <p>We retain your personal information for as long as your account is active or as needed to provide services. Financial records are retained for 7 years to comply with tax regulations. You may request deletion of your account and associated data at any time.</p>
 
-          {/* Children's Privacy */}
-          <Section title="9. Children's Privacy">
-            <Paragraph>
-              inkLedger is not intended for use by individuals under the age of 18. We do not knowingly collect personal information from minors. The tattoo industry serves adult clients, and our Service is designed exclusively for users who are 18 years of age or older.
-            </Paragraph>
-            <Paragraph>
-              If we become aware that we have collected personal information from a minor, we will take steps to delete that information promptly. If you believe a minor has provided us with personal information, please contact us immediately at jace@inkledger.app.
-            </Paragraph>
-          </Section>
+    <h2>7. DATA SECURITY</h2>
+    <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
+    <ul>
+      <li>Encryption of data in transit (HTTPS/TLS)</li>
+      <li>Secure database storage with access controls</li>
+      <li>Regular security assessments</li>
+      <li>Limited employee access to personal data</li>
+    </ul>
+    <p>However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security of your data.</p>
 
-          {/* International Data Transfers */}
-          <Section title="10. International Data Transfers">
-            <Paragraph>
-              Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. We ensure appropriate safeguards are in place for such transfers, including standard contractual clauses approved by the European Commission.
-            </Paragraph>
-          </Section>
+    <h2>8. YOUR RIGHTS (GDPR)</h2>
+    <p>Under the General Data Protection Regulation (GDPR), if you are in the European Economic Area, you have the following rights:</p>
+    <ul>
+      <li>Access: Request a copy of your personal data</li>
+      <li>Rectification: Request correction of inaccurate data</li>
+      <li>Erasure: Request deletion of your data ("right to be forgotten")</li>
+      <li>Restriction: Request limited processing of your data</li>
+      <li>Portability: Receive your data in a structured, machine-readable format</li>
+      <li>Objection: Object to processing based on legitimate interests</li>
+      <li>Withdraw consent: Withdraw consent at any time where processing is based on consent</li>
+    </ul>
+    <p>To exercise these rights, contact us at jace@inkledger.app. We will respond within 30 days.</p>
 
-          {/* Cookies and Tracking */}
-          <Section title="11. Cookies and Tracking">
-            <Paragraph>
-              Our web application may use cookies and similar technologies to:
-            </Paragraph>
-            <BulletPoint>Keep you logged in</BulletPoint>
-            <BulletPoint>Remember your preferences</BulletPoint>
-            <BulletPoint>Analyze usage patterns to improve our Service</BulletPoint>
-            <Paragraph>
-              You can control cookies through your browser settings. Disabling cookies may affect the functionality of our Service.
-            </Paragraph>
-          </Section>
+    <h2>9. CHILDREN'S PRIVACY</h2>
+    <p>inkLedger is not intended for use by individuals under the age of 18. We do not knowingly collect personal information from minors. The tattoo industry serves adult clients, and our Service is designed exclusively for users who are 18 years of age or older.</p>
+    <p>If we become aware that we have collected personal information from a minor, we will take steps to delete that information promptly. If you believe a minor has provided us with personal information, please contact us immediately at jace@inkledger.app.</p>
 
-          {/* Changes to This Policy */}
-          <Section title="12. Changes to This Policy">
-            <Paragraph>
-              We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the new policy on this page and updating the "Last updated" date. We encourage you to review this policy periodically.
-            </Paragraph>
-            <Paragraph>
-              Continued use of the Service after changes constitutes acceptance of the updated policy.
-            </Paragraph>
-          </Section>
+    <h2>10. INTERNATIONAL DATA TRANSFERS</h2>
+    <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. We ensure appropriate safeguards are in place for such transfers, including standard contractual clauses approved by the European Commission.</p>
 
-          {/* Contact Us */}
-          <Section title="13. Contact Us">
-            <Paragraph>
-              If you have questions, concerns, or complaints about this Privacy Policy or our data practices, please contact us:
-            </Paragraph>
-            <View style={styles.contactBox}>
-              <Text style={styles.contactLabel}>Email</Text>
-              <Text style={styles.contactValue}>jace@inkledger.app</Text>
-              
-              <Text style={styles.contactLabel}>Website</Text>
-              <Text style={styles.contactValue}>https://inkledger.app</Text>
-              
-              <Text style={styles.contactLabel}>Subject</Text>
-              <Text style={styles.contactValue}>Privacy Policy Inquiry</Text>
-            </View>
-            <Paragraph>
-              We aim to respond to all inquiries within 30 days. For complaints, you also have the right to lodge a complaint with your local data protection authority.
-            </Paragraph>
-          </Section>
+    <h2>11. COOKIES AND TRACKING</h2>
+    <p>Our web application may use cookies and similar technologies to:</p>
+    <ul>
+      <li>Keep you logged in</li>
+      <li>Remember your preferences</li>
+      <li>Analyze usage patterns to improve our Service</li>
+    </ul>
+    <p>You can control cookies through your browser settings. Disabling cookies may affect the functionality of our Service.</p>
 
-          {/* Legal Basis */}
-          <Section title="14. Legal Basis for Processing">
-            <Paragraph>We process your personal data based on:</Paragraph>
-            <BulletPoint>Contract: To fulfill our agreement to provide the Service</BulletPoint>
-            <BulletPoint>Consent: Where you have given explicit consent</BulletPoint>
-            <BulletPoint>Legitimate interests: To improve and secure our Service</BulletPoint>
-            <BulletPoint>Legal obligation: To comply with applicable laws and regulations</BulletPoint>
-          </Section>
+    <h2>12. CHANGES TO THIS POLICY</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the new policy on this page and updating the "Last updated" date. We encourage you to review this policy periodically.</p>
+    <p>Continued use of the Service after changes constitutes acceptance of the updated policy.</p>
 
-{/* Footer */}
-<View style={styles.footer}>
-  <View style={styles.footerLinks}>
-    <TouchableOpacity onPress={() => handleNavigation('/privacy')}>
-      <Text style={styles.footerLink}>Privacy Policy</Text>
-    </TouchableOpacity>
-    <Text style={styles.footerDivider}>•</Text>
-    <TouchableOpacity onPress={() => handleNavigation('/terms')}>
-      <Text style={styles.footerLink}>Terms of Service</Text>
-    </TouchableOpacity>
-    <Text style={styles.footerDivider}>•</Text>
-    <TouchableOpacity onPress={() => Linking.openURL('mailto:jace@inkledger.app')}>
-      <Text style={styles.footerLink}>Support</Text>
-    </TouchableOpacity>
-  </View>
-  <Text style={styles.footerText}>
-    © 2025 inkLedger. All rights reserved.
-  </Text>
-  <Text style={styles.footerText}>
-    Made with ❤️ in the Netherlands
-  </Text>
-</View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <h2>13. CONTACT US</h2>
+    <p>If you have questions, concerns, or complaints about this Privacy Policy or our data practices, please contact us:</p>
+    <div class="contact-box">
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:jace@inkledger.app">jace@inkledger.app</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Website</span>
+        <span class="contact-value"><a href="https://inkledger.app">https://inkledger.app</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Subject</span>
+        <span class="contact-value">Privacy Policy Inquiry</span>
+      </div>
+    </div>
+    <p>We aim to respond to all inquiries within 30 days. For complaints, you also have the right to lodge a complaint with your local data protection authority.</p>
+
+    <h2>14. LEGAL BASIS FOR PROCESSING</h2>
+    <p>We process your personal data based on:</p>
+    <ul>
+      <li>Contract: To fulfill our agreement to provide the Service</li>
+      <li>Consent: Where you have given explicit consent</li>
+      <li>Legitimate interests: To improve and secure our Service</li>
+      <li>Legal obligation: To comply with applicable laws and regulations</li>
+    </ul>
   </main>
+
+  <footer class="footer-bar">
+    <div class="footer-links">
+      <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+      <span class="footer-divider">&bull;</span>
+      <a href="/terms.html" class="footer-link">Terms of Service</a>
+      <span class="footer-divider">&bull;</span>
+      <a href="mailto:jace@inkledger.app" class="footer-link">Support</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 inkLedger. All rights reserved.</p>
+  </footer>
 </body>
 </html>
