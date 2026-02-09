@@ -482,7 +482,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 580px;
+      min-height: 640px;
     }
 
     /* Dot pattern behind phone like Baselayer */
@@ -505,31 +505,48 @@
       height: 100%;
     }
 
-    /* Phone mockup */
+    /* Phone mockup — iPhone 15 Pro frame */
     .phone-mockup {
       position: relative;
       z-index: 5;
       width: 280px;
-      height: 574px;
-      border-radius: 44px;
-      border: 6px solid #2a2a2a;
-      background: #1a1a1a;
-      overflow: hidden;
+      height: 607px;
+      border-radius: 52px;
+      border: 8px solid #1a1a1a;
+      background: #0a0a0a;
       box-shadow:
-        0 40px 80px rgba(0,0,0,0.25),
-        0 0 0 1px rgba(0,0,0,0.08);
+        0 40px 80px rgba(0,0,0,0.3),
+        0 10px 30px rgba(0,0,0,0.2),
+        0 0 0 1px rgba(255,255,255,0.05),
+        inset 0 0 0 1px rgba(255,255,255,0.06);
       transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+    }
+    .phone-mockup::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 53px;
+      border: 1px solid rgba(255,255,255,0.08);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .phone-mockup::after {
+      content: '';
+      position: absolute;
+      right: -11px;
+      top: 140px;
+      width: 3px;
+      height: 32px;
+      background: #1a1a1a;
+      border-radius: 0 2px 2px 0;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.04);
     }
     .phone-screen {
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, #1a1028 0%, #0f0f1a 30%, #0a0a0a 100%);
-      border-radius: 38px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 48px 20px 20px;
+      border-radius: 44px;
       overflow: hidden;
+      background: #fff;
       position: relative;
     }
     .phone-dynamic-island {
@@ -537,141 +554,21 @@
       top: 10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 86px;
-      height: 26px;
+      width: 92px;
+      height: 28px;
       background: #000;
       border-radius: 20px;
       z-index: 10;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.8);
     }
-
-    /* Phone screen UI elements */
-    .phone-ui-header {
+    .phone-screen-img {
+      display: block;
       width: 100%;
-      text-align: center;
-      margin-bottom: 16px;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 44px;
     }
-    .phone-ui-greeting {
-      font-size: 11px;
-      color: #666;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .phone-ui-name {
-      font-family: var(--font-display);
-      font-size: 28px;
-      color: #f5f5f5;
-      letter-spacing: 0.02em;
-    }
-    .phone-ui-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      width: 100%;
-      margin-bottom: 14px;
-    }
-    .phone-ui-stat {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 12px;
-      text-align: center;
-    }
-    .phone-ui-stat-value {
-      font-family: var(--font-display);
-      font-size: 22px;
-      color: #f5f5f5;
-      letter-spacing: 0.02em;
-    }
-    .phone-ui-stat-label {
-      font-size: 9px;
-      color: #666;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-    .phone-ui-booking {
-      width: 100%;
-      background: rgba(30, 27, 75, 0.15);
-      border: 1px solid rgba(30, 27, 75, 0.25);
-      border-radius: 14px;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .phone-ui-booking-avatar {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #fff;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .phone-ui-booking-info {
-      flex: 1;
-    }
-    .phone-ui-booking-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: #f5f5f5;
-    }
-    .phone-ui-booking-detail {
-      font-size: 10px;
-      color: #999;
-      margin-top: 1px;
-    }
-    .phone-ui-booking-time {
-      font-size: 10px;
-      font-weight: 600;
-      color: #8b85c1;
-      letter-spacing: 0.02em;
-    }
-    .phone-ui-chart {
-      width: 100%;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 14px;
-      margin-bottom: 10px;
-    }
-    .phone-ui-chart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .phone-ui-chart-title {
-      font-size: 10px;
-      color: #666;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .phone-ui-chart-amount {
-      font-family: var(--font-display);
-      font-size: 18px;
-      color: var(--ink-green);
-    }
-    .phone-ui-chart-bars {
-      display: flex;
-      align-items: flex-end;
-      gap: 4px;
-      height: 60px;
-    }
-    .phone-ui-chart-bar {
-      flex: 1;
-      background: var(--accent);
-      border-radius: 3px 3px 0 0;
-      opacity: 0.6;
-      transition: opacity 0.3s;
-    }
-    .phone-ui-chart-bar:nth-child(5) { opacity: 1; }
 
     /* Floating info badges like Baselayer */
     .floating-badge {
@@ -1272,7 +1169,7 @@
       .hero-form-success { margin: 0 auto; }
       .hero-privacy { text-align: center; }
 
-      .hero-visual { min-height: 500px; }
+      .hero-visual { min-height: 560px; }
       .hero-dot-grid { display: none; }
       .floating-badge--tl { left: 0; top: 30px; }
       .floating-badge--tr { right: 0; top: 80px; }
@@ -1288,14 +1185,16 @@
     @media (max-width: 480px) {
       .phone-mockup {
         width: 240px;
-        height: 492px;
-        border-width: 5px;
-        border-radius: 38px;
+        height: 520px;
+        border-width: 7px;
+        border-radius: 46px;
       }
-      .phone-screen { border-radius: 33px; padding: 42px 16px 16px; }
-      .phone-dynamic-island { width: 72px; height: 22px; }
+      .phone-mockup::after { top: 120px; right: -10px; width: 2px; height: 28px; }
+      .phone-screen { border-radius: 39px; }
+      .phone-screen-img { border-radius: 39px; }
+      .phone-dynamic-island { width: 78px; height: 24px; }
       .floating-badge { font-size: 10px; padding: 8px 14px; }
-      .hero-visual { min-height: 420px; }
+      .hero-visual { min-height: 460px; }
     }
 
     /* Focus visible */
@@ -1440,53 +1339,9 @@
 
           <!-- Phone -->
           <div class="phone-mockup">
-            <div class="phone-dynamic-island"></div>
             <div class="phone-screen">
-              <div class="phone-ui-header">
-                <div class="phone-ui-greeting">Welcome back</div>
-                <div class="phone-ui-name">Studio Alex</div>
-              </div>
-              <div class="phone-ui-stats">
-                <div class="phone-ui-stat">
-                  <div class="phone-ui-stat-value">€4,820</div>
-                  <div class="phone-ui-stat-label">Revenue</div>
-                </div>
-                <div class="phone-ui-stat">
-                  <div class="phone-ui-stat-value">23</div>
-                  <div class="phone-ui-stat-label">Bookings</div>
-                </div>
-              </div>
-              <div class="phone-ui-booking">
-                <div class="phone-ui-booking-avatar">M</div>
-                <div class="phone-ui-booking-info">
-                  <div class="phone-ui-booking-name">Maria de Vries</div>
-                  <div class="phone-ui-booking-detail">Sleeve — Session 2 of 4</div>
-                </div>
-                <div class="phone-ui-booking-time">14:00</div>
-              </div>
-              <div class="phone-ui-booking" style="border-color: rgba(16,185,129,0.2); background: rgba(16,185,129,0.06);">
-                <div class="phone-ui-booking-avatar" style="background: #10b981;">J</div>
-                <div class="phone-ui-booking-info">
-                  <div class="phone-ui-booking-name">Jan Bakker</div>
-                  <div class="phone-ui-booking-detail">Back piece — Consultation</div>
-                </div>
-                <div class="phone-ui-booking-time" style="color: #10b981;">16:30</div>
-              </div>
-              <div class="phone-ui-chart">
-                <div class="phone-ui-chart-header">
-                  <span class="phone-ui-chart-title">Monthly Revenue</span>
-                  <span class="phone-ui-chart-amount">+18%</span>
-                </div>
-                <div class="phone-ui-chart-bars">
-                  <div class="phone-ui-chart-bar" style="height: 40%;"></div>
-                  <div class="phone-ui-chart-bar" style="height: 55%;"></div>
-                  <div class="phone-ui-chart-bar" style="height: 45%;"></div>
-                  <div class="phone-ui-chart-bar" style="height: 70%;"></div>
-                  <div class="phone-ui-chart-bar" style="height: 100%;"></div>
-                  <div class="phone-ui-chart-bar" style="height: 85%;"></div>
-                  <div class="phone-ui-chart-bar" style="height: 65%;"></div>
-                </div>
-              </div>
+              <div class="phone-dynamic-island"></div>
+              <img class="phone-screen-img" src="IMG_3083.png" alt="inkledger app dashboard" />
             </div>
           </div>
         </div>
