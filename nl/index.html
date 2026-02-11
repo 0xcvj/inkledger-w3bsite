@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="inkLedger — The all-in-one booking and bookkeeping app for freelance tattoo artists. Simplify taxes, track revenue, manage clients." data-i18n="index.meta.description" data-i18n-attr="content">
+  <meta name="description" content="inkLedger — Anti-chaos OS for tattoo artists. Bookings, deposits, consent forms, invoices, expenses, and tax-ready exports." data-i18n="index.meta.description" data-i18n-attr="content">
   <meta name="keywords" content="tattoo booking app, freelance tattoo artist, ZZP tattoo, bookkeeping tattoo, inkLedger">
   <meta name="author" content="inkLedger">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://inkledger.app">
 
-  <meta property="og:title" content="inkLedger — Book. Ink. Earn." data-i18n="index.meta.og_title" data-i18n-attr="content">
+  <meta property="og:title" content="inkLedger — Kill the chaos." data-i18n="index.meta.og_title" data-i18n-attr="content">
   <meta property="og:description" content="The all-in-one booking and bookkeeping app built for freelance tattoo artists." data-i18n="index.meta.og_description" data-i18n-attr="content">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://inkledger.app">
@@ -17,10 +17,10 @@
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="inkLedger — Book. Ink. Earn." data-i18n="index.meta.twitter_title" data-i18n-attr="content">
+  <meta name="twitter:title" content="inkLedger — Kill the chaos." data-i18n="index.meta.twitter_title" data-i18n-attr="content">
   <meta name="twitter:description" content="The all-in-one booking and bookkeeping app built for freelance tattoo artists." data-i18n="index.meta.twitter_description" data-i18n-attr="content">
 
-  <title data-i18n="index.meta.title">inkLedger — Booking & Bookkeeping for Tattoo Artists</title>
+  <title data-i18n="index.meta.title">inkLedger — Kill admin chaos</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/icon.png">
 
@@ -40,17 +40,17 @@
       --bg-surface: #edece8;
       --bg-surface-elevated: #e4e3df;
       --bg-surface-hover: #dddcd8;
-      --bg-accent-subtle: rgba(30, 27, 75, 0.06);
+      --bg-accent-subtle: rgba(204, 51, 0, 0.06);
 
       --text-primary: #1a1a1a;
       --text-secondary: #5a5a5a;
       --text-muted: #8a8a8a;
       --text-inverse: #f6f5f1;
 
-      --accent: #1e1b4b;
-      --accent-hover: #2d2a5e;
-      --accent-glow: rgba(30, 27, 75, 0.3);
-      --accent-subtle: rgba(30, 27, 75, 0.08);
+      --accent: #cc3300;
+      --accent-hover: #b83200;
+      --accent-glow: rgba(204, 51, 0, 0.28);
+      --accent-subtle: rgba(204, 51, 0, 0.08);
 
       --ink-red: #dc2626;
       --ink-green: #10b981;
@@ -59,7 +59,7 @@
       --ink-pink: #ec4899;
 
       --border: rgba(0,0,0,0.08);
-      --border-accent: rgba(30, 27, 75, 0.2);
+      --border-accent: rgba(204, 51, 0, 0.22);
 
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
       --ease-smooth: cubic-bezier(0.45, 0, 0.15, 1);
@@ -306,8 +306,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 20% 40%, rgba(30, 27, 75, 0.04) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 80% at 80% 60%, rgba(30, 27, 75, 0.03) 0%, transparent 70%);
+        radial-gradient(ellipse 80% 60% at 20% 40%, rgba(204, 51, 0, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 80% 60%, rgba(204, 51, 0, 0.03) 0%, transparent 70%);
     }
     .hero-bg::after {
       content: '';
@@ -329,7 +329,7 @@
     .hero-corner::before, .hero-corner::after {
       content: '';
       position: absolute;
-      background: rgba(30, 27, 75, 0.2);
+      background: rgba(204, 51, 0, 0.2);
     }
     .hero-corner::before { width: 20px; height: 1.5px; }
     .hero-corner::after { width: 1.5px; height: 20px; }
@@ -790,7 +790,7 @@
       right: 18px;
       font-family: var(--font-display);
       font-size: 42px;
-      color: rgba(30, 27, 75, 0.06);
+      color: rgba(204, 51, 0, 0.06);
       line-height: 1;
     }
     .step-icon {
@@ -882,7 +882,7 @@
       max-width: 900px;
       margin: 0 auto;
       padding: clamp(36px, 5vw, 64px);
-      background: linear-gradient(135deg, var(--accent) 0%, #312e6e 100%);
+      background: linear-gradient(135deg, var(--accent) 0%, #7a1e00 100%);
       border-radius: 28px;
       text-align: center;
       position: relative;
@@ -1441,13 +1441,13 @@
       </a>
 
       <div class="nav-links" id="navLinks">
-        <a href="#how-it-works" class="nav-link" data-i18n="index.nav.how">How It Works</a>
+        <a href="#how-it-works" class="nav-link" data-i18n="index.nav.how">How it works</a>
         <a href="#features" class="nav-link" data-i18n="index.nav.features">Features</a>
         <a href="#faq" class="nav-link" data-i18n="index.nav.faq">FAQ</a>
 
         <div class="nav-actions">
-          <button class="btn-ghost-nav" onclick="document.getElementById('heroEmail').focus()" data-i18n="index.nav.sign_in">Sign In</button>
-          <button class="btn-primary-nav" onclick="document.getElementById('heroEmail').focus()" data-i18n="index.nav.join_waitlist">Join Waitlist</button>
+          <button class="btn-ghost-nav" onclick="document.getElementById('heroEmail').focus()" data-i18n="index.nav.sign_in">See demo</button>
+          <button class="btn-primary-nav" onclick="document.getElementById('heroEmail').focus()" data-i18n="index.nav.join_waitlist">Kill the chaos</button>
         </div>
       </div>
 
@@ -1470,16 +1470,16 @@
         <div class="hero-text">
           <div class="hero-badge hero-reveal hero-reveal-1">
             <span class="hero-badge-dot"></span>
-            <span data-i18n="index.hero.badge">Built for freelance tattoo artists</span>
+            <span data-i18n="index.hero.badge">For artists. Not accountants.</span>
           </div>
 
           <h1 class="hero-headline hero-reveal hero-reveal-2">
-            <span class="hero-headline-row" data-i18n="index.hero.headline_row1">BOOK. INK.</span>
-            <span class="hero-headline-row"><span class="hero-headline-accent" data-i18n="index.hero.headline_row2">EARN.</span></span>
+            <span class="hero-headline-row" data-i18n="index.hero.headline_row1">YOUR DMs ARE</span>
+            <span class="hero-headline-row"><span class="hero-headline-accent" data-i18n="index.hero.headline_row2">NOT A BOOKING SYSTEM.</span></span>
           </h1>
 
           <p class="hero-sub hero-reveal hero-reveal-3" data-i18n="index.hero.sub">
-            The all-in-one app for freelance tattoo artists. Manage bookings, track revenue, handle bookkeeping, and simplify your taxes — so you can focus on creating art.
+            Bookings, deposits, consent forms, expenses, and invoices — in one clean system. Get paid. Stay documented. Stay tax-ready.
           </p>
 
           <div id="heroFormContainer">
@@ -1488,7 +1488,7 @@
                 type="email"
                 class="hero-input"
                 id="heroEmail"
-                placeholder="Enter your email"
+                placeholder="Where do we send the receipts?"
                 data-i18n="index.hero.email_placeholder"
                 data-i18n-attr="placeholder"
                 autocomplete="email"
@@ -1499,11 +1499,11 @@
                 <input type="text" id="heroHp" name="hp_field" tabindex="-1" autocomplete="off">
               </div>
               <button type="submit" class="btn-primary" id="heroSubmit" data-i18n="index.hero.submit">
-                Join Waitlist
+                Kill the chaos
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
               </button>
             </form>
-            <p class="hero-privacy hero-reveal hero-reveal-5" data-i18n="index.hero.privacy">No spam. Unsubscribe anytime. We respect your privacy.</p>
+            <p class="hero-privacy hero-reveal hero-reveal-5" data-i18n="index.hero.privacy">No card. No chaos. Unsubscribe anytime.</p>
           </div>
         </div>
 
@@ -1514,7 +1514,7 @@
             <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.15">
                 <pattern id="dots-l" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-                  <text x="4" y="12" font-size="10" fill="#1e1b4b">+</text>
+                  <text x="4" y="12" font-size="10" fill="#cc3300">+</text>
                 </pattern>
                 <rect width="200" height="200" fill="url(#dots-l)"/>
               </g>
@@ -1524,7 +1524,7 @@
             <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.1">
                 <pattern id="dots-r" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1.5" fill="#1e1b4b"/>
+                  <circle cx="2" cy="2" r="1.5" fill="#cc3300"/>
                 </pattern>
                 <rect width="200" height="200" fill="url(#dots-r)"/>
               </g>
@@ -1540,7 +1540,7 @@
           </div>
           <div class="floating-badge floating-badge--tr badge-entrance badge-entrance-2">
             <span class="floating-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1e1b4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#cc3300" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </span>
             <span data-i18n="index.hero.badge_month">€2,340 This Month</span>
           </div>
@@ -1565,8 +1565,8 @@
     <!-- ========== TRUSTED BY ========== -->
     <section class="trust-section" aria-label="Trusted by artists" data-i18n="index.trust.aria" data-i18n-attr="aria-label">
       <div class="container">
-        <h2 class="trust-headline reveal" data-i18n="index.trust.title">TRUSTED BY TATTOO ARTISTS WORLDWIDE</h2>
-        <p class="trust-sub reveal reveal-delay-1" data-i18n="index.trust.sub">Join the growing community</p>
+        <h2 class="trust-headline reveal" data-i18n="index.trust.title">BUILT FOR SERIOUS TATTOO ARTISTS</h2>
+        <p class="trust-sub reveal reveal-delay-1" data-i18n="index.trust.sub">Join the anti-chaos crew</p>
         <div class="trust-logos reveal reveal-delay-2">
           <span class="trust-logo">INK STUDIO</span>
           <span class="trust-logo">BLACKWORK CO</span>
@@ -1584,9 +1584,9 @@
         <div class="story-card reveal">
           <div class="story-emoji">🖤</div>
           <p class="story-text" data-i18n="index.story.text">
-            We built inkLedger because tattoo artists shouldn't need a business degree to do their craft. You became an artist to create — not to fight calendars and tax forms. inkLedger handles the boring stuff so you can get back to what matters: the ink.
+            We built inkLedger because your time is worth more than admin. You didn’t become an artist to chase deposits, hunt messages, and panic at tax time. Keep it clean. Keep it documented.
           </p>
-          <p class="story-author" data-i18n="index.story.author">Made with ❤️ in the Netherlands</p>
+          <p class="story-author" data-i18n="index.story.author">Made in NL. Built to stay clean.</p>
         </div>
       </div>
     </section>
@@ -1594,17 +1594,17 @@
     <!-- ========== HOW IT WORKS ========== -->
     <section class="how-section" id="how-it-works" aria-label="How it works" data-i18n="index.how.aria" data-i18n-attr="aria-label">
       <div class="container">
-        <p class="section-eyebrow reveal" data-i18n="index.how.eyebrow">How It Works</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="index.how.title">YOUR STUDIO, SIMPLIFIED</h2>
+        <p class="section-eyebrow reveal" data-i18n="index.how.eyebrow">How it works</p>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="index.how.title">CHAOS → CONTROL</h2>
         <p class="section-subtitle reveal reveal-delay-2" data-i18n="index.how.sub">
-          From client inquiry to tax filing — every step of your freelance tattoo business in one place.
+          From inquiry to invoice to export. Everything in one place. Nothing gets lost.
         </p>
 
         <div class="steps-grid">
           <div class="step-card reveal reveal-delay-1">
             <span class="step-number">01</span>
-            <div class="step-icon" style="background: rgba(30,27,75,0.1);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1e1b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div class="step-icon" style="background: rgba(204, 51, 0, 0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#cc3300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
             <h3 class="step-title" data-i18n="index.how.step1.title">SMART BOOKING</h3>
             <p class="step-desc" data-i18n="index.how.step1.desc">Clients book directly through your personalized page. Upload design references, pick a slot, pay a deposit — all automatic.</p>
@@ -1648,8 +1648,8 @@
 
           <div class="step-card reveal reveal-delay-6">
             <span class="step-number">06</span>
-            <div class="step-icon" style="background: rgba(30,27,75,0.1);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1e1b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div class="step-icon" style="background: rgba(204, 51, 0, 0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#cc3300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
             <h3 class="step-title" data-i18n="index.how.step6.title">TAX-READY BOOKKEEPING</h3>
             <p class="step-desc" data-i18n="index.how.step6.desc">Revenue tracking, expense logging, and quarterly overviews built for Dutch freelancers. Tax season? Already handled.</p>
@@ -1661,10 +1661,10 @@
     <!-- ========== FEATURES / AND MORE ========== -->
     <section class="features-section" id="features" aria-label="Features" data-i18n="index.features.aria" data-i18n-attr="aria-label">
       <div class="container">
-        <p class="section-eyebrow reveal" data-i18n="index.features.eyebrow">And More</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="index.features.title">BUILT FOR YOUR WORKFLOW</h2>
+        <p class="section-eyebrow reveal" data-i18n="index.features.eyebrow">No fluff</p>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="index.features.title">BUILT TO STAY CLEAN</h2>
         <p class="section-subtitle reveal reveal-delay-2" data-i18n="index.features.sub">
-          Every feature designed with freelance tattoo artists in mind.
+          Every feature exists to kill chaos. Period.
         </p>
 
         <div class="features-grid">
@@ -1780,7 +1780,7 @@
         </p>
         <div id="ctaFormContainer">
           <form class="cta-form reveal reveal-delay-2" id="ctaForm">
-            <input type="email" class="hero-input" id="ctaEmail" placeholder="Enter your email" autocomplete="email" required data-i18n="index.cta.email_placeholder" data-i18n-attr="placeholder">
+            <input type="email" class="hero-input" id="ctaEmail" placeholder="Where do we send the receipts?" autocomplete="email" required data-i18n="index.cta.email_placeholder" data-i18n-attr="placeholder">
             <div class="honeypot" aria-hidden="true">
               <label for="ctaHp" data-i18n="index.cta.honeypot">Leave this field blank</label>
               <input type="text" id="ctaHp" name="hp_field" tabindex="-1" autocomplete="off">
