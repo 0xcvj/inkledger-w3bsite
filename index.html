@@ -734,7 +734,7 @@
     }
 
     /* ========================================
-       TRUSTED BY / LOGO STRIP
+       TRUSTED BY / TESTIMONIAL CAROUSEL
        ======================================== */
     .trust-section {
       padding: var(--space-4xl) 0;
@@ -755,21 +755,69 @@
       color: var(--text-muted);
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-bottom: var(--space-3xl);
+      margin-bottom: clamp(28px, 4vw, 44px);
     }
-    .trust-logos {
+    .trust-carousel {
+      --trust-gap: clamp(14px, 2.6vw, 26px);
+      --trust-card-w: clamp(220px, 18vw, 260px);
+      position: relative;
+    }
+    .trust-carousel-mask {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%);
+      padding: 2px 0;
+    }
+    .trust-carousel-track {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: clamp(32px, 5vw, 72px);
-      flex-wrap: wrap;
-      opacity: 0.45;
+      width: max-content;
+      animation: trust-carousel-scroll 36s linear infinite;
     }
-    .trust-logo {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 2.5vw, 30px);
-      color: var(--text-primary);
-      letter-spacing: 0.06em;
+    .trust-carousel-group {
+      display: flex;
+      gap: var(--trust-gap);
+      padding-right: var(--trust-gap);
+      align-items: stretch;
+    }
+    .trust-card {
+      width: var(--trust-card-w);
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .trust-card-media {
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--bg-surface);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.12);
+    }
+    .trust-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out);
+    }
+    .trust-card-copy {
+      font-size: clamp(12px, 0.9vw, 14px);
+      line-height: 1.45;
+      color: var(--text-secondary);
+      letter-spacing: 0.01em;
+      padding: 0 2px;
+      min-height: 2.9em;
+    }
+    .trust-carousel:hover .trust-carousel-track,
+    .trust-carousel:focus-within .trust-carousel-track {
+      animation-play-state: paused;
+    }
+    .trust-card:hover .trust-card-media img,
+    .trust-card:focus-within .trust-card-media img {
+      transform: scale(1.04);
+    }
+    @keyframes trust-carousel-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
 
     /* ========================================
@@ -1259,6 +1307,19 @@
         scroll-behavior: auto !important;
       }
       .reveal { opacity: 1; transform: none; }
+      .trust-carousel-mask {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        mask-image: none;
+        -webkit-mask-image: none;
+        scrollbar-width: thin;
+      }
+      .trust-carousel-track { animation: none; }
+      .trust-carousel-group {
+        padding-right: 0;
+      }
+      .trust-card { scroll-snap-align: start; }
     }
 
     /* ========================================
@@ -1327,7 +1388,10 @@
 
       .steps-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
       .features-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-      .trust-logos { gap: 24px; }
+      .trust-carousel {
+        --trust-card-w: clamp(180px, 32vw, 220px);
+        --trust-gap: clamp(12px, 2.4vw, 18px);
+      }
 
       .cta-form { flex-direction: column; max-width: 340px; }
     }
@@ -1345,6 +1409,10 @@
       .phone-dynamic-island { width: 78px; height: 24px; }
       .floating-badge { font-size: 10px; padding: 8px 14px; }
       .hero-visual { min-height: 460px; }
+      .trust-carousel {
+        --trust-card-w: clamp(160px, 44vw, 178px);
+        --trust-gap: 12px;
+      }
     }
 
     /* ========================================
@@ -1694,13 +1762,63 @@
       <div class="container">
         <h2 class="trust-headline reveal" data-i18n="index.trust.title">BUILT FOR SERIOUS TATTOO ARTISTS.</h2>
         <p class="trust-sub reveal reveal-delay-1" data-i18n="index.trust.sub">Join the growing community</p>
-        <div class="trust-logos reveal reveal-delay-2">
-          <span class="trust-logo">INK STUDIO</span>
-          <span class="trust-logo">BLACKWORK CO</span>
-          <span class="trust-logo">NEEDLE & THREAD</span>
-          <span class="trust-logo">SACRED INK</span>
-          <span class="trust-logo">DOTWORK LAB</span>
-          <span class="trust-logo">FINE LINE</span>
+        <div class="trust-carousel reveal reveal-delay-2">
+          <div class="trust-carousel-mask">
+            <div class="trust-carousel-track">
+              <div class="trust-carousel-group">
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-01.jpg" alt="Tattoo testimonial 1" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card1">No more deposit confusion. Every booking is crystal clear.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-02.jpg" alt="Tattoo testimonial 2" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card2">Clients show up prepared. All references in one thread.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-03.jpg" alt="Tattoo testimonial 3" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card3">Payments, notes, and follow-ups stay perfectly organized.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-04.jpg" alt="Tattoo testimonial 4" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card4">I finally stopped juggling DMs, screenshots, and spreadsheets.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-05.jpg" alt="Tattoo testimonial 5" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card5">Tax season feels calm when everything is already tracked.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-06.jpg" alt="Tattoo testimonial 6" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card6">Clean workflow, better sessions, more time to create.</p>
+                </article>
+              </div>
+              <div class="trust-carousel-group" aria-hidden="true">
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-01.jpg" alt="" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card1">No more deposit confusion. Every booking is crystal clear.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-02.jpg" alt="" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card2">Clients show up prepared. All references in one thread.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-03.jpg" alt="" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card3">Payments, notes, and follow-ups stay perfectly organized.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-04.jpg" alt="" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card4">I finally stopped juggling DMs, screenshots, and spreadsheets.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-05.jpg" alt="" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card5">Tax season feels calm when everything is already tracked.</p>
+                </article>
+                <article class="trust-card">
+                  <div class="trust-card-media"><img src="assets/testimonial-06.jpg" alt="" loading="lazy" decoding="async" /></div>
+                  <p class="trust-card-copy" data-i18n="index.trust.card6">Clean workflow, better sessions, more time to create.</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
