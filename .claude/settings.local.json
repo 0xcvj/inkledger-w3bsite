@@ -7,7 +7,14 @@
       "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" show 2689fbf --stat)",
       "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" show e0dd5fd --stat)",
       "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" show 2689fbf -- index.html)",
-      "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" show e0dd5fd -- index.html)"
+      "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" show e0dd5fd -- index.html)",
+      "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" log --oneline a0a8865 aa891b1 1f597f6 49325f7 442d94f 75bd2bd f76e245 7fb6352 --format=\"%h %s\" -- index.html nl/index.html)",
+      "Bash(git -C \"c:/Users/Jace/Projects/pr02-w-nkldger\" show --stat a0a8865 aa891b1 1f597f6 49325f7 442d94f)",
+      "Bash(py --version)",
+      "Bash(where python*)",
+      "Bash(py -m playwright:*)",
+      "Bash(py -m pip install:*)",
+      "Bash(py:*)"
     ]
   }
 }
