@@ -1530,7 +1530,7 @@
           <div class="sec-features">
             <div class="sec-feature" data-slide="0" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar">
-                <img src="/assets/testimonial-02.jpg" alt="Luisltattoo" loading="lazy">
+                <img src="/assets/testimonial-01.jpg" alt="Luisltattoo" loading="lazy">
               </span>
               <span class="sec-studio-name">Luisltattoo<span class="sec-studio-city">Den Haag</span></span>
             </div>
@@ -1551,7 +1551,7 @@
         <div class="sec-visual reveal reveal-d2" aria-label="Studio showcase">
           <div class="sec-slideshow">
             <div class="sec-slide sec-slide--active" data-index="0">
-              <img src="/assets/testimonial-02.jpg" alt="Luisltattoo, Den Haag" class="sec-slide-img">
+              <img src="/assets/testimonial-01.jpg" alt="Luisltattoo, Den Haag" class="sec-slide-img">
             </div>
             <div class="sec-slide sec-slide--locked" data-index="1">
               <img src="/assets/testimonial-03.jpg" alt="" class="sec-slide-img">
@@ -1683,6 +1683,7 @@
           <li><a href="#" data-i18n="index.footer.home">Home</a></li>
           <li><a href="#features" data-i18n="index.footer.features">Features</a></li>
           <li><a href="#how" data-i18n="index.footer.how">How It Works</a></li>
+          <li><a href="mailto:support@inkledger.app">Support</a></li>
           <li><a href="/privacy.html">Privacy</a> &amp; <a href="/terms.html">Terms</a></li>
         </ul>
       </div>
@@ -1698,7 +1699,7 @@
           </a>
         </div>
         -->
-        <div class="footer-newsletter">
+        <div class="footer-newsletter" id="footerFormContainer">
           <input type="email" id="footerEmail" placeholder="name@email.com" autocomplete="email">
           <button type="button" id="footerSubmit">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
@@ -1847,6 +1848,29 @@
     }
 
     handleWaitlistSubmit('heroForm', 'heroEmail', 'heroFormContainer', 'hero', 'heroHp');
+
+    // Footer newsletter — calls same API with source='footer'
+    (function() {
+      var btn       = document.getElementById('footerSubmit');
+      var input     = document.getElementById('footerEmail');
+      var container = document.getElementById('footerFormContainer');
+      if (!btn || !input || !container) return;
+      var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function submit() {
+        var email = input.value.trim();
+        if (!email || !re.test(email)) { input.focus(); return; }
+        btn.disabled = true;
+        submitWaitlist(email, 'footer', '')
+          .then(function()  { showWaitlistSuccess(container); })
+          .catch(function() { showWaitlistError(container);   });
+      }
+
+      btn.addEventListener('click', submit);
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') submit();
+      });
+    })();
 
     // Floating cards: scroll direction controls center/spread state
     var heroSection = document.querySelector('.hero');
