@@ -20,6 +20,7 @@
   <title data-i18n="index.meta.title">inkLedger - Booking & Bookkeeping for Tattoo Artists</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/icon.png">
+  <link rel="preload" as="image" href="/IMG_3083.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -57,6 +58,17 @@
     a { text-decoration: none; color: inherit; }
     .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 10000; font-weight: 600; transition: top 0.3s; }
     .skip-link:focus { top: 0; }
+    @supports (content-visibility: auto) {
+      .features-dark,
+      .ecosystem,
+      .security,
+      .faq,
+      .final-cta,
+      .footer {
+        content-visibility: auto;
+        contain-intrinsic-size: 960px;
+      }
+    }
 
     /* •••••••••••••••••••••••••••••••••••••••
        NAVIGATION  Floating pill (Framer style)
@@ -1394,6 +1406,8 @@
               alt="inkLedger app dashboard"
               data-i18n="index.hero.phone_alt"
               data-i18n-attr="alt"
+              width="1170"
+              height="2532"
               loading="eager"
               decoding="async"
               fetchpriority="high"
@@ -1452,7 +1466,7 @@
         <div class="fd-grid">
           <div class="fd-card reveal reveal-d1">
             <div class="fd-card-visual">
-              <img src="/assets/client - Copy.jpg" alt="" loading="lazy" decoding="async">
+              <img src="/assets/optimized/client-card.jpg" alt="" width="1200" height="792" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <h3 class="fd-card-title" data-i18n="index.features.item1.title">CLIENT MANAGEMENT</h3>
             <p class="fd-card-desc" data-i18n="index.features.item1.desc">Clients book directly through your personalized page. Upload design references, pick a slot, pay a deposit  all automatic.</p>
@@ -1460,7 +1474,7 @@
 
           <div class="fd-card reveal reveal-d2">
             <div class="fd-card-visual">
-              <img src="/assets/revenue.jpg" alt="" loading="lazy" decoding="async">
+              <img src="/assets/optimized/revenue-card.jpg" alt="" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <h3 class="fd-card-title" data-i18n="index.features.item2.title">REVENUE INSIGHTS</h3>
             <p class="fd-card-desc" data-i18n="index.features.item2.desc">Collect deposits upfront, track payments, and manage balances. No more chasing invoices or losing track of who paid what.</p>
@@ -1468,7 +1482,7 @@
 
           <div class="fd-card fd-card-quote reveal reveal-d3">
             <div class="fd-card-quote-bg">
-              <img src="/assets/testimonial-05.jpg" alt="" loading="lazy" decoding="async">
+              <img src="/assets/optimized/quote-card.jpg" alt="" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="fd-card-quote-text">
               <blockquote data-i18n="index.features.quote">"inkLedger exists because tattoo artists shouldn't have to wrestle spreadsheets to get paid. You became an artist to create  not to chase deposits, untangle calendars, and decode receipts."</blockquote>
@@ -1478,7 +1492,7 @@
 
           <div class="fd-card reveal reveal-d4">
             <div class="fd-card-visual">
-              <img src="/assets/taxes.jpg" alt="" loading="lazy" decoding="async">
+              <img src="/assets/optimized/taxes-card.jpg" alt="" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <h3 class="fd-card-title" data-i18n="index.features.item3.title">FEEL FREE.</h3>
             <p class="fd-card-desc" data-i18n="index.features.item3.desc">See your earnings in real-time. Monthly breakdowns, trends, and projections so you always know where your business stands.</p>
@@ -1529,19 +1543,19 @@
           <div class="sec-features">
             <div class="sec-feature" data-slide="0" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar">
-                <img src="/assets/testimonial-01.jpg" alt="Luisltattoo" loading="lazy">
+                <img src="/assets/optimized/avatars/community-01.jpg" alt="Luisltattoo" width="256" height="384" loading="lazy" decoding="async" fetchpriority="low">
               </span>
               <span class="sec-studio-name">Luisltattoo<span class="sec-studio-city">Den Haag</span></span>
             </div>
             <div class="sec-feature" data-slide="1" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar sec-avatar--blur">
-                <img src="/assets/testimonial-03.jpg" alt="" loading="lazy">
+                <img src="/assets/optimized/avatars/community-03.jpg" alt="" width="256" height="320" loading="lazy" decoding="async" fetchpriority="low">
               </span>
               <span class="sec-studio-name">Revealed soon<span class="sec-studio-city">Amsterdam</span></span>
             </div>
             <div class="sec-feature" data-slide="2" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar sec-avatar--blur">
-                <img src="/assets/testimonial-06.jpg" alt="" loading="lazy">
+                <img src="/assets/optimized/avatars/community-06.jpg" alt="" width="256" height="171" loading="lazy" decoding="async" fetchpriority="low">
               </span>
               <span class="sec-studio-name">Revealed soon<span class="sec-studio-city">Utrecht</span></span>
             </div>
@@ -1550,13 +1564,13 @@
         <div class="sec-visual reveal reveal-d2" aria-label="Studio showcase">
           <div class="sec-slideshow">
             <div class="sec-slide sec-slide--active" data-index="0">
-              <img src="/assets/testimonial-01.jpg" alt="Luisltattoo, Den Haag" class="sec-slide-img">
+              <img src="/assets/optimized/community-01.jpg" alt="Luisltattoo, Den Haag" class="sec-slide-img" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="sec-slide sec-slide--locked" data-index="1">
-              <img src="/assets/testimonial-03.jpg" alt="" class="sec-slide-img">
+              <img src="/assets/optimized/community-03.jpg" alt="" class="sec-slide-img" width="1200" height="1500" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="sec-slide sec-slide--locked" data-index="2">
-              <img src="/assets/testimonial-06.jpg" alt="" class="sec-slide-img">
+              <img src="/assets/optimized/community-06.jpg" alt="" class="sec-slide-img" width="1200" height="800" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="sec-slide-caption">
               <span class="sec-slide-label">Luisltattoo  Den Haag</span>
@@ -1713,12 +1727,20 @@
   (function() {
     'use strict';
 
-    // Loader
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        document.getElementById('loader').classList.add('done');
-      }, 500);
-    });
+    // Dismiss the loader as soon as the DOM is ready so images and fonts do not block first paint.
+    function dismissLoader() {
+      var loader = document.getElementById('loader');
+      if (!loader) return;
+      window.requestAnimationFrame(function() {
+        loader.classList.add('done');
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', dismissLoader, { once: true });
+    } else {
+      dismissLoader();
+    }
 
     // Nav toggle (mobile)
     var navToggle = document.getElementById('navToggle');
