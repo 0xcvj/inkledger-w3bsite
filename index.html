@@ -24,6 +24,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied' });
+  </script>
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-3FQYVJ5RRM"></script>
+  <script type="text/plain" data-consent="analytics">
+    gtag('js', new Date());
+    gtag('config', 'G-3FQYVJ5RRM');
+  </script>
 
   <style>
     /* •••••••••••••••••••••••••••••••••••••••
@@ -931,6 +941,20 @@
       color: rgba(255,255,255,0.5);
       transition: color 0.3s;
     }
+    .footer-link-button {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      font-family: var(--font-body);
+      font-size: 14px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .footer-link-button:hover,
+    .footer-link-button:focus-visible {
+      color: #fff;
+    }
     .footer-links-list a:hover { color: #fff; }
     .footer-right { text-align: right; }
     .footer-social-label {
@@ -994,6 +1018,55 @@
       transition: background 0.3s;
     }
     .footer-newsletter button:hover { background: rgba(255,255,255,0.16); }
+    .footer-language {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .footer-language-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+    }
+    .footer-language-picker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 12px 32px rgba(0,0,0,0.18);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .footer-language-option {
+      min-width: 54px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.58);
+      transition: color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease;
+    }
+    .footer-language-option:hover,
+    .footer-language-option:focus-visible {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .footer-language-option.is-active {
+      background: #f6f5f1;
+      color: #0b0b0b;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    }
 
     /* •••••••••••••••••••••••••••••••••••••••
        RESPONSIVE
@@ -1041,6 +1114,7 @@
       .footer-inner { flex-direction: column; }
       .footer-right { text-align: left; }
       .footer-social { justify-content: flex-start; }
+      .footer-language { align-items: flex-start; }
     }
 
     @media (max-width: 480px) {
@@ -1893,6 +1967,7 @@
           <li><a href="#how" data-i18n="index.footer.how">How It Works</a></li>
           <li><a href="mailto:support@inkledger.app">Support</a></li>
           <li><a href="/privacy.html">Privacy</a> &amp; <a href="/terms.html">Terms</a></li>
+          <li><button class="footer-link-button" type="button" id="cookieManageBtn">Cookie settings</button></li>
         </ul>
       </div>
       <div class="footer-right">
@@ -1913,6 +1988,13 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
             Subscribe
           </button>
+        </div>
+        <div class="footer-language" aria-label="Language selector">
+          <span class="footer-language-label">Language</span>
+          <div class="footer-language-picker">
+            <a class="footer-language-option" href="/nl" lang="nl">NL</a>
+            <a class="footer-language-option is-active" href="/" lang="en" aria-current="page">EN</a>
+          </div>
         </div>
       </div>
     </div>
@@ -2150,6 +2232,7 @@
     var acceptAllBtn = document.getElementById('cookieAcceptAll');
     var closeBtn = document.getElementById('cookieClose');
     var analyticsToggle = document.getElementById('cookieAnalytics');
+    var cookieManageBtn = document.getElementById('cookieManageBtn');
     var memoryConsent = null;
 
     function readConsent() {
@@ -2260,6 +2343,12 @@
     if (saveBtn) saveBtn.addEventListener('click', function() {
       var analytics = analyticsToggle ? analyticsToggle.checked : false;
       applyConsent({ analytics: analytics });
+    });
+    if (cookieManageBtn) cookieManageBtn.addEventListener('click', function() {
+      var storedConsent = normalizeConsent(readConsent());
+      if (analyticsToggle) analyticsToggle.checked = storedConsent.analytics;
+      showBanner();
+      openPrefs();
     });
 
     // Floating cards: scroll direction controls center/spread state
