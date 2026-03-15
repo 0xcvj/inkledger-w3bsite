@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — inkLedger</title>
+  <meta name="description" content="Insights, comparisons, and guides for tattoo artists. From the team behind inkLedger.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://inkledger.app/blog">
+  <meta property="og:title" content="Blog — inkLedger">
+  <meta property="og:description" content="Insights, comparisons, and guides for tattoo artists. From the team behind inkLedger.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inkledger.app/blog">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager (consent-gated) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied' });
+  </script>
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-3FQYVJ5RRM"></script>
+  <script type="text/plain" data-consent="analytics">
+    gtag('js', new Date());
+    gtag('config', 'G-3FQYVJ5RRM');
+  </script>
+
+  <!-- PostHog -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_WshcTxtUlLCWRd8G65zwZzAZcoxXrZjiJtnuiN1gUSO', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2026-01-30'
+    })
+  </script>
+
+  <style>
+    :root {
+      --off-white: #faf5f0;
+      --cream: #f5efe8;
+      --black: #0b0b0b;
+      --dark: #141414;
+      --dark-surface: #1c1c1c;
+      --gray: #6b6b6b;
+      --gray-light: #a0a0a0;
+      --gray-muted: #8a8a8a;
+      --accent: #cc3300;
+      --accent-hover: #b83200;
+      --accent-glow: rgba(204, 51, 0, 0.28);
+      --accent-subtle: rgba(204, 51, 0, 0.08);
+      --text-sm: clamp(13px, 0.9vw, 15px);
+      --border: rgba(0,0,0,0.08);
+      --border-dark: rgba(255,255,255,0.08);
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: var(--font-body); background: var(--off-white); color: var(--black); overflow-x: hidden; line-height: 1.6; }
+    ::selection { background: var(--accent); color: #fff; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* Back bar */
+    .back-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 245, 240, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(20px, 5vw, 80px);
+    }
+    .back-bar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 56px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--black);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .back-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-subtle);
+      transform: translateX(-2px);
+    }
+    .back-link svg { transition: transform 0.3s ease; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    /* Blog hero */
+    .blog-hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: clamp(48px, 8vw, 80px) clamp(20px, 5vw, 40px) 32px;
+    }
+    .blog-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 10vw, 120px);
+      letter-spacing: 0.02em;
+      line-height: 0.9;
+      margin-bottom: 16px;
+    }
+    .blog-hero p {
+      color: var(--gray);
+      font-size: 17px;
+      max-width: 480px;
+      line-height: 1.65;
+    }
+
+    /* Blog grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 40px) clamp(60px, 8vw, 100px);
+    }
+
+    .blog-card {
+      display: block;
+      background: var(--cream);
+      border-radius: 16px;
+      padding: clamp(28px, 3vw, 44px);
+      border: 1px solid var(--border);
+      transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.4s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 56px rgba(0,0,0,0.07);
+      border-color: rgba(0,0,0,0.14);
+    }
+
+    .blog-card-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+    }
+
+    .blog-card-tag {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+
+    .blog-card h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.5vw, 40px);
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      line-height: 1.05;
+      font-weight: 400;
+    }
+
+    .blog-card p {
+      color: var(--gray);
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      max-width: 640px;
+    }
+
+    .blog-card-meta {
+      font-size: 13px;
+      color: var(--gray-muted);
+      margin-bottom: 20px;
+    }
+
+    .blog-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.3s, gap 0.3s var(--ease-out);
+    }
+    .blog-card:hover .blog-card-link {
+      color: var(--accent);
+      gap: 12px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--black);
+      padding: clamp(40px, 5vw, 60px) clamp(20px, 5vw, 80px) clamp(24px, 3vw, 36px);
+      border-top: 1px solid var(--border-dark);
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .footer-logo-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-links-list a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+    .footer-link-button {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      font-family: var(--font-body);
+      font-size: 14px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .footer-link-button:hover,
+    .footer-link-button:focus-visible { color: #fff; }
+    .footer-links-list a:hover { color: #fff; }
+    .footer-right { text-align: right; }
+    .footer-newsletter {
+      display: flex;
+      gap: 0;
+      margin-top: 16px;
+    }
+    .footer-newsletter input {
+      flex: 1;
+      padding: 10px 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 13px;
+      outline: none;
+    }
+    .footer-newsletter input::placeholder { color: rgba(255,255,255,0.3); }
+    .footer-newsletter button {
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 0 8px 8px 0;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.3s;
+    }
+    .footer-newsletter button:hover { background: rgba(255,255,255,0.16); }
+    .footer-language {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .footer-language-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+    }
+    .footer-language-picker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 12px 32px rgba(0,0,0,0.18);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .footer-language-option {
+      min-width: 54px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.58);
+      transition: color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease;
+    }
+    .footer-language-option:hover,
+    .footer-language-option:focus-visible {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .footer-language-option.is-active {
+      background: #f6f5f1;
+      color: #0b0b0b;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    }
+
+    /* Cookie banner */
+    .cookie-banner {
+      position: fixed;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2000;
+      display: none;
+    }
+    .cookie-banner.is-visible { display: block; }
+    .cookie-banner-card {
+      background: #0b0b0b;
+      color: #f6f5f1;
+      border-radius: 20px;
+      padding: clamp(16px, 2vw, 24px);
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.45),
+        0 1px 0 rgba(255,255,255,0.04) inset;
+      display: grid;
+      grid-template-columns: 1.2fr auto;
+      gap: 16px 24px;
+      align-items: center;
+    }
+    .cookie-banner-title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2vw, 28px);
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .cookie-banner-text {
+      font-size: var(--text-sm);
+      color: rgba(246,245,241,0.78);
+      line-height: 1.6;
+      max-width: 560px;
+    }
+    .cookie-banner-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .btn-cookie {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      color: #f6f5f1;
+      cursor: pointer;
+      transition: transform 0.25s var(--ease-out), box-shadow 0.35s var(--ease-out), background 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
+    }
+    .btn-cookie:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255,255,255,0.35);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    }
+    .btn-cookie-primary {
+      background: #ffffff;
+      color: #0b0b0b;
+      border-color: transparent;
+    }
+    .btn-cookie-primary:hover {
+      box-shadow: 0 12px 28px rgba(255,255,255,0.25);
+    }
+    .cookie-banner-link {
+      color: rgba(246,245,241,0.9);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .cookie-preferences {
+      display: none;
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #111111;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+    .cookie-preferences.is-open { display: block; }
+    .cookie-preferences-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .cookie-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: #f6f5f1;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 0.2s var(--ease-out), border-color 0.3s var(--ease-out);
+    }
+    .cookie-close:hover {
+      transform: rotate(6deg);
+      border-color: rgba(255,255,255,0.4);
+    }
+    .cookie-preferences-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+    .cookie-pref-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .cookie-pref-item:first-child { border-top: 0; padding-top: 0; }
+    .cookie-pref-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #f6f5f1;
+      margin-bottom: 4px;
+    }
+    .cookie-pref-desc {
+      font-size: 13px;
+      color: rgba(246,245,241,0.68);
+      max-width: 460px;
+    }
+    .cookie-toggle {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(246,245,241,0.75);
+    }
+    .cookie-switch {
+      position: relative;
+      display: inline-flex;
+      width: 52px;
+      height: 30px;
+    }
+    .cookie-switch input { opacity: 0; width: 0; height: 0; }
+    .cookie-slider {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.14);
+      cursor: pointer;
+      transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+    }
+    .cookie-slider::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s var(--ease-out);
+    }
+    .cookie-switch input:checked + .cookie-slider {
+      background: #ffffff;
+      border-color: transparent;
+    }
+    .cookie-switch input:checked + .cookie-slider::after {
+      transform: translateX(22px);
+      background: #0b0b0b;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .footer-inner { flex-direction: column; }
+      .footer-right { text-align: left; }
+      .footer-language { align-items: flex-start; }
+    }
+    @media (max-width: 960px) {
+      .cookie-banner {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+      }
+      .cookie-banner-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .cookie-banner-actions {
+        justify-content: flex-start;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back bar -->
+  <div class="back-bar">
+    <div class="back-bar-inner">
+      <a class="back-link" href="/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m0 0 7 7m-7-7 7-7"/></svg>
+        Home
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <div class="blog-hero">
+      <h1>BLOG</h1>
+      <p>Insights, comparisons, and guides for tattoo artists who want to run their business without the chaos.</p>
+    </div>
+
+    <!-- Blog grid -->
+    <div class="blog-grid">
+
+      <a href="/blog/inkledger-vs-competitors-2026" class="blog-card">
+        <img class="blog-card-img" src="/blog/inkledger-vs-competitors-2026/blog1.jpg" alt="inkLedger vs tattoo booking competitors" width="1200" height="630" loading="lazy" decoding="async">
+        <div class="blog-card-tag">Comparison</div>
+        <h2>inkLedger vs Venue Ink, Porter, TattooGenda, Get Ink, Encre.me &amp; More</h2>
+        <p>Honest comparison of inkLedger vs 6 tattoo booking platforms. Features, pricing, and what actually matters for tattoo artists who want control, not chaos.</p>
+        <div class="blog-card-meta">March 15, 2026 &middot; 12 min read</div>
+        <span class="blog-card-link">
+          Read article
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <div class="footer-logo-icon"><img src="/icon.png" alt="inkLedger"></div>
+        </div>
+        <ul class="footer-links-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#how">How It Works</a></li>
+          <li><a href="mailto:support@inkledger.app">Support</a></li>
+          <li><a href="/privacy.html">Privacy</a> &amp; <a href="/terms.html">Terms</a></li>
+          <li><button class="footer-link-button" type="button" id="cookieManageBtn">Cookie settings</button></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <div class="footer-newsletter" id="footerFormContainer">
+          <input type="email" id="footerEmail" placeholder="name@email.com" autocomplete="email">
+          <button type="button" id="footerSubmit">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            Subscribe
+          </button>
+        </div>
+        <div class="footer-language" aria-label="Language selector">
+          <span class="footer-language-label">Language</span>
+          <div class="footer-language-picker">
+            <a class="footer-language-option" href="/nl" lang="nl">NL</a>
+            <a class="footer-language-option is-active" href="/" lang="en" aria-current="page">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-banner-card">
+      <div>
+        <div class="cookie-banner-title">Cookies & Privacy</div>
+        <p class="cookie-banner-text">
+          We use cookies to keep inkLedger running smoothly and to understand how you use the site.
+          Read our
+          <a class="cookie-banner-link" href="/privacy.html">Privacy Policy</a>
+          and
+          <a class="cookie-banner-link" href="/terms.html">Terms of Service</a>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="btn-cookie" type="button" id="cookieDecline">Decline</button>
+        <button class="btn-cookie" type="button" id="cookieCustomize">Customize</button>
+        <button class="btn-cookie btn-cookie-primary" type="button" id="cookieAccept">Accept all</button>
+      </div>
+    </div>
+    <div class="cookie-preferences" id="cookiePreferences" aria-hidden="true">
+      <div class="cookie-preferences-header">
+        <div class="cookie-banner-title">Cookie Preferences</div>
+        <button class="cookie-close" type="button" id="cookieClose" aria-label="Close">&times;</button>
+      </div>
+      <p class="cookie-banner-text">Choose which cookies you allow. You can change this anytime.</p>
+      <div class="cookie-preferences-list">
+        <div class="cookie-pref-item">
+          <div>
+            <div class="cookie-pref-title">Necessary</div>
+            <div class="cookie-pref-desc">Required for the site to function.</div>
+          </div>
+          <div class="cookie-toggle">Always on</div>
+        </div>
+        <div class="cookie-pref-item">
+          <div>
+            <div class="cookie-pref-title">Analytics</div>
+            <div class="cookie-pref-desc">Helps us improve the product.</div>
+          </div>
+          <label class="cookie-switch" for="cookieAnalytics">
+            <input type="checkbox" id="cookieAnalytics">
+            <span class="cookie-slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="cookie-banner-actions">
+        <button class="btn-cookie" type="button" id="cookieSave">Save preferences</button>
+        <button class="btn-cookie btn-cookie-primary" type="button" id="cookieAcceptAll">Accept all</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // Cookie banner + consent
+    var cookieKey = 'inkledger_cookie_consent';
+    var banner = document.getElementById('cookieBanner');
+    var prefs = document.getElementById('cookiePreferences');
+    var acceptBtn = document.getElementById('cookieAccept');
+    var declineBtn = document.getElementById('cookieDecline');
+    var customizeBtn = document.getElementById('cookieCustomize');
+    var saveBtn = document.getElementById('cookieSave');
+    var acceptAllBtn = document.getElementById('cookieAcceptAll');
+    var closeBtn = document.getElementById('cookieClose');
+    var analyticsToggle = document.getElementById('cookieAnalytics');
+    var cookieManageBtn = document.getElementById('cookieManageBtn');
+    var memoryConsent = null;
+
+    function readConsent() {
+      try {
+        var raw = localStorage.getItem(cookieKey);
+        if (!raw) return memoryConsent;
+        if (raw === 'accepted') return { analytics: true };
+        if (raw === 'declined') return { analytics: false };
+        return JSON.parse(raw);
+      } catch (e) {
+        return memoryConsent;
+      }
+    }
+
+    function writeConsent(consent) {
+      memoryConsent = consent;
+      try {
+        localStorage.setItem(cookieKey, JSON.stringify(consent));
+      } catch (e) {}
+    }
+
+    function normalizeConsent(consent) {
+      return {
+        necessary: true,
+        analytics: !!(consent && consent.analytics)
+      };
+    }
+
+    function showBanner() {
+      if (banner) banner.classList.add('is-visible');
+    }
+
+    function hideBanner() {
+      if (banner) banner.classList.remove('is-visible');
+    }
+
+    function openPrefs() {
+      if (!prefs) return;
+      prefs.classList.add('is-open');
+      prefs.setAttribute('aria-hidden', 'false');
+    }
+
+    function closePrefs() {
+      if (!prefs) return;
+      prefs.classList.remove('is-open');
+      prefs.setAttribute('aria-hidden', 'true');
+    }
+
+    function enableConsentScripts(type) {
+      var scripts = document.querySelectorAll('script[type="text/plain"][data-consent="' + type + '"]');
+      for (var i = 0; i < scripts.length; i++) {
+        var oldScript = scripts[i];
+        var newScript = document.createElement('script');
+        var srcAttr = oldScript.getAttribute('src');
+        if (srcAttr) newScript.src = srcAttr;
+        if (oldScript.async) newScript.async = true;
+        if (oldScript.defer) newScript.defer = true;
+        if (oldScript.noModule) newScript.noModule = true;
+        if (oldScript.crossOrigin) newScript.crossOrigin = oldScript.crossOrigin;
+        if (oldScript.referrerPolicy) newScript.referrerPolicy = oldScript.referrerPolicy;
+        if (oldScript.integrity) newScript.integrity = oldScript.integrity;
+        if (!srcAttr) newScript.text = oldScript.text || oldScript.textContent || '';
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      }
+    }
+
+    function updateAnalytics(consent) {
+      var analyticsState = consent.analytics ? 'granted' : 'denied';
+      document.documentElement.setAttribute('data-consent-analytics', analyticsState);
+      if (typeof window.CustomEvent === 'function') {
+        window.dispatchEvent(new CustomEvent('inkledger:consent', { detail: consent }));
+      }
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: analyticsState });
+      }
+      if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+        window.dataLayer.push({ event: 'consent_update', analytics: consent.analytics });
+      }
+      if (consent.analytics) enableConsentScripts('analytics');
+    }
+
+    function applyConsent(consent) {
+      var normalized = normalizeConsent(consent);
+      writeConsent(normalized);
+      if (analyticsToggle) analyticsToggle.checked = normalized.analytics;
+      updateAnalytics(normalized);
+      closePrefs();
+      hideBanner();
+    }
+
+    if (banner) {
+      var stored = readConsent();
+      if (stored) {
+        var normalized = normalizeConsent(stored);
+        if (analyticsToggle) analyticsToggle.checked = normalized.analytics;
+        updateAnalytics(normalized);
+        hideBanner();
+      } else {
+        showBanner();
+      }
+    }
+
+    if (customizeBtn) customizeBtn.addEventListener('click', function() { openPrefs(); });
+    if (closeBtn) closeBtn.addEventListener('click', function() { closePrefs(); });
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { applyConsent({ analytics: true }); });
+    if (acceptAllBtn) acceptAllBtn.addEventListener('click', function() { applyConsent({ analytics: true }); });
+    if (declineBtn) declineBtn.addEventListener('click', function() { applyConsent({ analytics: false }); });
+    if (saveBtn) saveBtn.addEventListener('click', function() {
+      var analytics = analyticsToggle ? analyticsToggle.checked : false;
+      applyConsent({ analytics: analytics });
+    });
+    if (cookieManageBtn) cookieManageBtn.addEventListener('click', function() {
+      var storedConsent = normalizeConsent(readConsent());
+      if (analyticsToggle) analyticsToggle.checked = storedConsent.analytics;
+      showBanner();
+      openPrefs();
+    });
+  })();
+  </script>
+
+</body>
+</html>
