@@ -173,6 +173,8 @@
       background: none;
       border: none;
       padding: 6px;
+      position: relative;
+      z-index: 1001;
     }
     .nav-toggle span {
       display: block;
@@ -1083,6 +1085,7 @@
       .nav { padding: 8px 12px 8px 14px; gap: 12px; }
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
+      .nav-cta { position: relative; z-index: 1001; }
       .nav-links.open {
         display: flex;
         position: fixed;
@@ -1093,10 +1096,11 @@
         align-items: center;
         justify-content: center;
         gap: 28px;
-        z-index: 999;
+        z-index: 1000;
         border-radius: 0;
       }
       .nav-links.open a { font-size: 18px; color: #fff; }
+      body.menu-open { overflow: hidden; }
       .features-dark-header { grid-template-columns: 1fr; }
       .fd-grid { grid-template-columns: 1fr; }
       .fd-card-quote { grid-column: 1; }
@@ -2087,6 +2091,7 @@
       var isOpen = navLinks.classList.toggle('open');
       this.classList.toggle('open');
       this.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
     });
 
     // Close mobile menu on link click
@@ -2095,6 +2100,7 @@
         navLinks.classList.remove('open');
         navToggle.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
       });
     });
 
