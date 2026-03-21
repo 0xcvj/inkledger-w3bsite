@@ -1086,18 +1086,28 @@
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
       .nav-cta { position: relative; z-index: 1001; }
-      .nav-links.open {
-        display: flex;
+      body.menu-open .nav {
         position: fixed;
         inset: 0;
+        transform: none;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
         background: rgba(11,11,11,0.97);
         backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      body.menu-open .nav-logo { position: absolute; top: 16px; left: 16px; }
+      body.menu-open .nav-cta { position: absolute; top: 16px; right: 56px; }
+      body.menu-open .nav-toggle { position: absolute; top: 16px; right: 12px; }
+      .nav-links.open {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 28px;
-        z-index: 1000;
-        border-radius: 0;
       }
       .nav-links.open a { font-size: 18px; color: #fff; }
       body.menu-open { overflow: hidden; }
@@ -1699,7 +1709,7 @@
       </div>
 
       <p class="hero-sub hero-anim hero-anim-4" data-i18n="index.hero.sub">
-        inkLedger is your studio's anti-chaos system: bookings, deposits, expenses, consent forms, and tax-ready numbers  in one clean place.
+        inkLedger is your studio's anti-chaos system: bookings, deposits, expenses, and tax-ready numbers  in one clean place.
       </p>
 
       <div class="hero-cta-group hero-anim hero-anim-5">
@@ -1811,7 +1821,7 @@
             <div class="eco-ico" style="background:rgba(6,182,212,0.15);color:#06b6d4;">&#128202;</div>
           </div>
           <h3 class="eco-card-title">TAX-READY BOOKKEEPING</h3>
-          <p class="eco-card-text" data-i18n="index.how.card3">Tax-ready bookkeeping built for Dutch freelancers. Revenue tracking, expense logging, and quarterly overviews  ready for the Belastingdienst. Export to CSV or PDF anytime.</p>
+          <p class="eco-card-text" data-i18n="index.how.card3">Tax-ready bookkeeping built for freelancers. Revenue tracking, expense logging, and quarterly overviews  ready for the Belastingdienst. Export to CSV or PDF anytime.</p>
         </div>
       </div>
     </section>
@@ -1913,7 +1923,7 @@
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a3">inkLedger automatically tracks your income and expenses, categorizes transactions, and generates quarterly overviews ready for the Belastingdienst. Export to CSV or PDF anytime. It's built specifically for Dutch freelance regulations.</p>
+              <p class="faq-a" data-i18n="index.faq.a3">inkLedger automatically tracks your income and expenses, categorizes transactions, and generates quarterly overviews ready for the Belastingdienst. Export to CSV anytime. It's built specifically for freelance regulations.</p>
             </div></div>
           </div>
 
@@ -1926,7 +1936,7 @@
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a4">Absolutely. We use end-to-end encryption, EU-based servers, and built-in consent management. Your client data and financial records are stored securely and in full compliance with GDPR.</p>
+              <p class="faq-a" data-i18n="index.faq.a4">Absolutely. We use end-to-end encryption, EU-based servers. Your client data and financial records are stored securely and in full compliance with GDPR.</p>
             </div></div>
           </div>
 
