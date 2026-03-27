@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<!-- Maintenance: Save this file as UTF-8 without BOM and use straight ASCII quotes (") for HTML attributes. -->
+<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -13,23 +12,25 @@
   <meta property="og:description" content="Tattoo artiest software met slimme boekingen, ontwerpgoedkeuring, aanbetalingen & belastingklare boekhouding. Gebouwd voor freelance tattooartiesten." data-i18n="index.meta.og_description" data-i18n-attr="content">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://inkledger.app/nl">
-  <meta property="og:image" content="https://inkledger.app/og-image.png">
+  <meta property="og:image" content="https://inkledger.app/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://inkledger.app/og-image.png">
+  <meta name="twitter:image" content="https://inkledger.app/assets/og-image.png">
   <link rel="alternate" hreflang="en" href="https://inkledger.app/">
   <link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/">
   <link rel="alternate" hreflang="x-default" href="https://inkledger.app/">
   <meta name="twitter:title" content="inkLedger — Tattoo Artiest Software voor Boekingen, Goedkeuring & Boekhouding" data-i18n="index.meta.twitter_title" data-i18n-attr="content">
   <meta name="twitter:description" content="Tattoo artiest software met slimme boekingen, ontwerpgoedkeuring, aanbetalingen & belastingklare boekhouding. Gebouwd voor freelance tattooartiesten." data-i18n="index.meta.twitter_description" data-i18n-attr="content">
   <title data-i18n="index.meta.title">inkLedger — Tattoo Artiest Software voor Boekingen, Goedkeuring & Boekhouding</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/icon.png">
-  <link rel="preload" as="image" href="/IMG_3083-2.jpg" fetchpriority="high">
+  <link rel="icon" type="image/png" href="/assets/adaptive-icon.png">
+  <link rel="apple-touch-icon" href="/assets/adaptive-icon.png">
+  <link rel="preload" as="image" href="/assets/IMG_3083-2.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/output.css">
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -40,2098 +41,401 @@
     gtag('js', new Date());
     gtag('config', 'G-3FQYVJ5RRM');
   </script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_WshcTxtUlLCWRd8G65zwZzAZcoxXrZjiJtnuiN1gUSO', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2026-01-30'
+    })
+  </script>
 
   <style>
-    /* •••••••••••••••••••••••••••••••••••••••
-       CSS VARIABLES
-       ••••••••••••••••••••••••••••••••••••••• */
-    :root {
-      --off-white: #faf5f0;
-      --cream: #f5efe8;
-      --black: #0b0b0b;
-      --dark: #141414;
-      --dark-surface: #1c1c1c;
-      --gray: #6b6b6b;
-      --gray-light: #a0a0a0;
-      --gray-muted: #8a8a8a;
-      --accent: #cc3300;
-      --accent-hover: #b83200;
-      --accent-glow: rgba(204, 51, 0, 0.28);
-      --accent-subtle: rgba(204, 51, 0, 0.08);
-      --text-sm: clamp(13px, 0.9vw, 15px);
-      --border: rgba(0,0,0,0.08);
-      --border-dark: rgba(255,255,255,0.08);
-      --font-display: 'Bebas Neue', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
-      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    body { font-family: var(--font-body); background: var(--off-white); color: var(--black); overflow-x: hidden; line-height: 1.6; }
-    ::selection { background: var(--accent); color: #fff; }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 10000; font-weight: 600; transition: top 0.3s; }
-    .skip-link:focus { top: 0; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-    .store-badges { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
-    .store-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 12px; font-family: var(--font-body); font-size: 14px; font-weight: 600; transition: transform 0.2s var(--ease-out), box-shadow 0.2s; }
-    .store-badge:hover { transform: translateY(-2px); }
-    .store-badge svg { width: 20px; height: 20px; flex-shrink: 0; }
-    .store-badge--apple { background: var(--black); color: #fff; }
-    .store-badge--apple:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-    .store-badge--android { background: transparent; color: var(--gray-muted); border: 1px solid var(--border); cursor: default; font-weight: 400; opacity: 0.7; }
-    .final-cta .store-badges { margin-top: 24px; }
-    .final-cta .store-badge--apple { background: #fff; color: var(--black); }
-    .final-cta .store-badge--apple:hover { box-shadow: 0 4px 20px rgba(255,255,255,0.2); }
-    .final-cta .store-badge--android { border-color: var(--border-dark); color: var(--gray-light); }
-    @supports (content-visibility: auto) {
-      .features-dark,
-      .ecosystem,
-      .security,
-      .faq,
-      .final-cta,
-      .footer {
-        content-visibility: auto;
-        contain-intrinsic-size: 960px;
-      }
-    }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       NAVIGATION  Floating pill (Framer style)
-       ••••••••••••••••••••••••••••••••••••••• */
-    .nav {
-      position: fixed;
-      top: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-      background: rgba(11, 11, 11, 0.92);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-radius: 100px;
-      padding: 8px 10px 8px 16px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .nav-logo-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .nav-logo-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .nav-logo-icon svg {
-      width: 100%;
-      height: 100%;
-    }
-    .nav-links {
-      display: flex;
-      gap: 4px;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a {
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 400;
-      color: rgba(255,255,255,0.6);
-      padding: 7px 14px;
-      border-radius: 100px;
-      transition: color 0.3s ease, background 0.3s ease;
-      white-space: nowrap;
-    }
-    .nav-links a:hover { color: #fff; }
-    .nav-cta {
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 500;
-      color: #fff;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 7px 18px;
-      border-radius: 100px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-    .nav-cta:hover { background: rgba(255,255,255,0.18); }
-    .nav-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 6px;
-      position: relative;
-      z-index: 1001;
-    }
-    .nav-toggle span {
-      display: block;
-      width: 18px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       SCROLL REVEAL
-       ••••••••••••••••••••••••••••••••••••••• */
-    .reveal {
-      opacity: 0;
-      transform: translateY(36px);
-      transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
-    .reveal-d4 { transition-delay: 0.4s; }
-    .reveal-d5 { transition-delay: 0.5s; }
-
-    /* Hero entrance animations */
-    .hero-anim {
-      opacity: 0;
-      transform: translateY(44px);
-      animation: heroIn 1s var(--ease-out) forwards;
-    }
-    .hero-anim-1 { animation-delay: 0.15s; }
-    .hero-anim-2 { animation-delay: 0.3s; }
-    .hero-anim-3 { animation-delay: 0.5s; }
-    .hero-anim-4 { animation-delay: 0.7s; }
-    .hero-anim-5 { animation-delay: 0.9s; }
-    @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       HERO SECTION
-       ••••••••••••••••••••••••••••••••••••••• */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 130px 24px 40px;
-      overflow: hidden;
-      background: var(--off-white);
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -15%;
-      left: -15%;
-      width: 130%;
-      height: 70%;
-      background:
-        radial-gradient(ellipse at 25% 50%, rgba(180, 155, 130, 0.22) 0%, transparent 55%),
-        radial-gradient(ellipse at 75% 35%, rgba(165, 145, 125, 0.18) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 65%, rgba(145, 125, 105, 0.12) 0%, transparent 60%);
-      animation: heroSmoke 22s ease-in-out infinite;
-      pointer-events: none;
-    }
-    @keyframes heroSmoke {
-      0%, 100% { transform: translateX(0) scale(1); opacity: 0.7; }
-      50% { transform: translateX(-25px) scale(1.04); opacity: 1; }
-    }
-
-    .hero-headline {
-      font-family: var(--font-display);
-      font-size: clamp(46px, 6.5vw, 96px);
-      font-weight: 400;
-      line-height: 1.05;
-      text-align: center;
-      color: var(--black);
-      max-width: 780px;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Phone mockup area */
-    .hero-phone-area {
-      position: relative;
-      z-index: 2;
-      margin-top: 36px;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 900px;
-    }
-
-    .phone-mockup {
-      width: 280px;
-      aspect-ratio: 280 / 607;
-      background: #fff;
-      border-radius: 44px;
-      border: 8px solid #1a1a1a;
-      overflow: hidden;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.15), 0 16px 32px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 5;
-      flex-shrink: 0;
-    }
-    .phone-notch {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 26px;
-      background: #1a1a1a;
-      border-radius: 0 0 16px 16px;
-      z-index: 10;
-    }
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      background: #fff;
-      overflow: hidden;
-      border-radius: inherit;
-      position: relative;
-    }
-    .phone-screen-img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: inherit;
-    }
-
-    /* Floating transaction cards */
-    .float-cards {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .fc {
-      position: absolute;
-      left: 50%;
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 12px;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-body);
-      white-space: nowrap;
-      opacity: 0.72;
-      transform: translateX(calc(-50% + var(--center-x, 0px))) rotate(var(--center-rot, 0deg));
-      transition: transform 700ms var(--ease-out), opacity 520ms ease;
-      will-change: transform;
-    }
-    .float-cards.is-center .fc {
-      transform: translateX(calc(-50% + var(--center-x, 0px))) rotate(var(--center-rot, 0deg));
-      opacity: 0.72;
-    }
-    .float-cards.is-spread .fc {
-      transform: translateX(calc(-50% + var(--spread-x, 0px))) rotate(var(--spread-rot, var(--center-rot, 0deg)));
-      opacity: 0.9;
-    }
-    .fc-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    .fc-name { font-weight: 600; font-size: 12px; }
-    .fc-status { font-size: 10px; color: var(--gray-light); }
-    .fc-right { text-align: right; }
-    .fc-amount { font-weight: 600; font-size: 12px; }
-    .fc-hash { font-size: 9px; color: var(--gray-light); font-family: monospace; }
-
-    .fc-1 { top: 8%; --center-x: -82px; --spread-x: -260px; --center-rot: -2deg; --spread-rot: -6deg; }
-    .fc-2 { top: 30%; --center-x: -96px; --spread-x: -272px; --center-rot: -3deg; --spread-rot: -7deg; }
-    .fc-3 { top: 55%; --center-x: -72px; --spread-x: -242px; --center-rot: -1deg; --spread-rot: -4deg; }
-    .fc-4 { top: 10%; --center-x: 82px; --spread-x: 260px; --center-rot: 2deg; --spread-rot: 6deg; }
-    .fc-5 { top: 34%; --center-x: 98px; --spread-x: 274px; --center-rot: 3deg; --spread-rot: 7deg; }
-    .fc-6 { top: 56%; --center-x: 74px; --spread-x: 244px; --center-rot: 1deg; --spread-rot: 4deg; }
-
-    /* Hero subtitle + CTA */
-    .hero-sub {
-      text-align: center;
-      max-width: 520px;
-      margin: 32px auto 0;
-      font-size: 16px;
-      line-height: 1.65;
-      color: var(--gray);
-      position: relative;
-      z-index: 3;
-    }
-    .hero-cta-group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      margin-top: 28px;
-      position: relative;
-      z-index: 3;
-      width: 100%;
-    }
-    .hero-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      width: min(420px, 100%);
-    }
-    .hero-input {
-      width: 100%;
-      padding: 14px 18px;
-      border: 1.5px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.82);
-      color: var(--black);
-      font-family: var(--font-body);
-      font-size: 15px;
-      outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hero-input::placeholder { color: var(--gray-muted); }
-    .hero-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-subtle);
-    }
-    .honeypot {
-      position: absolute;
-      left: -10000px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .hero-form-success {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 18px;
-      border-radius: 14px;
-      border: 1px solid rgba(16,185,129,0.25);
-      background: rgba(16,185,129,0.08);
-      color: #0f8a63;
-      font-size: 14px;
-      font-weight: 500;
-      width: min(420px, 100%);
-    }
-    .btn-accent {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 32px;
-      background: var(--accent);
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 500;
-      border-radius: 100px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s var(--ease-out);
-      box-shadow: 0 4px 20px var(--accent-glow);
-    }
-    .hero-form .btn-accent {
-      width: 100%;
-      justify-content: center;
-    }
-    .btn-accent:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px var(--accent-glow);
-    }
-    .btn-accent svg { width: 16px; height: 16px; transition: transform 0.3s var(--ease-out); }
-    .btn-accent:hover svg { transform: translateX(3px); }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       DARK FEATURES SECTION
-       ••••••••••••••••••••••••••••••••••••••• */
-    .features-dark {
-      background: var(--black);
-      color: #fff;
-      padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px);
-      border-radius: 24px 24px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .features-dark-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    .features-dark-header {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: clamp(32px, 5vw, 80px);
-      align-items: start;
-      margin-bottom: clamp(48px, 6vw, 80px);
-    }
-    .fd-title {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 400;
-      font-style: normal;
-      line-height: 1.12;
-      color: #fff;
-    }
-    .fd-right {
-      padding-top: 8px;
-    }
-    .fd-desc {
-      font-size: clamp(14px, 1vw, 16px);
-      color: rgba(255,255,255,0.6);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-    .btn-outline-light {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 28px;
-      border: 1.5px solid rgba(255,255,255,0.2);
-      border-radius: 100px;
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 500;
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .btn-outline-light:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.35);
-    }
-
-    /* Feature cards grid */
-    .fd-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .fd-card {
-      background: var(--dark-surface);
-      border: 1px solid var(--border-dark);
-      border-radius: 24px;
-      padding: clamp(24px, 3vw, 36px);
-      overflow: hidden;
-      position: relative;
-      transition: all 0.4s var(--ease-out);
-    }
-    .fd-card:hover {
-      border-color: rgba(255,255,255,0.15);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-    .fd-card-visual {
-      height: 200px;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      background: #111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .fd-card-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .fd-card-visual--flow { background: #0f0f0f; padding: 0 24px; }
-    .approval-flow { display: flex; align-items: center; gap: 0; width: 100%; }
-    .af-step { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; min-width: 64px; }
-    .af-icon { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); }
-    .af-step--done .af-icon { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
-    .af-icon--accent { background: var(--accent) !important; color: #fff !important; box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(204,51,0,0.15); }
-    .af-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 0.02em; white-space: nowrap; }
-    .af-step--done .af-label { color: rgba(255,255,255,0.6); }
-    .af-step--active .af-label { color: var(--accent); font-weight: 700; }
-    .af-time { font-size: 9px; color: rgba(255,255,255,0.2); font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .af-step--active .af-time { color: rgba(204,51,0,0.6); }
-    .af-connector { flex: 1; height: 2px; background: rgba(255,255,255,0.08); min-width: 12px; margin: 0 4px; margin-bottom: 28px; }
-    .af-connector--done { background: rgba(255,255,255,0.2); }
-    .af-step--pending .af-icon { border: 1.5px dashed rgba(255,255,255,0.15); background: transparent; }
-    .af-step--pending .af-label { color: rgba(255,255,255,0.2); }
-    .af-step--pending .af-time { color: rgba(255,255,255,0.12); }
-    .fd-card-title {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 400;
-      margin-bottom: 6px;
-      color: #fff;
-      letter-spacing: 0.03em;
-    }
-    .fd-card-desc {
-      font-size: 14px;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.6;
-    }
-
-    /* Big quote card */
-    .fd-card-quote {
-      grid-column: 1;
-      grid-row: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-      min-height: 280px;
-    }
-    .fd-card-quote-bg {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #1a2332, #0f1922);
-    }
-    .fd-card-quote-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.6;
-    }
-    .fd-card-quote-text {
-      position: relative;
-      z-index: 2;
-      padding: clamp(20px, 3vw, 32px);
-      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.7) 40%);
-    }
-    .fd-card-quote-text blockquote {
-      font-family: var(--font-body);
-      font-size: clamp(16px, 1.5vw, 20px);
-      font-style: italic;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-    .fd-card-quote-text cite {
-      font-style: normal;
-      font-size: 13px;
-      color: rgba(255,255,255,0.5);
-    }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       ECOSYSTEM SECTION (3 column cards)
-       ••••••••••••••••••••••••••••••••••••••• */
-    .ecosystem {
-      background: var(--black);
-      padding: clamp(60px, 8vw, 120px) clamp(20px, 5vw, 80px);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .ecosystem::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(204,51,0,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .eco-title {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4.5vw, 64px);
-      font-weight: 400;
-      color: #fff;
-      max-width: 700px;
-      margin: 0 auto clamp(40px, 5vw, 64px);
-      line-height: 1.1;
-      position: relative;
-    }
-    .eco-title .accent { color: var(--accent); }
-    .eco-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .eco-card {
-      background: var(--dark-surface);
-      border: 1px solid var(--border-dark);
-      border-radius: 20px;
-      padding: clamp(24px, 3vw, 32px);
-      text-align: left;
-      transition: all 0.4s var(--ease-out);
-    }
-    .eco-card:hover {
-      border-color: rgba(255,255,255,0.15);
-      transform: translateY(-4px);
-    }
-    .eco-card-icons {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-    .eco-card-icons img, .eco-card-icons .eco-ico {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-    .eco-ico {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 700;
-    }
-    .eco-card-text {
-      font-size: 15px;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.5;
-    }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       COMMUNITY SECTION (light bg)
-       ••••••••••••••••••••••••••••••••••••••• */
-    .security {
-      background: var(--off-white);
-      padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px);
-    }
-    .security-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: clamp(40px, 6vw, 100px);
-      align-items: center;
-    }
-    .sec-title {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .sec-title strong {
-      font-weight: 400;
-      font-style: normal;
-      color: var(--accent);
-    }
-    .sec-desc {
-      font-size: 15px;
-      color: var(--gray);
-      line-height: 1.7;
-      margin-bottom: 28px;
-      max-width: 460px;
-    }
-    .sec-features {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .sec-feature {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 12px 18px;
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--black);
-      max-width: 360px;
-      transition: all 0.25s var(--ease-out);
-      cursor: pointer;
-    }
-    .sec-feature:hover,
-    .sec-feature.is-active {
-      background: rgba(204, 51, 0, 0.06);
-      border-color: rgba(204, 51, 0, 0.2);
-      transform: translateX(4px);
-    }
-    .sec-feature-icon { flex-shrink: 0; }
-    .sec-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid rgba(204, 51, 0, 0.18);
-      display: block;
-    }
-    .sec-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .sec-studio-name {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      line-height: 1.2;
-    }
-    .sec-studio-city {
-      font-size: 11px;
-      font-weight: 400;
-      color: var(--gray);
-      letter-spacing: 0.02em;
-    }
-
-    /* Community visual  dark image slideshow card */
-    .sec-visual {
-      background: var(--dark);
-      border-radius: 24px;
-      overflow: hidden;
-      position: relative;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      aspect-ratio: 4 / 3;
-    }
-    .sec-visual::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 30% 20%, rgba(204, 51, 0, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(100, 100, 255, 0.04) 0%, transparent 50%);
-      z-index: 1;
-      pointer-events: none;
-    }
-    .sec-slideshow { position: absolute; inset: 0; }
-    .sec-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.7s var(--ease-out);
-      z-index: 0;
-    }
-    .sec-slide--active { opacity: 1; z-index: 2; }
-    .sec-slide-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .sec-slide-caption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      z-index: 4;
-      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
-      padding: 32px 24px 18px;
-    }
-    .sec-slide-label {
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.9);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .sec-slide-dots {
-      position: absolute;
-      top: 16px; right: 20px;
-      z-index: 4;
-      display: flex;
-      gap: 6px;
-    }
-    .sec-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .sec-dot--active { background: var(--accent); transform: scale(1.25); }
-
-    /* Locked / coming-soon slides */
-    .sec-avatar--blur img {
-      filter: blur(8px);
-      transform: scale(1.1);
-    }
-    .sec-slide--locked .sec-slide-img {
-      filter: blur(10px) saturate(0.4);
-      transform: scale(1.04);
-    }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       CTA + FOOTER (dark section)
-       ••••••••••••••••••••••••••••••••••••••• */
-    .final-cta {
-      background: var(--black);
-      padding: clamp(80px, 10vw, 160px) clamp(20px, 5vw, 80px) clamp(40px, 5vw, 60px);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .final-cta::before {
-      content: '';
-      position: absolute;
-      bottom: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 150%;
-      height: 80%;
-      background:
-        radial-gradient(ellipse at 30% 80%, rgba(204,51,0,0.12) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 60%, rgba(80,80,200,0.06) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    /* Shooting stars */
-    .star {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      background: #fff;
-      opacity: 0;
-      animation: shoot 3s linear infinite;
-    }
-    .star::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(to left, rgba(255,255,255,0.6), transparent);
-    }
-    .star-1 { top: 15%; left: 20%; animation-delay: 0s; }
-    .star-2 { top: 30%; left: 60%; animation-delay: 1.2s; }
-    .star-3 { top: 10%; left: 45%; animation-delay: 2.4s; }
-    .star-4 { top: 25%; left: 80%; animation-delay: 0.6s; }
-    @keyframes shoot {
-      0% { opacity: 0; transform: translate(0, 0) rotate(-35deg); }
-      5% { opacity: 1; }
-      40% { opacity: 0; transform: translate(-200px, 120px) rotate(-35deg); }
-      100% { opacity: 0; transform: translate(-200px, 120px) rotate(-35deg); }
-    }
-
-    .final-cta-title {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 52px);
-      font-weight: 400;
-      color: #fff;
-      max-width: 600px;
-      margin: 0 auto 28px;
-      line-height: 1.12;
-      position: relative;
-    }
-    .final-cta .btn-accent {
-      font-size: 16px;
-      padding: 16px 36px;
-      position: relative;
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--black);
-      padding: clamp(40px, 5vw, 60px) clamp(20px, 5vw, 80px) clamp(24px, 3vw, 36px);
-      border-top: 1px solid var(--border-dark);
-    }
-    .footer-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    .footer-logo-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .footer-logo-icon img { width: 100%; height: 100%; object-fit: contain; }
-    .footer-links-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .footer-links-list a {
-      font-size: 14px;
-      color: rgba(255,255,255,0.5);
-      transition: color 0.3s;
-    }
-    .footer-link-button {
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: rgba(255,255,255,0.5);
-      font-family: var(--font-body);
-      font-size: 14px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .footer-link-button:hover,
-    .footer-link-button:focus-visible {
-      color: #fff;
-    }
-    .footer-links-list a:hover { color: #fff; }
-    .footer-right { text-align: right; }
-    .footer-social-label {
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 12px;
-    }
-    .footer-social {
-      display: flex;
-      gap: 12px;
-      justify-content: flex-end;
-    }
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.6);
-      transition: all 0.3s ease;
-    }
-    .footer-social a:hover {
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-    }
-    .footer-social svg { width: 16px; height: 16px; }
-    .footer-newsletter {
-      display: flex;
-      gap: 0;
-      margin-top: 16px;
-    }
-    .footer-newsletter input {
-      flex: 1;
-      padding: 10px 16px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-right: none;
-      border-radius: 8px 0 0 8px;
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 13px;
-      outline: none;
-    }
-    .footer-newsletter input::placeholder { color: rgba(255,255,255,0.3); }
-    .footer-newsletter button {
-      padding: 10px 18px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 0 8px 8px 0;
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: background 0.3s;
-    }
-    .footer-newsletter button:hover { background: rgba(255,255,255,0.16); }
-    .footer-language {
-      margin-top: 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
-    }
-    .footer-language-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.38);
-    }
-    .footer-language-picker {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.06),
-        0 12px 32px rgba(0,0,0,0.18);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-    .footer-language-option {
-      min-width: 54px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.58);
-      transition: color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease;
-    }
-    .footer-language-option:hover,
-    .footer-language-option:focus-visible {
-      color: #fff;
-      transform: translateY(-1px);
-    }
-    .footer-language-option.is-active {
-      background: #f6f5f1;
-      color: #0b0b0b;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
-    }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       RESPONSIVE
-       ••••••••••••••••••••••••••••••••••••••• */
-    @media (max-width: 900px) {
-      .nav { padding: 8px 12px 8px 14px; gap: 12px; }
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-      .nav-cta { position: relative; z-index: 1001; }
-      body.menu-open .nav {
-        position: fixed;
-        inset: 0;
-        transform: none;
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(11,11,11,0.97);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      body.menu-open .nav-logo { position: absolute; top: 16px; left: 16px; }
-      body.menu-open .nav-cta { position: absolute; top: 16px; right: 56px; }
-      body.menu-open .nav-toggle { position: absolute; top: 16px; right: 12px; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 28px;
-      }
-      .nav-links.open a { font-size: 18px; color: #fff; }
-      body.menu-open { overflow: hidden; }
-      .features-dark-header { grid-template-columns: 1fr; }
-      .fd-grid { grid-template-columns: 1fr; }
-      .fd-card-quote { grid-column: 1; }
-      .eco-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-      .security-inner { grid-template-columns: 1fr; }
-      .hero-phone-area { max-width: 560px; min-height: 560px; }
-      .fc {
-        padding: 8px 12px;
-        border-radius: 10px;
-        gap: 8px;
-      }
-      .fc-icon { width: 26px; height: 26px; font-size: 12px; }
-      .fc-name { font-size: 11px; }
-      .fc-status { font-size: 9px; }
-      .fc-amount { font-size: 11px; }
-      .fc-hash { font-size: 8px; }
-      .fc-1 { top: 8%; --center-x: -64px; --spread-x: -186px; }
-      .fc-2 { top: 28%; --center-x: -74px; --spread-x: -194px; }
-      .fc-3 { top: 50%; --center-x: -58px; --spread-x: -174px; }
-      .fc-4 { top: 10%; --center-x: 64px; --spread-x: 186px; }
-      .fc-5 { top: 30%; --center-x: 76px; --spread-x: 196px; }
-      .fc-6 { top: 52%; --center-x: 60px; --spread-x: 176px; }
-      .footer-inner { flex-direction: column; }
-      .footer-right { text-align: left; }
-      .footer-social { justify-content: flex-start; }
-      .footer-language { align-items: flex-start; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-phone-area { min-height: 500px; margin-top: 28px; }
-      .phone-mockup { width: 240px; border-radius: 38px; border-width: 7px; }
-      .phone-notch { width: 80px; height: 22px; border-radius: 0 0 12px 12px; }
-      .phone-screen { border-radius: inherit; }
-      .phone-screen-img { border-radius: inherit; }
-      .fc {
-        padding: 7px 10px;
-        border-radius: 9px;
-        gap: 7px;
-      }
-      .fc-icon { width: 23px; height: 23px; font-size: 11px; }
-      .fc-name { font-size: 10px; }
-      .fc-status { font-size: 8px; }
-      .fc-amount { font-size: 10px; }
-      .fc-hash { display: none; }
-      .fc-1 { top: 9%; --center-x: -52px; --spread-x: -146px; }
-      .fc-2 { top: 30%; --center-x: -60px; --spread-x: -154px; }
-      .fc-3 { top: 52%; --center-x: -46px; --spread-x: -136px; }
-      .fc-4 { top: 11%; --center-x: 52px; --spread-x: 146px; }
-      .fc-5 { top: 32%; --center-x: 62px; --spread-x: 156px; }
-      .fc-6 { top: 54%; --center-x: 48px; --spread-x: 138px; }
-      .hero-headline { font-size: clamp(36px, 10vw, 52px); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-      .reveal { opacity: 1; transform: none; }
-      .fc { transition: none !important; }
-    }
-
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-    /* Hero badge */
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 18px;
-      border-radius: 50px;
-      border: 1px solid rgba(204, 51, 0, 0.22);
-      background: rgba(204, 51, 0, 0.08);
-      margin-bottom: 20px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      animation: pulse-dot 2s ease-in-out infinite;
-      flex-shrink: 0;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.4); }
-    }
-
-    /* Section eyebrows */
-    .section-eyebrow,
-    .fd-eyebrow {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .fd-eyebrow { text-align: left; }
-
-    /* Ecosystem subtitle + card titles */
-    .eco-subtitle {
-      font-size: 16px;
-      color: rgba(255,255,255,0.6);
-      text-align: center;
-      max-width: 560px;
-      margin: 0 auto clamp(40px, 5vw, 64px);
-      line-height: 1.65;
-    }
-    .eco-card-title {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 400;
-      color: #fff;
-      letter-spacing: 0.03em;
-      margin-bottom: 10px;
-    }
-
-    /* •••••••••••••••••••••••••••••••••••••••
-       FAQ SECTION
-       ••••••••••••••••••••••••••••••••••••••• */
-    .faq {
-      background: var(--off-white);
-      padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px);
-      position: relative;
-      overflow: hidden;
-    }
-    .faq::before {
-      content: '';
-      position: absolute;
-      top: 0; left: clamp(20px, 5vw, 80px); right: clamp(20px, 5vw, 80px);
-      height: 1px;
-      background: var(--border);
-    }
-    .faq-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .faq-header {
-      text-align: center;
-      margin-bottom: clamp(48px, 6vw, 80px);
-    }
-    .faq-eyebrow {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .faq-title {
-      font-family: var(--font-display);
-      font-size: clamp(52px, 7vw, 100px);
-      font-weight: 400;
-      color: var(--black);
-      line-height: 1;
-      letter-spacing: 0.02em;
-      margin-bottom: 16px;
-    }
-    .faq-subtitle {
-      font-size: 16px;
-      color: var(--gray);
-      max-width: 460px;
-      margin: 0 auto;
-      line-height: 1.65;
-    }
-
-    /* List */
-    .faq-list {
-      border-top: 1px solid var(--border);
-    }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      transition: border-color 0.3s ease;
-    }
-    .faq-item::after {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 2px;
-      background: var(--accent);
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform 0.45s var(--ease-out);
-    }
-    .faq-item.faq-open::after {
-      transform: scaleY(1);
-    }
-
-    /* Button row */
-    .faq-btn {
-      display: grid;
-      grid-template-columns: 56px 1fr 34px;
-      gap: 20px;
-      align-items: center;
-      padding: 26px 0 26px 16px;
-      width: 100%;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      transition: background 0.25s ease;
-    }
-    .faq-btn:hover { background: rgba(204,51,0,0.03); }
-
-    .faq-num {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 3.5vw, 46px);
-      color: rgba(0,0,0,0.1);
-      line-height: 1;
-      letter-spacing: 0.04em;
-      transition: color 0.35s ease;
-      user-select: none;
-    }
-    .faq-item.faq-open .faq-num { color: var(--accent); }
-
-    .faq-q {
-      font-family: var(--font-body);
-      font-size: clamp(15px, 1.15vw, 18px);
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1.4;
-      transition: color 0.3s ease;
-    }
-
-    .faq-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      border: 1.5px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.4s var(--ease-out);
-      color: var(--gray);
-      background: transparent;
-    }
-    .faq-icon svg {
-      width: 14px; height: 14px;
-      transition: transform 0.4s var(--ease-out);
-    }
-    .faq-item.faq-open .faq-icon {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-    .faq-item.faq-open .faq-icon svg { transform: rotate(45deg); }
-
-    /* Answer panel  grid-template-rows trick for smooth animation */
-    .faq-body {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.45s var(--ease-out);
-    }
-    .faq-body-inner { overflow: hidden; }
-    .faq-a {
-      padding: 0 0 28px calc(56px + 20px + 16px);
-      font-size: 15px;
-      color: var(--gray);
-      line-height: 1.75;
-      max-width: 640px;
-    }
-    .faq-item.faq-open .faq-body { grid-template-rows: 1fr; }
-
-    /* Closing quote */
-    .faq-quote {
-      text-align: center;
-      margin-top: clamp(48px, 6vw, 80px);
-      font-size: clamp(16px, 1.4vw, 20px);
-      font-weight: 700;
-      color: var(--accent);
-      font-style: italic;
-      font-family: var(--font-body);
-    }
-
-    @media (max-width: 600px) {
-      .faq-btn { grid-template-columns: 40px 1fr 30px; gap: 12px; padding-left: 12px; }
-      .faq-a { padding-left: calc(40px + 12px + 12px); }
-    }
-
-    /* Loading */
     .loader {
-      position: fixed;
-      inset: 0;
-      background: var(--off-white);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.6s ease, visibility 0.6s ease;
+      position: fixed; inset: 0; background: #09090b; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
     }
     .loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
-    .loader-icon {
-      width: 40px;
-      height: 40px;
-      animation: loaderPulse 1.2s ease-in-out infinite;
-    }
+    .loader-icon { width: 36px; height: 36px; animation: loaderPulse 1.2s ease-in-out infinite; }
     .loader-icon img { width: 100%; height: 100%; object-fit: contain; }
     @keyframes loaderPulse {
       0%, 100% { opacity: 0.3; transform: scale(0.92); }
       50% { opacity: 1; transform: scale(1); }
     }
-
-    /* ========================================
-       COOKIE BANNER
-       ======================================== */
-    .cookie-banner {
-      position: fixed;
-      left: 24px;
-      right: 24px;
-      bottom: 24px;
-      z-index: 2000;
-      display: none;
+    body.menu-open .nav-full {
+      position: fixed; inset: 0; transform: none;
+      border-radius: 0; width: 100%; height: 100%;
+      background: rgba(9,9,11,0.97); backdrop-filter: blur(20px);
+      flex-direction: column; justify-content: center; align-items: center;
+      top: 0; left: 0;
     }
+    body.menu-open .nav-logo-wrap { position: absolute; top: 16px; left: 16px; }
+    body.menu-open .nav-cta-wrap { position: absolute; top: 16px; right: 56px; }
+    body.menu-open .nav-toggle-wrap { position: absolute; top: 16px; right: 12px; }
+    body.menu-open #navLinks {
+      display: flex !important; flex-direction: column;
+      align-items: center; justify-content: center; gap: 28px;
+    }
+    body.menu-open #navLinks a { font-size: 18px; color: #fff; }
+    body.menu-open { overflow: hidden; }
+    .nav-toggle-bar { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s ease; }
+    .nav-toggle.open .nav-toggle-bar:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .nav-toggle.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    .nav-toggle.open .nav-toggle-bar:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease; }
+    .faq-body-inner { overflow: hidden; }
+    .faq-item.faq-open .faq-body { grid-template-rows: 1fr; }
+    .faq-item.faq-open .faq-icon-svg { transform: rotate(45deg); }
+    .cookie-banner { display: none; }
     .cookie-banner.is-visible { display: block; }
-    .cookie-banner-card {
-      background: #0b0b0b;
-      color: #f6f5f1;
-      border-radius: 20px;
-      padding: clamp(16px, 2vw, 24px);
-      box-shadow:
-        0 20px 60px rgba(0,0,0,0.45),
-        0 1px 0 rgba(255,255,255,0.04) inset;
-      display: grid;
-      grid-template-columns: 1.2fr auto;
-      gap: 16px 24px;
-      align-items: center;
-    }
-    .cookie-banner-title {
-      font-family: var(--font-display);
-      font-size: clamp(20px, 2vw, 28px);
-      letter-spacing: 0.04em;
-      margin-bottom: 6px;
-    }
-    .cookie-banner-text {
-      font-size: var(--text-sm);
-      color: rgba(246,245,241,0.78);
-      line-height: 1.6;
-      max-width: 560px;
-    }
-    .cookie-banner-actions {
-      display: flex;
-      gap: 10px;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-    }
-    .btn-cookie {
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: transparent;
-      color: #f6f5f1;
-      cursor: pointer;
-      transition: transform 0.25s var(--ease-out), box-shadow 0.35s var(--ease-out), background 0.35s var(--ease-out), border-color 0.35s var(--ease-out);
-    }
-    .btn-cookie:hover {
-      transform: translateY(-1px);
-      border-color: rgba(255,255,255,0.35);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-    }
-    .btn-cookie-primary {
-      background: #ffffff;
-      color: #0b0b0b;
-      border-color: transparent;
-    }
-    .btn-cookie-primary:hover {
-      box-shadow: 0 12px 28px rgba(255,255,255,0.25);
-    }
-    .cookie-banner-link {
-      color: rgba(246,245,241,0.9);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-    .cookie-preferences {
-      display: none;
-      margin-top: 14px;
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: #111111;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
-    }
+    .cookie-preferences { display: none; }
     .cookie-preferences.is-open { display: block; }
-    .cookie-preferences-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 8px;
-    }
-    .cookie-close {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.2);
-      background: transparent;
-      color: #f6f5f1;
-      font-size: 20px;
-      line-height: 1;
-      cursor: pointer;
-      transition: transform 0.2s var(--ease-out), border-color 0.3s var(--ease-out);
-    }
-    .cookie-close:hover {
-      transform: rotate(6deg);
-      border-color: rgba(255,255,255,0.4);
-    }
-    .cookie-preferences-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 12px 0 16px;
-    }
-    .cookie-pref-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .cookie-pref-item:first-child { border-top: 0; padding-top: 0; }
-    .cookie-pref-title {
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #f6f5f1;
-      margin-bottom: 4px;
-    }
-    .cookie-pref-desc {
-      font-size: 13px;
-      color: rgba(246,245,241,0.68);
-      max-width: 460px;
-    }
-    .cookie-toggle {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(246,245,241,0.75);
-    }
-    .cookie-switch {
-      position: relative;
-      display: inline-flex;
-      width: 52px;
-      height: 30px;
-    }
-    .cookie-switch input { opacity: 0; width: 0; height: 0; }
-    .cookie-slider {
-      position: absolute;
-      inset: 0;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.14);
-      cursor: pointer;
-      transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
-    }
-    .cookie-slider::after {
-      content: '';
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      top: 3px;
-      left: 3px;
-      background: #ffffff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-      transition: transform 0.3s var(--ease-out);
-    }
-    .cookie-switch input:checked + .cookie-slider {
-      background: #ffffff;
-      border-color: transparent;
-    }
-    .cookie-switch input:checked + .cookie-slider::after {
-      transform: translateX(22px);
-      background: #0b0b0b;
-    }
-    @media (max-width: 960px) {
-      .cookie-banner {
-        left: 16px;
-        right: 16px;
-        bottom: 16px;
-      }
-      .cookie-banner-card {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-      .cookie-banner-actions {
-        justify-content: flex-start;
-      }
-    }
   </style>
 </head>
-<body data-i18n-page="index">
+<body data-i18n-page="index" class="font-sans">
   <a href="#main" class="skip-link" data-i18n="index.skip">Ga naar hoofdinhoud</a>
 
   <!-- LOADER -->
   <div class="loader" id="loader">
-    <div class="loader-icon"><img src="/icon.png" alt="Laden"></div>
+    <div class="loader-icon"><img src="/assets/adaptive-icon.png" alt="Laden"></div>
   </div>
+  <script>
+    (function(){
+      function d(){var l=document.getElementById('loader');if(l)requestAnimationFrame(function(){l.classList.add('done')});}
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',d,{once:true});else d();
+    })();
+  </script>
 
   <!-- NAVIGATION -->
-  <nav class="nav" role="navigation" aria-label="Hoofdnavigatie">
-    <a href="#" class="nav-logo" aria-label="inkLedger start">
-      <span class="nav-logo-icon"><img src="/icon.png" alt="inkLedger"></span>
+  <nav class="nav-full fixed top-4 left-1/2 -translate-x-1/2 z-[1000] bg-[#09090b]/95 rounded-full px-3 py-2 pl-4 flex items-center gap-5 shadow-[0_4px_24px_rgba(0,0,0,0.2)] border border-white/[0.06]" role="navigation" aria-label="Hoofdnavigatie">
+    <a href="#" class="nav-logo-wrap flex items-center gap-2 shrink-0" aria-label="inkLedger start">
+      <span class="w-7 h-7 rounded-lg overflow-hidden flex items-center justify-center bg-white/10">
+        <img src="/assets/adaptive-icon.png" alt="inkLedger" class="w-full h-full object-contain">
+      </span>
     </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#how" data-i18n="index.nav.how">Hoe het werkt</a>
-      <a href="#features" data-i18n="index.nav.features">Functies</a>
-      <a href="#faq" data-i18n="index.nav.faq">FAQ</a>
-      <a href="/blog">Blog</a>
+    <div id="navLinks" class="hidden md:flex gap-1 items-center">
+      <a href="#features" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap" data-i18n="index.nav.features">Functies</a>
+      <a href="#how" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap" data-i18n="index.nav.how">Hoe het werkt</a>
+      <a href="#faq" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap" data-i18n="index.nav.faq">FAQ</a>
+      <a href="/blog" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap">Blog</a>
     </div>
-    <a href="#heroFormContainer" class="nav-cta" data-i18n="index.nav.join_waitlist">Gratis Download</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Navigatie schakelen" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" target="_blank" rel="noopener" class="nav-cta-wrap text-[13px] font-medium text-white bg-white/10 border border-white/15 px-4 py-1.5 rounded-full hover:bg-white/[0.18] transition-all whitespace-nowrap" data-i18n="index.nav.join_waitlist">Download</a>
+    <button class="nav-toggle md:hidden flex flex-col gap-1 cursor-pointer bg-transparent border-none p-1.5 relative z-[1001]" id="navToggle" aria-label="Navigatie schakelen" aria-expanded="false">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
     </button>
   </nav>
 
   <main id="main" role="main">
 
-    <!-- ••••••••••• HERO ••••••••••• -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero-badge hero-anim hero-anim-1">
-        <span class="hero-badge-dot"></span>
+    <!-- ===== HERO ===== -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-28 pb-16 bg-[#fafafa] overflow-hidden" aria-label="Hero">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-accent/20 bg-accent-subtle text-accent text-sm font-medium tracking-wide mb-8 opacity-0 animate-fade-in-up">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse-dot shrink-0"></span>
         <span data-i18n="index.hero.badge">Nu op iOS</span>
       </div>
 
-      <h1 class="hero-headline hero-anim hero-anim-2" data-i18n="index.hero.headline">
-        JOUW BOEKINGEN. JOUW BOEKEN. <span style="color:var(--accent);">ÉÉN APP.</span>
+      <h1 class="text-center font-extrabold leading-[1.05] tracking-tight max-w-3xl opacity-0 animate-fade-in-up animation-delay-100" style="font-size: clamp(2.75rem, 7vw, 5.5rem);" data-i18n="index.hero.headline">
+        Boek klanten.<br>Track geld.<br><span class="text-accent">Skip de chaos.</span>
       </h1>
       <p class="sr-only">inkLedger is tattoo artiest software die boekingen, ontwerpgoedkeuring en boekhouding combineert voor freelance tattooartiesten en ZZP'ers.</p>
 
-      <div class="hero-phone-area hero-anim hero-anim-3">
-        <!-- Floating transaction cards -->
-        <div class="float-cards is-center" aria-hidden="true">
-          <div class="fc fc-1">
-            <div class="fc-icon" style="background:#f7931a;color:#fff;font-weight:700;">&#9733;</div>
-            <div><div class="fc-name">Sessie</div><div class="fc-status">Geboekt</div></div>
-            <div class="fc-right"><div class="fc-amount">&euro;350</div><div class="fc-hash">inv...8F2A</div></div>
-          </div>
-          <div class="fc fc-2">
-            <div class="fc-icon" style="background:#10b981;color:#fff;">&#10003;</div>
-            <div><div class="fc-name">Aanbetaling</div><div class="fc-status">Ontvangen</div></div>
-            <div class="fc-right"><div class="fc-amount">&euro;120</div><div class="fc-hash">dep...C4D1</div></div>
-          </div>
-          <div class="fc fc-3">
-            <div class="fc-icon" style="background:#ec4899;color:#fff;">&#9829;</div>
-            <div><div class="fc-name">Follow-up</div><div class="fc-status">Verstuurd</div></div>
-            <div class="fc-right"><div class="fc-amount">&mdash;</div><div class="fc-hash">msg...A09B</div></div>
-          </div>
-          <div class="fc fc-4">
-            <div class="fc-icon" style="background:#6366f1;color:#fff;font-size:12px;">&#9998;</div>
-            <div><div class="fc-name">Factuur</div><div class="fc-status">Aangemaakt</div></div>
-            <div class="fc-right"><div class="fc-amount">&euro;780</div><div class="fc-hash">inv...F6D9</div></div>
-          </div>
-          <div class="fc fc-5">
-            <div class="fc-icon" style="background:#f59e0b;color:#fff;">&#9733;</div>
-            <div><div class="fc-name">Nieuwe klant</div><div class="fc-status">Geregistreerd</div></div>
-            <div class="fc-right"><div class="fc-amount">&mdash;</div><div class="fc-hash">cli...B3E7</div></div>
-          </div>
-          <div class="fc fc-6">
-            <div class="fc-icon" style="background:#06b6d4;color:#fff;">$</div>
-            <div><div class="fc-name">Uitgave</div><div class="fc-status">Gelogd</div></div>
-            <div class="fc-right"><div class="fc-amount">&euro;45</div><div class="fc-hash">exp...2C8F</div></div>
-          </div>
-        </div>
-
-        <!-- Phone mockup -->
-        <div class="phone-mockup">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <img
-              class="phone-screen-img"
-              src="/IMG_3083-2.jpg"
-              alt="inkLedger app dashboard"
-              data-i18n="index.hero.phone_alt"
-              data-i18n-attr="alt"
-              width="1170"
-              height="2532"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            >
-          </div>
-        </div>
-      </div>
-
-      <p class="hero-sub hero-anim hero-anim-4" data-i18n="index.hero.sub">
+      <p class="text-center text-muted text-lg max-w-xl mt-6 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200" data-i18n="index.hero.sub">
         Tattoo artiest software die planning, aanbetalingen, ontwerpgoedkeuring en belastingklare boekhouding regelt — zodat jij nooit meer achter klanten of bonnetjes aan hoeft te zitten.
       </p>
 
-      <div class="hero-cta-group hero-anim hero-anim-5">
-        <div id="heroFormContainer">
-          <form class="hero-form" id="heroForm">
-            <input
-              type="email"
-              class="hero-input"
-              id="heroEmail"
-              placeholder="Vul je e-mail in"
-              data-i18n="index.hero.email_placeholder"
-              data-i18n-attr="placeholder"
-              autocomplete="email"
-              required
-            >
-            <div class="honeypot" aria-hidden="true">
-              <label for="heroHp" data-i18n="index.hero.honeypot">Laat dit veld leeg</label>
-              <input type="text" id="heroHp" name="hp_field" tabindex="-1" autocomplete="off">
-            </div>
-            <button type="submit" class="btn-accent" id="heroSubmit">
-              Start gratis
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-            </button>
-          </form>
+      <div class="flex flex-col items-center gap-4 mt-10 opacity-0 animate-fade-in-up animation-delay-300">
+        <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-white text-base font-semibold rounded-full shadow-[0_4px_24px_var(--color-accent-glow)] hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-[0_8px_32px_var(--color-accent-glow)] transition-all duration-300">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Gratis downloaden op iOS
+        </a>
+        <p class="text-sm text-muted">Geen creditcard. Geen chaos.</p>
+      </div>
+
+      <div class="relative mt-16 w-full max-w-xs mx-auto opacity-0 animate-fade-in-up animation-delay-400">
+        <div class="bg-white rounded-[2.75rem] border-[7px] border-[#1a1a1a] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.12),0_16px_32px_rgba(0,0,0,0.08)]">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-[#1a1a1a] rounded-b-2xl z-10"></div>
+          <img src="/assets/IMG_3083-2.jpg" alt="inkLedger app dashboard" data-i18n="index.hero.phone_alt" data-i18n-attr="alt" width="1170" height="2532" loading="eager" decoding="async" fetchpriority="high" class="w-full h-full object-cover object-top">
         </div>
       </div>
-        <div class="store-badges hero-anim hero-anim-5">
-          <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" class="store-badge store-badge--apple" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            Download op iOS
-          </a>
-          <span class="store-badge store-badge--android">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.273l1.615 2.8a.3.3 0 01-.111.408l-.814.47a.3.3 0 01-.41-.11L16.26 3.24c-1.252-.58-2.722-.89-4.26-.89s-3.008.31-4.26.89L6.197 5.84a.3.3 0 01-.41.11l-.814-.47a.3.3 0 01-.111-.408l1.615-2.8C3.833 4.2 1.945 7.47 1.5 11.25h21c-.445-3.78-2.333-7.05-4.977-8.977zM7 8.75a1 1 0 110-2 1 1 0 010 2zm10 0a1 1 0 110-2 1 1 0 010 2zM3.5 12.25v8a1.5 1.5 0 003 0v-8h11v8a1.5 1.5 0 003 0v-8h-17zm-2 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/></svg>
-            Android — Binnenkort
-          </span>
-        </div>
     </section>
 
-    <!-- ••••••••••• FEATURES (dark section) ••••••••••• -->
-    <section class="features-dark" id="features" aria-label="Features">
-      <div class="features-dark-inner">
-        <div class="features-dark-header reveal">
+    <!-- ===== FEATURES (dark) ===== -->
+    <section class="bg-surface-dark text-white py-24 md:py-36 px-6 md:px-12 lg:px-20 rounded-t-3xl relative overflow-hidden" id="features" aria-label="Functies">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-8 md:gap-16 items-start mb-16 md:mb-20">
           <div>
-            <p class="fd-eyebrow" data-i18n="index.features.eyebrow">WAT JE KRIJGT</p>
-            <h2 class="fd-title" data-i18n="index.features.title">ALLES WAT JE NODIG HEBT. MEER NIET.</h2>
+            <p class="text-xs font-bold text-accent tracking-[0.15em] uppercase mb-3" data-i18n="index.features.eyebrow">Wat je krijgt</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight" data-i18n="index.features.title">Alles wat je nodig hebt. Meer niet.</h2>
           </div>
-          <div class="fd-right">
-            <p class="fd-desc" data-i18n="index.features.desc">Tattoo artiest software zonder ballast. Slim boeken, directe aanbetalingen, ontwerp-goedkeuring en boeken die klaar zijn als de belasting komt.</p>
-            <a href="#heroFormContainer" class="btn-outline-light">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span data-i18n="index.features.dl">Schrijf je in</span>
-            </a>
+          <div class="pt-1">
+            <p class="text-white/60 text-base leading-relaxed" data-i18n="index.features.desc">Tattoo artiest software zonder ballast. Slim boeken, directe aanbetalingen, ontwerp-goedkeuring en boeken die klaar zijn als de belasting komt.</p>
           </div>
         </div>
 
-        <div class="fd-grid">
-          <div class="fd-card reveal reveal-d1">
-            <div class="fd-card-visual">
-              <img src="/assets/optimized/client-card.jpg" alt="Klantbeheer dashboard met boekingsdetails" width="1200" height="792" loading="lazy" decoding="async" fetchpriority="low">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-surface-card border border-border-dark rounded-2xl p-8 md:p-10 transition-colors duration-300 hover:border-white/15">
+            <div class="h-48 rounded-xl overflow-hidden mb-6 bg-[#111]">
+              <img src="/assets/optimized/client-card.jpg" alt="Klantbeheer dashboard met boekingsdetails" width="1200" height="792" loading="lazy" decoding="async" class="w-full h-full object-cover">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item1.title">BOEKINGEN & AANBETALINGEN</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item1.desc">Klanten kiezen een slot, uploaden referenties en betalen een aanbetaling via jouw boekingspagina. Je wordt wakker met bevestigde sessies, niet met ongelezen DM's.</p>
+            <h3 class="text-xl font-bold tracking-tight mb-2" data-i18n="index.features.item1.title">Boekingen & Aanbetalingen</h3>
+            <p class="text-white/55 text-sm leading-relaxed" data-i18n="index.features.item1.desc">Klanten kiezen een slot, uploaden referenties en betalen een aanbetaling via jouw boekingspagina. Je wordt wakker met bevestigde sessies, niet met ongelezen DM's.</p>
           </div>
 
-          <div class="fd-card reveal reveal-d2">
-            <div class="fd-card-visual">
-              <img src="/assets/optimized/revenue-card.jpg" alt="Omzet tracking en aanbetalingsoverzicht" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="bg-surface-card border border-border-dark rounded-2xl p-8 md:p-10 transition-colors duration-300 hover:border-white/15">
+            <div class="h-48 rounded-xl overflow-hidden mb-6 bg-[#111]">
+              <img src="/assets/optimized/revenue-card.jpg" alt="Omzet tracking en aanbetalingsoverzicht" width="1280" height="853" loading="lazy" decoding="async" class="w-full h-full object-cover">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item2.title">OMZET & BETALINGEN</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item2.desc">Zie elke aanbetaling, elk saldo en elke betaling in één overzicht. Weet precies wie betaald heeft en waar je geld zit — zonder spreadsheet.</p>
+            <h3 class="text-xl font-bold tracking-tight mb-2" data-i18n="index.features.item2.title">Omzet & Betalingen</h3>
+            <p class="text-white/55 text-sm leading-relaxed" data-i18n="index.features.item2.desc">Zie elke aanbetaling, elk saldo en elke betaling in één overzicht. Weet precies wie betaald heeft en waar je geld zit — zonder spreadsheet.</p>
           </div>
 
-          <div class="fd-card fd-card-quote reveal reveal-d3">
-            <div class="fd-card-quote-bg">
-              <img src="/assets/optimized/quote-card.jpg" alt="Tattooartiest aan het werk in studio" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
-            </div>
-            <div class="fd-card-quote-text">
-              <blockquote data-i18n="index.features.quote">"We bouwden inkLedger omdat geen tattooartiest z'n vrijdagavond aan boekhouding zou moeten verliezen. Je pakte een machine op om te creëren — niet om facturen na te jagen."</blockquote>
-              <cite data-i18n="index.features.quote_author">&mdash; Gebouwd in Nederland. Gemaakt voor artiesten overal.</cite>
-            </div>
-          </div>
-
-          <div class="fd-card reveal reveal-d4">
-            <div class="fd-card-visual fd-card-visual--flow" aria-label="Ontwerpgoedkeuring status flow">
-              <div class="approval-flow">
-                <div class="af-step af-step--done">
-                  <div class="af-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/><polyline points="17 8 21 4"/><line x1="15" y1="10" x2="21" y2="4"/></svg></div>
-                  <span class="af-label">Geüpload</span>
-                  <span class="af-time">24 mrt, 14:32</span>
+          <div class="md:col-span-2 bg-surface-card border border-border-dark rounded-2xl p-8 md:p-10 transition-colors duration-300 hover:border-white/15">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+              <div class="flex items-center gap-0 shrink-0 py-4">
+                <div class="flex flex-col items-center gap-1.5 min-w-[64px]">
+                  <div class="w-8 h-8 rounded-full bg-white/12 flex items-center justify-center text-white/70">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/><polyline points="17 8 21 4"/><line x1="15" y1="10" x2="21" y2="4"/></svg>
+                  </div>
+                  <span class="text-[11px] font-semibold text-white/60">Geüpload</span>
                 </div>
-                <div class="af-connector af-connector--done"></div>
-                <div class="af-step af-step--done">
-                  <div class="af-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-                  <span class="af-label">Bekeken</span>
-                  <span class="af-time">25 mrt, 09:15</span>
+                <div class="flex-1 h-0.5 bg-white/20 min-w-3 mx-1 mb-5"></div>
+                <div class="flex flex-col items-center gap-1.5 min-w-[64px]">
+                  <div class="w-8 h-8 rounded-full bg-white/12 flex items-center justify-center text-white/70">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </div>
+                  <span class="text-[11px] font-semibold text-white/60">Bekeken</span>
                 </div>
-                <div class="af-connector af-connector--done"></div>
-                <div class="af-step af-step--active">
-                  <div class="af-icon af-icon--accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  <span class="af-label">Goedgekeurd</span>
-                  <span class="af-time">25 mrt, 11:48</span>
+                <div class="flex-1 h-0.5 bg-white/20 min-w-3 mx-1 mb-5"></div>
+                <div class="flex flex-col items-center gap-1.5 min-w-[64px]">
+                  <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white shadow-[0_0_20px_var(--color-accent-glow)]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span class="text-[11px] font-bold text-accent">Goedgekeurd</span>
                 </div>
-                <div class="af-connector"></div>
-                <div class="af-step af-step--pending">
-                  <div class="af-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-                  <span class="af-label">Geboekt</span>
-                  <span class="af-time">Wachtend</span>
+                <div class="flex-1 h-0.5 bg-white/8 min-w-3 mx-1 mb-5"></div>
+                <div class="flex flex-col items-center gap-1.5 min-w-[64px]">
+                  <div class="w-8 h-8 rounded-full border-[1.5px] border-dashed border-white/15 flex items-center justify-center text-white/30">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  </div>
+                  <span class="text-[11px] font-semibold text-white/20">Geboekt</span>
                 </div>
               </div>
-            </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item3.title">ONTWERPGOEDKEURING</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item3.desc">Stuur een magic link. Je klant bekijkt het ontwerp, geeft feedback en tekent af — met tijdstempel en opgeslagen. Geen screenshots kwijt in DM's. Geen "heb je m'n bericht gezien?"</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ••••••••••• ECOSYSTEM (How It Works) ••••••••••• -->
-    <section class="ecosystem" id="how" aria-label="How it works">
-      <p class="section-eyebrow reveal" data-i18n="index.how.eyebrow">Hoe het werkt</p>
-      <h2 class="eco-title reveal reveal-d1" data-i18n="index.how.title">DRIE STAPPEN. NUL CHAOS.</h2>
-      <p class="eco-subtitle reveal reveal-d2" data-i18n="index.how.sub">Van eerste aanvraag tot laatste factuur — tattoo artiest software die elke stap van je freelance business op één plek houdt.</p>
-      <div class="eco-grid">
-        <div class="eco-card reveal reveal-d1">
-          <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          </div>
-          <h3 class="eco-card-title">BOEK</h3>
-          <p class="eco-card-text" data-i18n="index.how.card1">Deel je boekingspagina. Klanten kiezen een sessie, uploaden referenties en locken in met een aanbetaling. Bevestigd en georganiseerd voordat je een naald oppakt.</p>
-        </div>
-        <div class="eco-card reveal reveal-d2">
-          <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          </div>
-          <h3 class="eco-card-title">BEHEER</h3>
-          <p class="eco-card-text" data-i18n="index.how.card2">Elke klant krijgt een profiel — sessiegeschiedenis, allergieën, ontwerpnotities, referenties. Automatische herinneringen voor afspraken. Nazorginstructies erna. Niets valt tussen wal en schip.</p>
-        </div>
-        <div class="eco-card reveal reveal-d3">
-          <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          </div>
-          <h3 class="eco-card-title">WORD BETAALD</h3>
-          <p class="eco-card-text" data-i18n="index.how.card3">Omzet erin, uitgaven eruit, kwartaalcijfers klaar. Exporteer naar CSV of PDF voor je boekhouder of de Belastingdienst. Boekhouding die minuten kost, geen uren.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ••••••••••• COMMUNITY ••••••••••• -->
-    <section class="security" id="community" aria-label="Join the community">
-      <div class="security-inner">
-        <div class="reveal">
-          <h2 class="sec-title">JIJ BENT NIET DE EERSTE. <strong>JOIN DE ARTIESTEN DIE SWITCHTEN.</strong></h2>
-          <p class="sec-desc">Tattooartiesten door heel Nederland vervangen spreadsheets en plakbriefjes voor een studio-first workflow. Stap vroeg in. Help bepalen wat we bouwen.</p>
-          <div class="sec-features">
-            <div class="sec-feature" data-slide="0" tabindex="0" role="button" aria-pressed="false">
-              <span class="sec-feature-icon sec-avatar">
-                <img src="/assets/optimized/avatars/community-01.jpg" alt="Luisltattoo" width="256" height="384" loading="lazy" decoding="async" fetchpriority="low">
-              </span>
-              <span class="sec-studio-name">Luisltattoo<span class="sec-studio-city">Den Haag</span></span>
-            </div>
-            <div class="sec-feature" data-slide="1" tabindex="0" role="button" aria-pressed="false">
-              <span class="sec-feature-icon sec-avatar sec-avatar--blur">
-                <img src="/assets/optimized/avatars/community-03.jpg" alt="" width="256" height="320" loading="lazy" decoding="async" fetchpriority="low">
-              </span>
-              <span class="sec-studio-name">Binnenkort<span class="sec-studio-city">Amsterdam</span></span>
-            </div>
-            <div class="sec-feature" data-slide="2" tabindex="0" role="button" aria-pressed="false">
-              <span class="sec-feature-icon sec-avatar sec-avatar--blur">
-                <img src="/assets/optimized/avatars/community-06.jpg" alt="" width="256" height="171" loading="lazy" decoding="async" fetchpriority="low">
-              </span>
-              <span class="sec-studio-name">Binnenkort<span class="sec-studio-city">Utrecht</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="sec-visual reveal reveal-d2" aria-label="Studio showcase">
-          <div class="sec-slideshow">
-            <div class="sec-slide sec-slide--active" data-index="0">
-              <img src="/assets/optimized/community-01.jpg" alt="Luisltattoo, Den Haag" class="sec-slide-img" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
-            </div>
-            <div class="sec-slide sec-slide--locked" data-index="1">
-              <img src="/assets/optimized/community-03.jpg" alt="" class="sec-slide-img" width="1200" height="1500" loading="lazy" decoding="async" fetchpriority="low">
-            </div>
-            <div class="sec-slide sec-slide--locked" data-index="2">
-              <img src="/assets/optimized/community-06.jpg" alt="" class="sec-slide-img" width="1200" height="800" loading="lazy" decoding="async" fetchpriority="low">
-            </div>
-            <div class="sec-slide-caption">
-              <span class="sec-slide-label">Luisltattoo  Den Haag</span>
-            </div>
-            <div class="sec-slide-dots" aria-hidden="true">
-              <span class="sec-dot sec-dot--active"></span>
-              <span class="sec-dot"></span>
-              <span class="sec-dot"></span>
+              <div>
+                <h3 class="text-xl font-bold tracking-tight mb-2" data-i18n="index.features.item3.title">Ontwerpgoedkeuring</h3>
+                <p class="text-white/55 text-sm leading-relaxed" data-i18n="index.features.item3.desc">Stuur een magic link. Je klant bekijkt het ontwerp, geeft feedback en tekent af — met tijdstempel en opgeslagen. Geen screenshots kwijt in DM's. Geen "heb je m'n bericht gezien?"</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ••••••••••• FAQ ••••••••••• -->
-    <section class="faq" id="faq" aria-label="Frequently asked questions">
-      <div class="faq-inner">
-        <div class="faq-header">
-          <p class="faq-eyebrow reveal" data-i18n="index.faq.eyebrow">FAQ</p>
-          <h2 class="faq-title reveal reveal-d1" data-i18n="index.faq.title">SNELLE ANTWOORDEN.</h2>
-          <p class="faq-subtitle reveal reveal-d2" data-i18n="index.faq.sub">Wat je echt wilt weten voordat je je aanmeldt.</p>
+    <!-- ===== HOW IT WORKS (light) ===== -->
+    <section class="bg-[#fafafa] py-24 md:py-36 px-6 md:px-12 lg:px-20" id="how" aria-label="Hoe het werkt">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-bold text-accent tracking-[0.15em] uppercase mb-3 text-center" data-i18n="index.how.eyebrow">Hoe het werkt</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-center max-w-2xl mx-auto mb-20" data-i18n="index.how.title">Drie stappen. Nul chaos.</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+          <div class="group">
+            <div class="text-7xl md:text-8xl font-black text-black/[0.06] leading-none mb-4 tracking-tighter">01</div>
+            <h3 class="text-lg font-bold tracking-tight mb-3">Boek</h3>
+            <p class="text-muted text-sm leading-relaxed" data-i18n="index.how.card1">Deel je boekingspagina. Klanten kiezen een sessie, uploaden referenties en locken in met een aanbetaling. Bevestigd en georganiseerd voordat je een naald oppakt.</p>
+          </div>
+          <div class="group">
+            <div class="text-7xl md:text-8xl font-black text-black/[0.06] leading-none mb-4 tracking-tighter">02</div>
+            <h3 class="text-lg font-bold tracking-tight mb-3">Beheer</h3>
+            <p class="text-muted text-sm leading-relaxed" data-i18n="index.how.card2">Elke klant krijgt een profiel — sessiegeschiedenis, allergieën, ontwerpnotities, referenties. Automatische herinneringen voor afspraken. Nazorginstructies erna. Niets valt tussen wal en schip.</p>
+          </div>
+          <div class="group">
+            <div class="text-7xl md:text-8xl font-black text-black/[0.06] leading-none mb-4 tracking-tighter">03</div>
+            <h3 class="text-lg font-bold tracking-tight mb-3">Word betaald</h3>
+            <p class="text-muted text-sm leading-relaxed" data-i18n="index.how.card3">Omzet erin, uitgaven eruit, kwartaalcijfers klaar. Exporteer naar CSV voor je boekhouder of de Belastingdienst. Boekhouding die minuten kost, geen uren.</p>
+          </div>
         </div>
-
-        <div class="faq-list reveal reveal-d3">
-
-          <div class="faq-item">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-num">01</span>
-              <span class="faq-q" data-i18n="index.faq.q1">Is inkLedger gratis?</span>
-              <span class="faq-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a1">Ja. De basisfuncties — boekingen, klantprofielen en basis boekhouding — zijn gratis. Premiumfuncties zoals belastingexports, geavanceerde rapporten en multi-sessiebeheer zitten in betaalde plannen.</p>
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-num">02</span>
-              <span class="faq-q" data-i18n="index.faq.q2">Kunnen klanten direct via inkLedger boeken?</span>
-              <span class="faq-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a2">Ja. Je krijgt een persoonlijke boekingspagina. Klanten bekijken je werk, kiezen een sessietype, uploaden referenties en betalen een aanbetaling — één flow, één link. Deel op Instagram, je site of in je bio.</p>
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-num">03</span>
-              <span class="faq-q" data-i18n="index.faq.q3">Hoe werkt de boekhouding voor freelancers?</span>
-              <span class="faq-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a3">inkLedger volgt inkomsten en uitgaven automatisch, categoriseert transacties en bouwt kwartaaloverzichten. Exportklaar voor de Belastingdienst of je boekhouder. Geen boekhoudopleiding nodig.</p>
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-num">04</span>
-              <span class="faq-q" data-i18n="index.faq.q4">Is mijn data veilig?</span>
-              <span class="faq-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a4">End-to-end encryptie. EU-gebaseerde servers. Volledig AVG-compliant. Je klantdata en financiën zijn op slot.</p>
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-num">05</span>
-              <span class="faq-q" data-i18n="index.faq.q5">Wanneer lanceert inkLedger?</span>
-              <span class="faq-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a5">De iOS-app is nu live. We zitten in early access met een groeiende groep artiesten. Stap in en help bepalen wat we bouwen.</p>
-            </div></div>
-          </div>
-
-        </div><!-- /faq-list -->
-
-        <p class="faq-quote reveal" data-i18n="index.faq.quote">"Gebouwd door mensen die de hustle echt snappen."</p>
       </div>
     </section>
 
-    <!-- ••••••••••• FINAL CTA ••••••••••• -->
-    <section class="final-cta" id="cta" aria-label="Call to action">
-      <div class="star star-1"></div>
-      <div class="star star-2"></div>
-      <div class="star star-3"></div>
-      <div class="star star-4"></div>
+    <!-- ===== TRUST STRIP ===== -->
+    <section class="bg-[#fafafa] pb-12 px-6" aria-label="Social proof">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10 border border-border rounded-2xl p-6 md:p-8 bg-white/60">
+          <div class="flex items-center gap-4 shrink-0">
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-accent/20">
+              <img src="/assets/optimized/avatars/community-01.jpg" alt="Luisltattoo" width="256" height="384" loading="lazy" decoding="async" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="text-sm font-semibold">Luisltattoo</div>
+              <div class="text-xs text-muted">Den Haag</div>
+            </div>
+          </div>
+          <blockquote class="text-sm text-muted leading-relaxed italic" data-i18n="index.features.quote">"We bouwden inkLedger omdat geen tattooartiest z'n vrijdagavond aan boekhouding zou moeten verliezen. Je pakte een machine op om te creëren — niet om facturen na te jagen."</blockquote>
+        </div>
+      </div>
+    </section>
 
-      <h2 class="final-cta-title reveal" data-i18n="index.cta.title">JOUW VOLGENDE SESSIE<br>BEGINT HIER.</h2>
-      <div class="reveal reveal-d1">
-        <a href="#heroFormContainer" class="btn-accent" id="ctaBtn" data-i18n="index.cta.btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-          Start gratis
+    <!-- ===== FAQ ===== -->
+    <section class="bg-[#fafafa] py-24 md:py-36 px-6 md:px-12 lg:px-20 relative" id="faq" aria-label="Veelgestelde vragen">
+      <div class="absolute top-0 left-6 right-6 md:left-12 md:right-12 lg:left-20 lg:right-20 h-px bg-border"></div>
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-xs font-bold text-accent tracking-[0.15em] uppercase mb-3" data-i18n="index.faq.eyebrow">FAQ</p>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-4" data-i18n="index.faq.title">Snelle antwoorden.</h2>
+          <p class="text-base text-muted max-w-md mx-auto" data-i18n="index.faq.sub">Wat je echt wilt weten voordat je je aanmeldt.</p>
+        </div>
+
+        <div class="border-t border-border">
+          <div class="faq-item border-b border-border">
+            <button class="faq-btn w-full flex items-center gap-5 py-6 text-left bg-transparent border-none cursor-pointer group" aria-expanded="false">
+              <span class="text-3xl font-black text-black/10 leading-none transition-colors group-hover:text-accent/40 w-12 shrink-0 tabular-nums">01</span>
+              <span class="flex-1 text-base font-semibold leading-snug" data-i18n="index.faq.q1">Is inkLedger gratis?</span>
+              <span class="w-8 h-8 rounded-full border border-border flex items-center justify-center shrink-0 text-muted transition-all duration-300">
+                <svg class="faq-icon-svg w-3.5 h-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-body"><div class="faq-body-inner">
+              <p class="pb-6 pl-17 text-sm text-muted leading-relaxed max-w-xl" data-i18n="index.faq.a1">Ja. De basisfuncties — boekingen, klantprofielen en basis boekhouding — zijn gratis. Premiumfuncties zoals belastingexports, geavanceerde rapporten en multi-sessiebeheer zijn gratis voor de eerste gebruikers!</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item border-b border-border">
+            <button class="faq-btn w-full flex items-center gap-5 py-6 text-left bg-transparent border-none cursor-pointer group" aria-expanded="false">
+              <span class="text-3xl font-black text-black/10 leading-none transition-colors group-hover:text-accent/40 w-12 shrink-0 tabular-nums">02</span>
+              <span class="flex-1 text-base font-semibold leading-snug" data-i18n="index.faq.q2">Kunnen klanten direct via inkLedger boeken?</span>
+              <span class="w-8 h-8 rounded-full border border-border flex items-center justify-center shrink-0 text-muted transition-all duration-300">
+                <svg class="faq-icon-svg w-3.5 h-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-body"><div class="faq-body-inner">
+              <p class="pb-6 pl-17 text-sm text-muted leading-relaxed max-w-xl" data-i18n="index.faq.a2">Ja. Je krijgt een persoonlijke boekingspagina. Klanten bekijken je werk, kiezen een sessietype, uploaden referenties en betalen een aanbetaling — één flow, één link. Deel op Instagram, je site of in je bio.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item border-b border-border">
+            <button class="faq-btn w-full flex items-center gap-5 py-6 text-left bg-transparent border-none cursor-pointer group" aria-expanded="false">
+              <span class="text-3xl font-black text-black/10 leading-none transition-colors group-hover:text-accent/40 w-12 shrink-0 tabular-nums">03</span>
+              <span class="flex-1 text-base font-semibold leading-snug" data-i18n="index.faq.q3">Hoe werkt de boekhouding voor freelancers?</span>
+              <span class="w-8 h-8 rounded-full border border-border flex items-center justify-center shrink-0 text-muted transition-all duration-300">
+                <svg class="faq-icon-svg w-3.5 h-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-body"><div class="faq-body-inner">
+              <p class="pb-6 pl-17 text-sm text-muted leading-relaxed max-w-xl" data-i18n="index.faq.a3">inkLedger volgt inkomsten en uitgaven automatisch, categoriseert transacties en bouwt kwartaaloverzichten. Exportklaar voor de Belastingdienst of je boekhouder. Geen boekhoudopleiding nodig.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item border-b border-border">
+            <button class="faq-btn w-full flex items-center gap-5 py-6 text-left bg-transparent border-none cursor-pointer group" aria-expanded="false">
+              <span class="text-3xl font-black text-black/10 leading-none transition-colors group-hover:text-accent/40 w-12 shrink-0 tabular-nums">04</span>
+              <span class="flex-1 text-base font-semibold leading-snug" data-i18n="index.faq.q4">Is mijn data veilig?</span>
+              <span class="w-8 h-8 rounded-full border border-border flex items-center justify-center shrink-0 text-muted transition-all duration-300">
+                <svg class="faq-icon-svg w-3.5 h-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-body"><div class="faq-body-inner">
+              <p class="pb-6 pl-17 text-sm text-muted leading-relaxed max-w-xl" data-i18n="index.faq.a4">End-to-end encryptie. EU-gebaseerde servers. Volledig AVG-compliant. Je klantdata en financiën zijn op slot.</p>
+            </div></div>
+          </div>
+
+          <div class="faq-item border-b border-border">
+            <button class="faq-btn w-full flex items-center gap-5 py-6 text-left bg-transparent border-none cursor-pointer group" aria-expanded="false">
+              <span class="text-3xl font-black text-black/10 leading-none transition-colors group-hover:text-accent/40 w-12 shrink-0 tabular-nums">05</span>
+              <span class="flex-1 text-base font-semibold leading-snug" data-i18n="index.faq.q5">Wanneer lanceert inkLedger?</span>
+              <span class="w-8 h-8 rounded-full border border-border flex items-center justify-center shrink-0 text-muted transition-all duration-300">
+                <svg class="faq-icon-svg w-3.5 h-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-body"><div class="faq-body-inner">
+              <p class="pb-6 pl-17 text-sm text-muted leading-relaxed max-w-xl" data-i18n="index.faq.a5">De iOS-app is nu live. We zitten in early access met een groeiende groep artiesten. Stap in en help bepalen wat we bouwen.</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="bg-surface-dark py-28 md:py-40 px-6 text-center relative overflow-hidden" id="cta" aria-label="Call to action">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_80%,rgba(204,51,0,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-lg mx-auto mb-8 relative" data-i18n="index.cta.title">Jouw volgende sessie begint hier.</h2>
+      <div class="relative">
+        <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2.5 px-10 py-4 bg-accent text-white text-base font-semibold rounded-full shadow-[0_4px_24px_var(--color-accent-glow)] hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-[0_8px_32px_var(--color-accent-glow)] transition-all duration-300" data-i18n="index.cta.btn">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Gratis downloaden op iOS
         </a>
       </div>
-      <p style="margin-top:16px;font-size:14px;color:var(--gray);opacity:0.7;" class="reveal reveal-d2" data-i18n="index.cta.sub">Gratis tattoo artiest software voor boekingen, goedkeuring en boekhouding. Beschikbaar op iOS.</p>
-      <div class="store-badges reveal reveal-d3">
-        <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" class="store-badge store-badge--apple" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download op iOS
-        </a>
-        <span class="store-badge store-badge--android">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.273l1.615 2.8a.3.3 0 01-.111.408l-.814.47a.3.3 0 01-.41-.11L16.26 3.24c-1.252-.58-2.722-.89-4.26-.89s-3.008.31-4.26.89L6.197 5.84a.3.3 0 01-.41.11l-.814-.47a.3.3 0 01-.111-.408l1.615-2.8C3.833 4.2 1.945 7.47 1.5 11.25h21c-.445-3.78-2.333-7.05-4.977-8.977zM7 8.75a1 1 0 110-2 1 1 0 010 2zm10 0a1 1 0 110-2 1 1 0 010 2zM3.5 12.25v8a1.5 1.5 0 003 0v-8h11v8a1.5 1.5 0 003 0v-8h-17zm-2 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/></svg>
-          Android — Binnenkort
-        </span>
-      </div>
+      <p class="mt-5 text-sm text-white/40 relative" data-i18n="index.cta.sub">Gratis tattoo artiest software voor boekingen, goedkeuring en boekhouding. Beschikbaar op iOS.</p>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <div class="footer-logo">
-          <div class="footer-logo-icon"><img src="/icon.png" alt="inkLedger"></div>
+  <footer class="bg-surface-dark border-t border-border-dark py-12 px-6 md:px-12 lg:px-20" role="contentinfo">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+      <div>
+        <div class="flex items-center gap-2 mb-5">
+          <div class="w-6 h-6 rounded-md overflow-hidden bg-white/10"><img src="/assets/adaptive-icon.png" alt="inkLedger" class="w-full h-full object-contain"></div>
         </div>
-        <ul class="footer-links-list">
-          <li><a href="#" data-i18n="index.footer.home">Home</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="#features" data-i18n="index.footer.features">Functies</a></li>
-          <li><a href="#how" data-i18n="index.footer.how">Hoe het werkt</a></li>
-          <li><a href="mailto:support@inkledger.app">Support</a></li>
-          <li><a href="/nl/privacy">Privacybeleid</a> &amp; <a href="/nl/terms">Gebruiksvoorwaarden</a></li>
-          <li><button class="footer-link-button" type="button" id="cookieManageBtn">Cookie-instellingen</button></li>
+        <ul class="flex flex-col gap-2">
+          <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors" data-i18n="index.footer.home">Home</a></li>
+          <li><a href="/blog" class="text-sm text-white/50 hover:text-white transition-colors">Blog</a></li>
+          <li><a href="#features" class="text-sm text-white/50 hover:text-white transition-colors" data-i18n="index.footer.features">Functies</a></li>
+          <li><a href="#how" class="text-sm text-white/50 hover:text-white transition-colors" data-i18n="index.footer.how">Hoe het werkt</a></li>
+          <li><a href="mailto:support@inkledger.app" class="text-sm text-white/50 hover:text-white transition-colors">Support</a></li>
+          <li><a href="/nl/privacy" class="text-sm text-white/50 hover:text-white transition-colors">Privacybeleid</a> &amp; <a href="/nl/terms" class="text-sm text-white/50 hover:text-white transition-colors">Gebruiksvoorwaarden</a></li>
+          <li><button class="text-sm text-white/50 hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 font-[inherit]" type="button" id="cookieManageBtn">Cookie-instellingen</button></li>
         </ul>
       </div>
-      <div class="footer-right">
-        <!-- SOCIAL ICONS  commented out, activate when ready
-        <div class="footer-social-label">Stay in touch</div>
-        <div class="footer-social">
-          <a href="https://instagram.com/inkledger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-        </div>
-        -->
-        <div class="footer-newsletter" id="footerFormContainer">
-          <input type="email" id="footerEmail" placeholder="naam@email.com" autocomplete="email">
-          <button type="button" id="footerSubmit">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-            Inschrijven
-          </button>
-        </div>
-        <div class="footer-language" aria-label="Taalselector">
-          <span class="footer-language-label">Taal</span>
-          <div class="footer-language-picker">
-            <a class="footer-language-option is-active" href="/nl" lang="nl" aria-current="page">NL</a>
-            <a class="footer-language-option" href="/" lang="en">EN</a>
+      <div class="text-right">
+        <div class="flex flex-col items-end gap-3">
+          <span class="text-[11px] font-bold tracking-[0.16em] uppercase text-white/40">Taal</span>
+          <div class="inline-flex items-center gap-1.5 p-1.5 rounded-full bg-white/5 border border-white/12">
+            <a class="min-w-[54px] px-3.5 py-2 rounded-full text-xs font-bold tracking-[0.12em] uppercase bg-[#f6f5f1] text-[#0b0b0b] shadow-[0_10px_24px_rgba(0,0,0,0.22)] text-center" href="/nl" lang="nl" aria-current="page">NL</a>
+            <a class="min-w-[54px] px-3.5 py-2 rounded-full text-xs font-bold tracking-[0.12em] uppercase text-white/60 hover:text-white transition-all text-center" href="/" lang="en">EN</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ========== COOKIE BANNER ========== -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent" data-i18n="index.cookie.aria" data-i18n-attr="aria-label">
-    <div class="cookie-banner-card">
+  <!-- ===== COOKIE BANNER ===== -->
+  <div class="cookie-banner fixed left-4 right-4 md:left-6 md:right-6 bottom-4 md:bottom-6 z-[2000]" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie toestemming" data-i18n="index.cookie.aria" data-i18n-attr="aria-label">
+    <div class="bg-[#0b0b0b] text-[#f6f5f1] rounded-2xl p-5 md:p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)] grid grid-cols-1 md:grid-cols-[1.2fr_auto] gap-4 md:gap-6 items-center">
       <div>
-        <div class="cookie-banner-title" data-i18n="index.cookie.title">Cookies & Privacy</div>
-        <p class="cookie-banner-text">
-          <span data-i18n="index.cookie.text">We use cookies to keep inkLedger running smoothly and to understand how you use the site.</span>
-          <span data-i18n="index.cookie.read">Read our</span>
-          <a class="cookie-banner-link" href="/privacy" data-localize-href="/privacy" data-i18n="index.cookie.privacy">Privacy Policy</a>
-          <span data-i18n="index.cookie.and">and</span>
-          <a class="cookie-banner-link" href="/terms" data-localize-href="/terms" data-i18n="index.cookie.terms">Terms of Service</a>.
+        <div class="text-xl font-bold tracking-wide mb-1.5" data-i18n="index.cookie.title">Cookies & Privacy</div>
+        <p class="text-sm text-white/75 leading-relaxed">
+          <span data-i18n="index.cookie.text">We gebruiken cookies om inkLedger soepel te laten draaien en te begrijpen hoe je de site gebruikt.</span>
+          <span data-i18n="index.cookie.read">Lees ons</span>
+          <a class="text-white/90 underline underline-offset-4" href="/nl/privacy" data-localize-href="/nl/privacy" data-i18n="index.cookie.privacy">Privacybeleid</a>
+          <span data-i18n="index.cookie.and">en</span>
+          <a class="text-white/90 underline underline-offset-4" href="/nl/terms" data-localize-href="/nl/terms" data-i18n="index.cookie.terms">Gebruiksvoorwaarden</a>.
         </p>
       </div>
-      <div class="cookie-banner-actions">
-        <button class="btn-cookie" type="button" id="cookieDecline" data-i18n="index.cookie.decline">Decline</button>
-        <button class="btn-cookie" type="button" id="cookieCustomize" data-i18n="index.cookie.customize">Customize</button>
-        <button class="btn-cookie btn-cookie-primary" type="button" id="cookieAccept" data-i18n="index.cookie.accept">Accept all</button>
+      <div class="flex gap-2.5 flex-wrap">
+        <button class="px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.08em] uppercase border border-white/18 bg-transparent text-white cursor-pointer hover:-translate-y-px hover:border-white/35 transition-all" type="button" id="cookieDecline" data-i18n="index.cookie.decline">Weigeren</button>
+        <button class="px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.08em] uppercase border border-white/18 bg-transparent text-white cursor-pointer hover:-translate-y-px hover:border-white/35 transition-all" type="button" id="cookieCustomize" data-i18n="index.cookie.customize">Aanpassen</button>
+        <button class="px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.08em] uppercase bg-white text-[#0b0b0b] border border-transparent cursor-pointer hover:-translate-y-px hover:shadow-[0_12px_28px_rgba(255,255,255,0.25)] transition-all" type="button" id="cookieAccept" data-i18n="index.cookie.accept">Alles accepteren</button>
       </div>
     </div>
-    <div class="cookie-preferences" id="cookiePreferences" aria-hidden="true">
-      <div class="cookie-preferences-header">
-        <div class="cookie-banner-title" data-i18n="index.cookie.preferences_title">Cookie Preferences</div>
-        <button class="cookie-close" type="button" id="cookieClose" aria-label="Close" data-i18n="index.cookie.close" data-i18n-attr="aria-label">&times;</button>
+
+    <div class="cookie-preferences mt-3.5 p-4 rounded-2xl border border-white/8 bg-[#111]" id="cookiePreferences" aria-hidden="true">
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <div class="text-xl font-bold tracking-wide text-[#f6f5f1]" data-i18n="index.cookie.preferences_title">Cookie-voorkeuren</div>
+        <button class="w-9 h-9 rounded-full border border-white/20 bg-transparent text-[#f6f5f1] text-xl leading-none cursor-pointer hover:border-white/40 transition-all" type="button" id="cookieClose" aria-label="Sluiten" data-i18n="index.cookie.close" data-i18n-attr="aria-label">&times;</button>
       </div>
-      <p class="cookie-banner-text" data-i18n="index.cookie.preferences_text">Choose which cookies you allow. You can change this anytime.</p>
-      <div class="cookie-preferences-list">
-        <div class="cookie-pref-item">
+      <p class="text-sm text-white/65 mb-4" data-i18n="index.cookie.preferences_text">Kies welke cookies je toestaat. Je kunt dit altijd wijzigen.</p>
+      <div class="flex flex-col gap-3 mb-4">
+        <div class="flex items-center justify-between gap-4 py-3">
           <div>
-            <div class="cookie-pref-title" data-i18n="index.cookie.necessary_title">Necessary</div>
-            <div class="cookie-pref-desc" data-i18n="index.cookie.necessary_desc">Required for the site to function.</div>
+            <div class="text-sm font-bold tracking-wide uppercase text-[#f6f5f1] mb-1" data-i18n="index.cookie.necessary_title">Noodzakelijk</div>
+            <div class="text-[13px] text-white/65" data-i18n="index.cookie.necessary_desc">Vereist om de site te laten werken.</div>
           </div>
-          <div class="cookie-toggle" data-i18n="index.cookie.always_on">Always on</div>
+          <div class="text-xs font-bold tracking-[0.08em] uppercase text-white/75" data-i18n="index.cookie.always_on">Altijd aan</div>
         </div>
-        <div class="cookie-pref-item">
+        <div class="flex items-center justify-between gap-4 py-3 border-t border-white/6">
           <div>
-            <div class="cookie-pref-title" data-i18n="index.cookie.analytics_title">Analytics</div>
-            <div class="cookie-pref-desc" data-i18n="index.cookie.analytics_desc">Helps us improve the product.</div>
+            <div class="text-sm font-bold tracking-wide uppercase text-[#f6f5f1] mb-1" data-i18n="index.cookie.analytics_title">Analytics</div>
+            <div class="text-[13px] text-white/65" data-i18n="index.cookie.analytics_desc">Helpt ons het product te verbeteren.</div>
           </div>
           <label class="cookie-switch" for="cookieAnalytics">
             <input type="checkbox" id="cookieAnalytics">
@@ -2139,481 +443,60 @@
           </label>
         </div>
       </div>
-      <div class="cookie-banner-actions">
-        <button class="btn-cookie" type="button" id="cookieSave" data-i18n="index.cookie.save">Save preferences</button>
-        <button class="btn-cookie btn-cookie-primary" type="button" id="cookieAcceptAll" data-i18n="index.cookie.accept">Accept all</button>
+      <div class="flex gap-2.5 flex-wrap">
+        <button class="px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.08em] uppercase border border-white/18 bg-transparent text-white cursor-pointer hover:-translate-y-px transition-all" type="button" id="cookieSave" data-i18n="index.cookie.save">Voorkeuren opslaan</button>
+        <button class="px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.08em] uppercase bg-white text-[#0b0b0b] border border-transparent cursor-pointer hover:-translate-y-px transition-all" type="button" id="cookieAcceptAll" data-i18n="index.cookie.accept">Alles accepteren</button>
       </div>
     </div>
   </div>
 
-  <script>
-  (function() {
-    'use strict';
-
-    // Dismiss the loader as soon as the DOM is ready so images and fonts do not block first paint.
-    function dismissLoader() {
-      var loader = document.getElementById('loader');
-      if (!loader) return;
-      window.requestAnimationFrame(function() {
-        loader.classList.add('done');
-      });
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', dismissLoader, { once: true });
-    } else {
-      dismissLoader();
-    }
-
-    // Nav toggle (mobile)
-    var navToggle = document.getElementById('navToggle');
-    var navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', function() {
-      var isOpen = navLinks.classList.toggle('open');
-      this.classList.toggle('open');
-      this.setAttribute('aria-expanded', isOpen);
-      document.body.classList.toggle('menu-open', isOpen);
-    });
-
-    // Close mobile menu on link click
-    navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('menu-open');
-      });
-    });
-
-    // Scroll reveal with IntersectionObserver
-    var revealEls = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      revealEls.forEach(function(el) { observer.observe(el); });
-    } else {
-      revealEls.forEach(function(el) { el.classList.add('visible'); });
-    }
-
-    function getHeroEmailInput() {
-      return document.getElementById('heroEmail');
-    }
-
-    function focusHeroEmailInput() {
-      var heroEmailInput = getHeroEmailInput();
-      if (!heroEmailInput) return;
-      try {
-        heroEmailInput.focus({ preventScroll: true });
-      } catch (e) {
-        heroEmailInput.focus();
-      }
-    }
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-      a.addEventListener('click', function(e) {
-        var href = this.getAttribute('href');
-        var target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          if (href === '#heroFormContainer') {
-            var heroEmailInput = getHeroEmailInput();
-            if (heroEmailInput) {
-              heroEmailInput.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
-              setTimeout(focusHeroEmailInput, 520);
-              return;
-            }
-          }
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // Waitlist form handling (hero only)
-    function showWaitlistSuccess(container) {
-      var message = (window.t && window.t('index.waitlist.success')) || "You're on the list! We'll be in touch soon.";
-      container.innerHTML =
-        '<div class="hero-form-success">' +
-          '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
-          '<span>' + message + '</span>' +
-        '</div>';
-    }
-
-    function showWaitlistError(container) {
-      var message = (window.t && window.t('index.waitlist.error')) || "Something went wrong. Please try again.";
-      container.innerHTML =
-        '<div class="hero-form-success" style="border-color: rgba(220,38,38,0.25); color: #dc2626; background: rgba(220,38,38,0.08);">' +
-          '<span>' + message + '</span>' +
-        '</div>';
-    }
-
-    function submitWaitlist(email, source, honeypot) {
-      return fetch('https://api.inkledger.app/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, source: source, hp: honeypot })
-      }).then(function(res) {
-        return res.json().catch(function() { return {}; }).then(function(data) {
-          if (!res.ok || !data.ok) {
-            throw new Error(data.error || 'Request failed');
-          }
-          return data;
-        });
-      });
-    }
-
-    function handleWaitlistSubmit(formId, emailId, containerId, source, hpId) {
-      var form = document.getElementById(formId);
-      var emailInput = document.getElementById(emailId);
-      var hpInput = document.getElementById(hpId);
-      var container = document.getElementById(containerId);
-      if (!form) return;
-
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var email = emailInput.value.trim();
-        var honeypot = hpInput ? hpInput.value.trim() : '';
-        if (honeypot) {
-          showWaitlistSuccess(container);
-          return;
-        }
-        if (!email) return;
-        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!re.test(email)) return;
-
-        submitWaitlist(email, source, honeypot)
-          .then(function() { showWaitlistSuccess(container); })
-          .catch(function() { showWaitlistError(container); });
-      });
-    }
-
-    handleWaitlistSubmit('heroForm', 'heroEmail', 'heroFormContainer', 'hero', 'heroHp');
-
-    // Footer newsletter  calls same API with source='footer'
-    (function() {
-      var btn       = document.getElementById('footerSubmit');
-      var input     = document.getElementById('footerEmail');
-      var container = document.getElementById('footerFormContainer');
-      if (!btn || !input || !container) return;
-      var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      function submit() {
-        var email = input.value.trim();
-        if (!email || !re.test(email)) { input.focus(); return; }
-        btn.disabled = true;
-        submitWaitlist(email, 'footer', '')
-          .then(function()  { showWaitlistSuccess(container); })
-          .catch(function() { showWaitlistError(container);   });
-      }
-
-      btn.addEventListener('click', submit);
-      input.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') submit();
-      });
-    })();
-
-    // Cookie banner + consent
-    var cookieKey = 'inkledger_cookie_consent';
-    var banner = document.getElementById('cookieBanner');
-    var prefs = document.getElementById('cookiePreferences');
-    var acceptBtn = document.getElementById('cookieAccept');
-    var declineBtn = document.getElementById('cookieDecline');
-    var customizeBtn = document.getElementById('cookieCustomize');
-    var saveBtn = document.getElementById('cookieSave');
-    var acceptAllBtn = document.getElementById('cookieAcceptAll');
-    var closeBtn = document.getElementById('cookieClose');
-    var analyticsToggle = document.getElementById('cookieAnalytics');
-    var cookieManageBtn = document.getElementById('cookieManageBtn');
-    var memoryConsent = null;
-
-    function readConsent() {
-      try {
-        var raw = localStorage.getItem(cookieKey);
-        if (!raw) return memoryConsent;
-        if (raw === 'accepted') return { analytics: true };
-        if (raw === 'declined') return { analytics: false };
-        return JSON.parse(raw);
-      } catch (e) {
-        return memoryConsent;
-      }
-    }
-
-    function writeConsent(consent) {
-      memoryConsent = consent;
-      try {
-        localStorage.setItem(cookieKey, JSON.stringify(consent));
-      } catch (e) {}
-    }
-
-    function normalizeConsent(consent) {
-      return {
-        necessary: true,
-        analytics: !!(consent && consent.analytics)
-      };
-    }
-
-    function showBanner() {
-      if (banner) banner.classList.add('is-visible');
-    }
-
-    function hideBanner() {
-      if (banner) banner.classList.remove('is-visible');
-    }
-
-    function openPrefs() {
-      if (!prefs) return;
-      prefs.classList.add('is-open');
-      prefs.setAttribute('aria-hidden', 'false');
-    }
-
-    function closePrefs() {
-      if (!prefs) return;
-      prefs.classList.remove('is-open');
-      prefs.setAttribute('aria-hidden', 'true');
-    }
-
-    function enableConsentScripts(type) {
-      var scripts = document.querySelectorAll('script[type="text/plain"][data-consent="' + type + '"]');
-      for (var i = 0; i < scripts.length; i++) {
-        var oldScript = scripts[i];
-        var newScript = document.createElement('script');
-        var srcAttr = oldScript.getAttribute('src');
-        if (srcAttr) newScript.src = srcAttr;
-        if (oldScript.async) newScript.async = true;
-        if (oldScript.defer) newScript.defer = true;
-        if (oldScript.noModule) newScript.noModule = true;
-        if (oldScript.crossOrigin) newScript.crossOrigin = oldScript.crossOrigin;
-        if (oldScript.referrerPolicy) newScript.referrerPolicy = oldScript.referrerPolicy;
-        if (oldScript.integrity) newScript.integrity = oldScript.integrity;
-        if (!srcAttr) newScript.text = oldScript.text || oldScript.textContent || '';
-        oldScript.parentNode.replaceChild(newScript, oldScript);
-      }
-    }
-
-    function updateAnalytics(consent) {
-      var analyticsState = consent.analytics ? 'granted' : 'denied';
-      document.documentElement.setAttribute('data-consent-analytics', analyticsState);
-      if (typeof window.CustomEvent === 'function') {
-        window.dispatchEvent(new CustomEvent('inkledger:consent', { detail: consent }));
-      }
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', { analytics_storage: analyticsState });
-      }
-      if (window.dataLayer && typeof window.dataLayer.push === 'function') {
-        window.dataLayer.push({ event: 'consent_update', analytics: consent.analytics });
-      }
-      if (consent.analytics) enableConsentScripts('analytics');
-    }
-
-    function applyConsent(consent) {
-      var normalized = normalizeConsent(consent);
-      writeConsent(normalized);
-      if (analyticsToggle) analyticsToggle.checked = normalized.analytics;
-      updateAnalytics(normalized);
-      closePrefs();
-      hideBanner();
-    }
-
-    if (banner) {
-      var stored = readConsent();
-      if (stored) {
-        var normalized = normalizeConsent(stored);
-        if (analyticsToggle) analyticsToggle.checked = normalized.analytics;
-        updateAnalytics(normalized);
-        hideBanner();
-      } else {
-        showBanner();
-      }
-    }
-
-    if (customizeBtn) customizeBtn.addEventListener('click', function() { openPrefs(); });
-    if (closeBtn) closeBtn.addEventListener('click', function() { closePrefs(); });
-    if (acceptBtn) acceptBtn.addEventListener('click', function() { applyConsent({ analytics: true }); });
-    if (acceptAllBtn) acceptAllBtn.addEventListener('click', function() { applyConsent({ analytics: true }); });
-    if (declineBtn) declineBtn.addEventListener('click', function() { applyConsent({ analytics: false }); });
-    if (saveBtn) saveBtn.addEventListener('click', function() {
-      var analytics = analyticsToggle ? analyticsToggle.checked : false;
-      applyConsent({ analytics: analytics });
-    });
-    if (cookieManageBtn) cookieManageBtn.addEventListener('click', function() {
-      var storedConsent = normalizeConsent(readConsent());
-      if (analyticsToggle) analyticsToggle.checked = storedConsent.analytics;
-      showBanner();
-      openPrefs();
-    });
-
-    // Floating cards: scroll direction controls center/spread state
-    var heroSection = document.querySelector('.hero');
-    var floatCards = document.querySelector('.float-cards');
-    var reduceMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-    var prefersReducedMotion = !!(reduceMotionQuery && reduceMotionQuery.matches);
-
-    if (heroSection && floatCards && !prefersReducedMotion) {
-      var heroInView = false;
-      var hasHeroObserver = false;
-      var currentState = 'center';
-      var lastScrollY = window.scrollY || window.pageYOffset || 0;
-      var ticking = false;
-      var directionThreshold = 4;
-
-      function isInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return rect.bottom > 0 && rect.top < window.innerHeight;
-      }
-
-      function applyFloatState(nextState) {
-        if (nextState === currentState) return;
-        currentState = nextState;
-        floatCards.classList.toggle('is-center', nextState === 'center');
-        floatCards.classList.toggle('is-spread', nextState === 'spread');
-      }
-
-      heroInView = isInViewport(heroSection);
-
-      if ('IntersectionObserver' in window) {
-        hasHeroObserver = true;
-        var heroObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.target === heroSection) {
-              heroInView = entry.isIntersecting;
-            }
-          });
-        }, { threshold: 0.2 });
-        heroObserver.observe(heroSection);
-      }
-
-      function handleScrollDirection() {
-        ticking = false;
-        var currentY = window.scrollY || window.pageYOffset || 0;
-        var deltaY = currentY - lastScrollY;
-        if (!hasHeroObserver) {
-          heroInView = isInViewport(heroSection);
-        }
-        if (heroInView && Math.abs(deltaY) >= directionThreshold) {
-          applyFloatState(deltaY > 0 ? 'spread' : 'center');
-        }
-        lastScrollY = currentY;
-      }
-
-      window.addEventListener('scroll', function() {
-        if (!ticking) {
-          ticking = true;
-          window.requestAnimationFrame(handleScrollDirection);
-        }
-      }, { passive: true });
-    }
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = btn.closest('.faq-item');
-        var isOpen = item.classList.contains('faq-open');
-        document.querySelectorAll('.faq-item').forEach(function(i) {
-          i.classList.remove('faq-open');
-          i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
-        });
-        if (!isOpen) {
-          item.classList.add('faq-open');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-
-    //  Community slideshow 
-    (function() {
-      var slides = document.querySelectorAll('.sec-slide');
-      var dots   = document.querySelectorAll('.sec-dot');
-      var cards  = document.querySelectorAll('.sec-feature[data-slide]');
-      var label  = document.querySelector('.sec-slide-label');
-      if (!slides.length || !label) return;
-
-      var studioNames = [
-        'Luisltattoo \u2014 Den Haag',
-        'Binnenkort \u2014 Amsterdam',
-        'Binnenkort \u2014 Utrecht'
-      ];
-      var current = 0;
-      var timer = null, resumeTimer = null;
-      var reduceMotion = window.matchMedia
-        ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
-
-      function goTo(i) {
-        slides[current].classList.remove('sec-slide--active');
-        dots[current].classList.remove('sec-dot--active');
-        cards[current].classList.remove('is-active');
-        cards[current].setAttribute('aria-pressed','false');
-        current = i;
-        slides[current].classList.add('sec-slide--active');
-        dots[current].classList.add('sec-dot--active');
-        cards[current].classList.add('is-active');
-        cards[current].setAttribute('aria-pressed','true');
-        label.textContent = studioNames[current];
-      }
-
-      function startAutoPlay() {
-        if (reduceMotion) return;
-        clearInterval(timer);
-        timer = setInterval(function(){ goTo((current + 1) % slides.length); }, 4000);
-      }
-
-      function pauseAndResume() {
-        clearInterval(timer);
-        clearTimeout(resumeTimer);
-        resumeTimer = setTimeout(startAutoPlay, 3000);
-      }
-
-      cards[0].classList.add('is-active');
-      cards[0].setAttribute('aria-pressed','true');
-
-      cards.forEach(function(card) {
-        var idx = parseInt(card.getAttribute('data-slide'), 10);
-        card.addEventListener('mouseenter', function(){ goTo(idx); pauseAndResume(); });
-        card.addEventListener('click',      function(){ goTo(idx); pauseAndResume(); });
-        card.addEventListener('keydown',    function(e){
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(idx); pauseAndResume(); }
-        });
-      });
-
-      startAutoPlay();
-    })();
-
-  })();
-  </script>
+  <script src="/js/main.js"></script>
+  <script src="/i18n.js"></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "inkLedger",
-    "url": "https://inkledger.app",
-    "description": "Tattoo artist software voor boekingen, ontwerpgoedkeuring & belastingklare boekhouding in één app voor freelance tattooartiesten en ZZP'ers.",
+    "url": "https://inkledger.app/nl",
+    "description": "Tattoo artiest software die boekingen, ontwerpgoedkeuring & belastingklare boekhouding combineert in één app voor freelance tattooartiesten.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "iOS, Android, Web",
-    "inLanguage": "nl",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "EUR",
-      "description": "Gratis voor artiesten die net starten"
+      "description": "Gratis voor artiesten die starten"
     },
     "featureList": [
       "Klantboekingen & planning",
       "Ontwerpgoedkeuring via magic link",
-      "Aanbetalingen incasseren",
+      "Aanbetaling incasso",
       "Belastingklare boekhouding",
-      "Uitgaven bijhouden",
+      "Uitgaven tracking",
       "Klantbeheer & profielen",
       "Kwartaalexport (CSV/PDF)"
     ],
     "audience": {
       "@type": "Audience",
-      "audienceType": "Freelance tattooartiesten en ZZP'ers"
+      "audienceType": "Freelance tattooartiesten"
+    },
+    "downloadUrl": "https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341",
+    "installUrl": "https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "inkLedger — Tattoo Booking",
+    "operatingSystem": "iOS",
+    "applicationCategory": "BusinessApplication",
+    "downloadUrl": "https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
     }
   }
   </script>
@@ -2623,8 +506,8 @@
     "@type": "Organization",
     "name": "inkLedger",
     "url": "https://inkledger.app",
-    "logo": "https://inkledger.app/icon.png",
-    "description": "Tattoo artist software gebouwd in Nederland voor freelance tattooartiesten wereldwijd.",
+    "logo": "https://inkledger.app/assets/adaptive-icon.png",
+    "description": "Tattoo artiest software gebouwd in Nederland voor freelance tattooartiesten wereldwijd.",
     "sameAs": []
   }
   </script>
@@ -2634,7 +517,7 @@
     "@type": "WebSite",
     "name": "inkLedger",
     "url": "https://inkledger.app",
-    "inLanguage": ["nl", "en"],
+    "inLanguage": ["en", "nl"],
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://inkledger.app/?q={search_term_string}",
@@ -2652,7 +535,7 @@
         "name": "Is inkLedger gratis?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja. De basisfuncties — boekingen, klantprofielen en basis boekhouding — zijn gratis. Premiumfuncties zoals belastingexports, geavanceerde rapporten en multi-sessiebeheer zitten in betaalde plannen."
+          "text": "Ja. De basisfuncties — boekingen, klantprofielen en basis boekhouding — zijn gratis. Premiumfuncties zoals belastingexports, geavanceerde rapporten en multi-sessiebeheer zijn gratis voor de eerste gebruikers!"
         }
       },
       {

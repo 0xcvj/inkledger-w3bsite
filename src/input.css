@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fafafa;
+  --color-surface-dark: #09090b;
+  --color-surface-card: #141414;
+  --color-accent: #cc3300;
+  --color-accent-hover: #b82e00;
+  --color-accent-glow: rgba(204, 51, 0, 0.25);
+  --color-accent-subtle: rgba(204, 51, 0, 0.08);
+  --color-muted: #71717a;
+  --color-muted-light: #a1a1aa;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-dark: rgba(255, 255, 255, 0.08);
+
+  --font-sans: "Inter", "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-surface);
+    color: var(--color-surface-dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Utility components */
+@layer components {
+  .skip-link {
+    @apply absolute -top-full left-4 bg-accent text-white px-6 py-3 rounded-b-lg z-[10000] font-semibold transition-all duration-300;
+  }
+  .skip-link:focus {
+    @apply top-0;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+  .animate-pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+  .animation-delay-100 { animation-delay: 0.1s; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-300 { animation-delay: 0.3s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+}
+
+/* Cookie banner toggle switch */
+.cookie-switch {
+  position: relative;
+  display: inline-flex;
+  width: 52px;
+  height: 30px;
+}
+.cookie-switch input { opacity: 0; width: 0; height: 0; }
+.cookie-slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.cookie-slider::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+.cookie-switch input:checked + .cookie-slider {
+  background: #ffffff;
+  border-color: transparent;
+}
+.cookie-switch input:checked + .cookie-slider::after {
+  transform: translateX(22px);
+  background: #0b0b0b;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
