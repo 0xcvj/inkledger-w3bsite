@@ -4,21 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="inkLedger is het anti-chaos besturingssysteem voor freelance tattooartiesten: aanbetalingen, boekingen, consent, uitgaven en belastingklare exports." data-i18n="index.meta.description" data-i18n-attr="content">
-  <meta name="keywords" content="tattoo booking app, freelance tattooartiest, ZZP tattoo, tattoeboekhouding, inkLedger">
+  <meta name="description" content="inkLedger is tattoo artiest software voor boekingen, ontwerpgoedkeuring & belastingklare boekhouding in één app. Aanbetalingen, klantbeheer en uitgaven — gebouwd voor freelance tattooartiesten en ZZP'ers." data-i18n="index.meta.description" data-i18n-attr="content">
+  <meta name="keywords" content="tattoo artiest software, tattoo booking app, freelance tattooartiest, tattoo boekhouding software, ZZP tattoo, tattoo agenda app, inkLedger">
   <meta name="author" content="inkLedger">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://inkledger.app/nl">
-  <meta property="og:title" content="inkLedger — Kill de chaos" data-i18n="index.meta.og_title" data-i18n-attr="content">
-  <meta property="og:description" content="Het anti-chaos besturingssysteem voor tattooartiesten: boekingen, aanbetalingen en belastingklare cijfers." data-i18n="index.meta.og_description" data-i18n-attr="content">
+  <meta property="og:title" content="inkLedger — Tattoo Artiest Software voor Boekingen, Goedkeuring & Boekhouding" data-i18n="index.meta.og_title" data-i18n-attr="content">
+  <meta property="og:description" content="Tattoo artiest software met slimme boekingen, ontwerpgoedkeuring, aanbetalingen & belastingklare boekhouding. Gebouwd voor freelance tattooartiesten." data-i18n="index.meta.og_description" data-i18n-attr="content">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://inkledger.app/nl">
+  <meta property="og:image" content="https://inkledger.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="inkLedger — Kill de chaos" data-i18n="index.meta.twitter_title" data-i18n-attr="content">
-  <meta name="twitter:description" content="Boek. Krijg betaald. Bewijs het. Alles op één plek." data-i18n="index.meta.twitter_description" data-i18n-attr="content">
-  <title data-i18n="index.meta.title">inkLedger — Anti-chaos app voor tattooartiesten</title>
+  <meta name="twitter:image" content="https://inkledger.app/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://inkledger.app/">
+  <link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://inkledger.app/">
+  <meta name="twitter:title" content="inkLedger — Tattoo Artiest Software voor Boekingen, Goedkeuring & Boekhouding" data-i18n="index.meta.twitter_title" data-i18n-attr="content">
+  <meta name="twitter:description" content="Tattoo artiest software met slimme boekingen, ontwerpgoedkeuring, aanbetalingen & belastingklare boekhouding. Gebouwd voor freelance tattooartiesten." data-i18n="index.meta.twitter_description" data-i18n-attr="content">
+  <title data-i18n="index.meta.title">inkLedger — Tattoo Artiest Software voor Boekingen, Goedkeuring & Boekhouding</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/icon.png">
   <link rel="preload" as="image" href="/IMG_3083-2.jpg" fetchpriority="high">
@@ -70,6 +75,18 @@
     a { text-decoration: none; color: inherit; }
     .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 10000; font-weight: 600; transition: top 0.3s; }
     .skip-link:focus { top: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .store-badges { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .store-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 12px; font-family: var(--font-body); font-size: 14px; font-weight: 600; transition: transform 0.2s var(--ease-out), box-shadow 0.2s; }
+    .store-badge:hover { transform: translateY(-2px); }
+    .store-badge svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .store-badge--apple { background: var(--black); color: #fff; }
+    .store-badge--apple:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .store-badge--android { background: transparent; color: var(--gray-muted); border: 1px solid var(--border); cursor: default; font-weight: 400; opacity: 0.7; }
+    .final-cta .store-badges { margin-top: 24px; }
+    .final-cta .store-badge--apple { background: #fff; color: var(--black); }
+    .final-cta .store-badge--apple:hover { box-shadow: 0 4px 20px rgba(255,255,255,0.2); }
+    .final-cta .store-badge--android { border-color: var(--border-dark); color: var(--gray-light); }
     @supports (content-visibility: auto) {
       .features-dark,
       .ecosystem,
@@ -1627,7 +1644,7 @@
       <a href="#faq" data-i18n="index.nav.faq">FAQ</a>
       <a href="/blog">Blog</a>
     </div>
-    <a href="#heroFormContainer" class="nav-cta" data-i18n="index.nav.join_waitlist">Krijg early access</a>
+    <a href="#heroFormContainer" class="nav-cta" data-i18n="index.nav.join_waitlist">Gratis Download</a>
     <button class="nav-toggle" id="navToggle" aria-label="Navigatie schakelen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1639,12 +1656,13 @@
     <section class="hero" aria-label="Hero">
       <div class="hero-badge hero-anim hero-anim-1">
         <span class="hero-badge-dot"></span>
-        <span data-i18n="index.hero.badge">Voor artiesten & studios. Niet voor accountants.</span>
+        <span data-i18n="index.hero.badge">Nu op iOS</span>
       </div>
 
       <h1 class="hero-headline hero-anim hero-anim-2" data-i18n="index.hero.headline">
-        KILL ADMINCHAOS. <span style="color:var(--accent);">HOUD DE INK. HOUD HET CASH.</span>
+        JOUW BOEKINGEN. JOUW BOEKEN. <span style="color:var(--accent);">ÉÉN APP.</span>
       </h1>
+      <p class="sr-only">inkLedger is tattoo artiest software die boekingen, ontwerpgoedkeuring en boekhouding combineert voor freelance tattooartiesten en ZZP'ers.</p>
 
       <div class="hero-phone-area hero-anim hero-anim-3">
         <!-- Floating transaction cards -->
@@ -1702,7 +1720,7 @@
       </div>
 
       <p class="hero-sub hero-anim hero-anim-4" data-i18n="index.hero.sub">
-        inkLedger is jouw anti-chaos OS: aanbetalingen, boekingen, uitgaven, toestemmingsformulieren en belastingklare cijfers. Alles op één plek.
+        Tattoo artiest software die planning, aanbetalingen, ontwerpgoedkeuring en belastingklare boekhouding regelt — zodat jij nooit meer achter klanten of bonnetjes aan hoeft te zitten.
       </p>
 
       <div class="hero-cta-group hero-anim hero-anim-5">
@@ -1723,12 +1741,22 @@
               <input type="text" id="heroHp" name="hp_field" tabindex="-1" autocomplete="off">
             </div>
             <button type="submit" class="btn-accent" id="heroSubmit">
-              Kill de chaos
+              Start gratis
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
             </button>
           </form>
         </div>
       </div>
+        <div class="store-badges hero-anim hero-anim-5">
+          <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" class="store-badge store-badge--apple" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download op iOS
+          </a>
+          <span class="store-badge store-badge--android">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.273l1.615 2.8a.3.3 0 01-.111.408l-.814.47a.3.3 0 01-.41-.11L16.26 3.24c-1.252-.58-2.722-.89-4.26-.89s-3.008.31-4.26.89L6.197 5.84a.3.3 0 01-.41.11l-.814-.47a.3.3 0 01-.111-.408l1.615-2.8C3.833 4.2 1.945 7.47 1.5 11.25h21c-.445-3.78-2.333-7.05-4.977-8.977zM7 8.75a1 1 0 110-2 1 1 0 010 2zm10 0a1 1 0 110-2 1 1 0 010 2zM3.5 12.25v8a1.5 1.5 0 003 0v-8h11v8a1.5 1.5 0 003 0v-8h-17zm-2 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/></svg>
+            Android — Binnenkort
+          </span>
+        </div>
     </section>
 
     <!-- ••••••••••• FEATURES (dark section) ••••••••••• -->
@@ -1736,11 +1764,11 @@
       <div class="features-dark-inner">
         <div class="features-dark-header reveal">
           <div>
-            <p class="fd-eyebrow" data-i18n="index.features.eyebrow">GEEN ONZIN</p>
-            <h2 class="fd-title" data-i18n="index.features.title">GEMAAKT OM SCHOON TE BLIJVEN</h2>
+            <p class="fd-eyebrow" data-i18n="index.features.eyebrow">WAT JE KRIJGT</p>
+            <h2 class="fd-title" data-i18n="index.features.title">ALLES WAT JE NODIG HEBT. MEER NIET.</h2>
           </div>
           <div class="fd-right">
-            <p class="fd-desc" data-i18n="index.features.desc">Alles wat je nodig hebt. Niks wat je niet nodig hebt. Van slim boeken tot belastingklare boekhouding — clean by design.</p>
+            <p class="fd-desc" data-i18n="index.features.desc">Tattoo artiest software zonder ballast. Slim boeken, directe aanbetalingen, ontwerp-goedkeuring en boeken die klaar zijn als de belasting komt.</p>
             <a href="#heroFormContainer" class="btn-outline-light">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span data-i18n="index.features.dl">Schrijf je in</span>
@@ -1751,36 +1779,36 @@
         <div class="fd-grid">
           <div class="fd-card reveal reveal-d1">
             <div class="fd-card-visual">
-              <img src="/assets/optimized/client-card.jpg" alt="" width="1200" height="792" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/client-card.jpg" alt="Klantbeheer dashboard met boekingsdetails" width="1200" height="792" loading="lazy" decoding="async" fetchpriority="low">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item1.title">KLANTBEHEER</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item1.desc">Klanten boeken direct via jouw persoonlijke pagina. Referenties uploaden, tijdslot kiezen, aanbetaling betalen — alles automatisch.</p>
+            <h3 class="fd-card-title" data-i18n="index.features.item1.title">BOEKINGEN & AANBETALINGEN</h3>
+            <p class="fd-card-desc" data-i18n="index.features.item1.desc">Klanten kiezen een slot, uploaden referenties en betalen een aanbetaling via jouw boekingspagina. Je wordt wakker met bevestigde sessies, niet met ongelezen DM's.</p>
           </div>
 
           <div class="fd-card reveal reveal-d2">
             <div class="fd-card-visual">
-              <img src="/assets/optimized/revenue-card.jpg" alt="" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/revenue-card.jpg" alt="Omzet tracking en aanbetalingsoverzicht" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item2.title">OMZETINZICHT</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item2.desc">Incasseer aanbetalingen, volg betalingen en beheer saldo's. Geen achter facturen aanzitten. Geen gedoe over wie wat betaalde.</p>
+            <h3 class="fd-card-title" data-i18n="index.features.item2.title">OMZET & BETALINGEN</h3>
+            <p class="fd-card-desc" data-i18n="index.features.item2.desc">Zie elke aanbetaling, elk saldo en elke betaling in één overzicht. Weet precies wie betaald heeft en waar je geld zit — zonder spreadsheet.</p>
           </div>
 
           <div class="fd-card fd-card-quote reveal reveal-d3">
             <div class="fd-card-quote-bg">
-              <img src="/assets/optimized/quote-card.jpg" alt="" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/quote-card.jpg" alt="Tattooartiest aan het werk in studio" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="fd-card-quote-text">
-              <blockquote data-i18n="index.features.quote">"inkLedger bestaat omdat tattooartiesten geen boekhouder hoeven te zijn om betaald te worden. Je werd artiest om te creëren — niet om achter aanbetalingen aan te zitten, agenda's te ontwarren en bonnen te ontcijferen."</blockquote>
-              <cite data-i18n="index.features.quote_author">&mdash; Gemaakt in Nederland. Gebouwd om chaos te stoppen.</cite>
+              <blockquote data-i18n="index.features.quote">"We bouwden inkLedger omdat geen tattooartiest z'n vrijdagavond aan boekhouding zou moeten verliezen. Je pakte een machine op om te creëren — niet om facturen na te jagen."</blockquote>
+              <cite data-i18n="index.features.quote_author">&mdash; Gebouwd in Nederland. Gemaakt voor artiesten overal.</cite>
             </div>
           </div>
 
           <div class="fd-card reveal reveal-d4">
             <div class="fd-card-visual">
-              <img src="/assets/optimized/taxes-card.jpg" alt="" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/taxes-card.jpg" alt="Ontwerpgoedkeuring flow via magic link" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item3.title">VRIJHEID</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item3.desc">Ingebouwde consent flows, veilige data-afhandeling en privacy-first ontwerp. Rust vanaf dag één.</p>
+            <h3 class="fd-card-title" data-i18n="index.features.item3.title">ONTWERPGOEDKEURING</h3>
+            <p class="fd-card-desc" data-i18n="index.features.item3.desc">Stuur een magic link. Je klant bekijkt het ontwerp, geeft feedback en tekent af — met tijdstempel en opgeslagen. Geen screenshots kwijt in DM's. Geen "heb je m'n bericht gezien?"</p>
           </div>
         </div>
       </div>
@@ -1789,32 +1817,32 @@
     <!-- ••••••••••• ECOSYSTEM (How It Works) ••••••••••• -->
     <section class="ecosystem" id="how" aria-label="How it works">
       <p class="section-eyebrow reveal" data-i18n="index.how.eyebrow">Hoe het werkt</p>
-      <h2 class="eco-title reveal reveal-d1" data-i18n="index.how.title">JOUW STUDIO. ONDER CONTROLE.</h2>
-      <p class="eco-subtitle reveal reveal-d2" data-i18n="index.how.sub">Van eerste aanvraag tot belasting: één systeem. Geen rommel.</p>
+      <h2 class="eco-title reveal reveal-d1" data-i18n="index.how.title">DRIE STAPPEN. NUL CHAOS.</h2>
+      <p class="eco-subtitle reveal reveal-d2" data-i18n="index.how.sub">Van eerste aanvraag tot laatste factuur — tattoo artiest software die elke stap van je freelance business op één plek houdt.</p>
       <div class="eco-grid">
         <div class="eco-card reveal reveal-d1">
           <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(204,51,0,0.15);color:var(--accent);">&#128197;</div>
-            <div class="eco-ico" style="background:rgba(16,185,129,0.15);color:#10b981;">&#128176;</div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           </div>
-          <h3 class="eco-card-title">SLIM BOEKEN</h3>
-          <p class="eco-card-text" data-i18n="index.how.card1">Klanten boeken via jouw pagina: referenties uploaden, tijdslot kiezen, aanbetaling betalen — alles in één flow. Geen DM-chaos meer.</p>
+          <h3 class="eco-card-title">BOEK</h3>
+          <p class="eco-card-text" data-i18n="index.how.card1">Deel je boekingspagina. Klanten kiezen een sessie, uploaden referenties en locken in met een aanbetaling. Bevestigd en georganiseerd voordat je een naald oppakt.</p>
         </div>
         <div class="eco-card reveal reveal-d2">
           <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(99,102,241,0.15);color:#6366f1;">&#128221;</div>
-            <div class="eco-ico" style="background:rgba(245,158,11,0.15);color:#f59e0b;">&#128276;</div>
-            <div class="eco-ico" style="background:rgba(236,72,153,0.15);color:#ec4899;">&#9829;</div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           </div>
-          <h3 class="eco-card-title">KLANTPROFIELEN &amp; HERINNERINGEN</h3>
-          <p class="eco-card-text" data-i18n="index.how.card2">Volledige klantprofielen met aantekeningen, allergieën, referenties en sessienotities. Automatische reminders, nazorg en opvolgboekingen — alles geordend.</p>
+          <h3 class="eco-card-title">BEHEER</h3>
+          <p class="eco-card-text" data-i18n="index.how.card2">Elke klant krijgt een profiel — sessiegeschiedenis, allergieën, ontwerpnotities, referenties. Automatische herinneringen voor afspraken. Nazorginstructies erna. Niets valt tussen wal en schip.</p>
         </div>
         <div class="eco-card reveal reveal-d3">
           <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(6,182,212,0.15);color:#06b6d4;">&#128202;</div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           </div>
-          <h3 class="eco-card-title">BELASTINGKLARE BOEKHOUDING</h3>
-          <p class="eco-card-text" data-i18n="index.how.card3">Belastingklare boekhouding voor Nederlandse freelancers. Omzet, uitgaven en kwartaaloverzichten — klaar voor de Belastingdienst. Exporteer naar CSV of PDF.</p>
+          <h3 class="eco-card-title">WORD BETAALD</h3>
+          <p class="eco-card-text" data-i18n="index.how.card3">Omzet erin, uitgaven eruit, kwartaalcijfers klaar. Exporteer naar CSV of PDF voor je boekhouder of de Belastingdienst. Boekhouding die minuten kost, geen uren.</p>
         </div>
       </div>
     </section>
@@ -1823,8 +1851,8 @@
     <section class="security" id="community" aria-label="Join the community">
       <div class="security-inner">
         <div class="reveal">
-          <h2 class="sec-title">JE STAAT ER NIET ALLEEN VOOR. <strong>JOIN THE PACK.</strong></h2>
-          <p class="sec-desc">Tattooartiesten vervangen hun adminchaos al voor een studio-first workflow. Meld je vroeg aan, bepaal wat we bouwen, en claim je plek voor de publieke lancering.</p>
+          <h2 class="sec-title">JIJ BENT NIET DE EERSTE. <strong>JOIN DE ARTIESTEN DIE SWITCHTEN.</strong></h2>
+          <p class="sec-desc">Tattooartiesten door heel Nederland vervangen spreadsheets en plakbriefjes voor een studio-first workflow. Stap vroeg in. Help bepalen wat we bouwen.</p>
           <div class="sec-features">
             <div class="sec-feature" data-slide="0" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar">
@@ -1875,8 +1903,8 @@
       <div class="faq-inner">
         <div class="faq-header">
           <p class="faq-eyebrow reveal" data-i18n="index.faq.eyebrow">FAQ</p>
-          <h2 class="faq-title reveal reveal-d1" data-i18n="index.faq.title">VRAGEN?</h2>
-          <p class="faq-subtitle reveal reveal-d2" data-i18n="index.faq.sub">Alles wat je moet weten om te starten met inkLedger.</p>
+          <h2 class="faq-title reveal reveal-d1" data-i18n="index.faq.title">SNELLE ANTWOORDEN.</h2>
+          <p class="faq-subtitle reveal reveal-d2" data-i18n="index.faq.sub">Wat je echt wilt weten voordat je je aanmeldt.</p>
         </div>
 
         <div class="faq-list reveal reveal-d3">
@@ -1884,52 +1912,52 @@
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">01</span>
-              <span class="faq-q" data-i18n="index.faq.q1">Is inkLedger gratis te gebruiken?</span>
+              <span class="faq-q" data-i18n="index.faq.q1">Is inkLedger gratis?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a1">We bieden een royale gratis versie voor solo-artiesten die net starten. Premium functies zoals geavanceerde boekhouding, belastingexports en multi-sessiebeheer zitten in betaalde plannen. Meld je aan om als eerste toegang te krijgen tot early-bird prijzen.</p>
+              <p class="faq-a" data-i18n="index.faq.a1">Ja. De basisfuncties — boekingen, klantprofielen en basis boekhouding — zijn gratis. Premiumfuncties zoals belastingexports, geavanceerde rapporten en multi-sessiebeheer zitten in betaalde plannen.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">02</span>
-              <span class="faq-q" data-i18n="index.faq.q2">Kunnen mijn klanten direct via inkLedger boeken?</span>
+              <span class="faq-q" data-i18n="index.faq.q2">Kunnen klanten direct via inkLedger boeken?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a2">Ja. Je krijgt een persoonlijke boekingspagina waar klanten je portfolio bekijken, een sessietype kiezen, referentiebeelden uploaden en een aanbetaling betalen — alles in een flow. Deel de link op Instagram, je website of waar dan ook.</p>
+              <p class="faq-a" data-i18n="index.faq.a2">Ja. Je krijgt een persoonlijke boekingspagina. Klanten bekijken je werk, kiezen een sessietype, uploaden referenties en betalen een aanbetaling — één flow, één link. Deel op Instagram, je site of in je bio.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">03</span>
-              <span class="faq-q" data-i18n="index.faq.q3">Hoe werkt de boekhouding voor ZZP'ers?</span>
+              <span class="faq-q" data-i18n="index.faq.q3">Hoe werkt de boekhouding voor freelancers?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a3">inkLedger volgt automatisch je inkomsten en uitgaven, categoriseert transacties en maakt kwartaaloverzichten klaar voor de Belastingdienst. Exporteer naar CSV of PDF wanneer je wilt. Het is gebouwd voor Nederlandse freelance regels.</p>
+              <p class="faq-a" data-i18n="index.faq.a3">inkLedger volgt inkomsten en uitgaven automatisch, categoriseert transacties en bouwt kwartaaloverzichten. Exportklaar voor de Belastingdienst of je boekhouder. Geen boekhoudopleiding nodig.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">04</span>
-              <span class="faq-q" data-i18n="index.faq.q4">Is mijn data veilig en AVG-compliant?</span>
+              <span class="faq-q" data-i18n="index.faq.q4">Is mijn data veilig?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a4">Absoluut. We gebruiken end-to-end encryptie, EU-gebaseerde servers en ingebouwde consent management. Je klantdata en financiële gegevens worden veilig opgeslagen en zijn volledig AVG-conform.</p>
+              <p class="faq-a" data-i18n="index.faq.a4">End-to-end encryptie. EU-gebaseerde servers. Volledig AVG-compliant. Je klantdata en financiën zijn op slot.</p>
             </div></div>
           </div>
 
@@ -1942,13 +1970,13 @@
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a5">We zitten nu in een gesloten beta met een selecte groep artiesten. Meld je aan om early access te krijgen en help de features te vormen die het meest tellen voor jouw workflow.</p>
+              <p class="faq-a" data-i18n="index.faq.a5">De iOS-app is nu live. We zitten in early access met een groeiende groep artiesten. Stap in en help bepalen wat we bouwen.</p>
             </div></div>
           </div>
 
         </div><!-- /faq-list -->
 
-        <p class="faq-quote reveal" data-i18n="index.faq.quote">"Gebouwd door mensen die de hustle echt begrijpen."</p>
+        <p class="faq-quote reveal" data-i18n="index.faq.quote">"Gebouwd door mensen die de hustle echt snappen."</p>
       </div>
     </section>
 
@@ -1959,14 +1987,24 @@
       <div class="star star-3"></div>
       <div class="star star-4"></div>
 
-      <h2 class="final-cta-title reveal" data-i18n="index.cta.title">KLAAR OM DE CHAOS<br>TE STOPPEN?</h2>
+      <h2 class="final-cta-title reveal" data-i18n="index.cta.title">JOUW VOLGENDE SESSIE<br>BEGINT HIER.</h2>
       <div class="reveal reveal-d1">
         <a href="#heroFormContainer" class="btn-accent" id="ctaBtn" data-i18n="index.cta.btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           Start gratis
         </a>
       </div>
-      <p style="margin-top:16px;font-size:14px;color:var(--gray);opacity:0.7;" class="reveal reveal-d2" data-i18n="index.cta.sub">Aanbetalingen, splits en belastingklare winst. Op één plek.</p>
+      <p style="margin-top:16px;font-size:14px;color:var(--gray);opacity:0.7;" class="reveal reveal-d2" data-i18n="index.cta.sub">Gratis tattoo artiest software voor boekingen, goedkeuring en boekhouding. Beschikbaar op iOS.</p>
+      <div class="store-badges reveal reveal-d3">
+        <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" class="store-badge store-badge--apple" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download op iOS
+        </a>
+        <span class="store-badge store-badge--android">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.273l1.615 2.8a.3.3 0 01-.111.408l-.814.47a.3.3 0 01-.41-.11L16.26 3.24c-1.252-.58-2.722-.89-4.26-.89s-3.008.31-4.26.89L6.197 5.84a.3.3 0 01-.41.11l-.814-.47a.3.3 0 01-.111-.408l1.615-2.8C3.833 4.2 1.945 7.47 1.5 11.25h21c-.445-3.78-2.333-7.05-4.977-8.977zM7 8.75a1 1 0 110-2 1 1 0 010 2zm10 0a1 1 0 110-2 1 1 0 010 2zM3.5 12.25v8a1.5 1.5 0 003 0v-8h11v8a1.5 1.5 0 003 0v-8h-17zm-2 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/></svg>
+          Android — Binnenkort
+        </span>
+      </div>
     </section>
   </main>
 
@@ -2514,9 +2552,102 @@
     "@type": "SoftwareApplication",
     "name": "inkLedger",
     "url": "https://inkledger.app",
-    "description": "Het anti-chaos besturingssysteem voor freelance tattooartiesten.",
+    "description": "Tattoo artist software voor boekingen, ontwerpgoedkeuring & belastingklare boekhouding in één app voor freelance tattooartiesten en ZZP'ers.",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS, Android, Web"
+    "operatingSystem": "iOS, Android, Web",
+    "inLanguage": "nl",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Gratis voor artiesten die net starten"
+    },
+    "featureList": [
+      "Klantboekingen & planning",
+      "Ontwerpgoedkeuring via magic link",
+      "Aanbetalingen incasseren",
+      "Belastingklare boekhouding",
+      "Uitgaven bijhouden",
+      "Klantbeheer & profielen",
+      "Kwartaalexport (CSV/PDF)"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Freelance tattooartiesten en ZZP'ers"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "inkLedger",
+    "url": "https://inkledger.app",
+    "logo": "https://inkledger.app/icon.png",
+    "description": "Tattoo artist software gebouwd in Nederland voor freelance tattooartiesten wereldwijd.",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "inkLedger",
+    "url": "https://inkledger.app",
+    "inLanguage": ["nl", "en"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://inkledger.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is inkLedger gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. De basisfuncties — boekingen, klantprofielen en basis boekhouding — zijn gratis. Premiumfuncties zoals belastingexports, geavanceerde rapporten en multi-sessiebeheer zitten in betaalde plannen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kunnen klanten direct via inkLedger boeken?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Je krijgt een persoonlijke boekingspagina. Klanten bekijken je werk, kiezen een sessietype, uploaden referenties en betalen een aanbetaling — één flow, één link. Deel op Instagram, je site of in je bio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe werkt de boekhouding voor freelancers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "inkLedger volgt inkomsten en uitgaven automatisch, categoriseert transacties en bouwt kwartaaloverzichten. Exportklaar voor de Belastingdienst of je boekhouder. Geen boekhoudopleiding nodig."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is mijn data veilig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "End-to-end encryptie. EU-gebaseerde servers. Volledig AVG-compliant. Je klantdata en financiën zijn op slot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wanneer lanceert inkLedger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De iOS-app is nu live. We zitten in early access met een groeiende groep artiesten. Stap in en help bepalen wat we bouwen."
+        }
+      }
+    ]
   }
   </script>
 </body>

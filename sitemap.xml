@@ -1,28 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://inkledger.app/</loc>
-    <lastmod>2026-02-11</lastmod>
-  </url>
-  <url>
-    <loc>https://inkledger.app/privacy</loc>
-    <lastmod>2026-02-11</lastmod>
-  </url>
-  <url>
-    <loc>https://inkledger.app/terms</loc>
-    <lastmod>2026-02-11</lastmod>
+    <lastmod>2026-03-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkledger.app/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkledger.app/"/>
   </url>
   <url>
     <loc>https://inkledger.app/nl/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <lastmod>2026-03-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkledger.app/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkledger.app/"/>
   </url>
   <url>
-    <loc>https://inkledger.app/nl/privacy</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://inkledger.app/privacy</loc>
+    <lastmod>2026-03-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkledger.app/privacy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkledger.app/privacy"/>
   </url>
   <url>
-    <loc>https://inkledger.app/nl/terms</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://inkledger.app/nl/privacy/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkledger.app/privacy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkledger.app/privacy"/>
+  </url>
+  <url>
+    <loc>https://inkledger.app/terms</loc>
+    <lastmod>2026-03-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkledger.app/terms"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkledger.app/terms"/>
+  </url>
+  <url>
+    <loc>https://inkledger.app/nl/terms/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inkledger.app/terms"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inkledger.app/terms"/>
   </url>
   <url>
     <loc>https://inkledger.app/blog</loc>

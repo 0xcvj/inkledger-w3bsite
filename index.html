@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="inkLedger - The all-in-one booking and bookkeeping app for freelance tattoo artists. Simplify taxes, track revenue, manage clients." data-i18n="index.meta.description" data-i18n-attr="content">
-  <meta name="keywords" content="tattoo booking app, freelance tattoo artist, ZZP tattoo, bookkeeping tattoo, inkLedger">
+  <meta name="description" content="inkLedger is tattoo artist software that combines booking, design approvals & tax-ready bookkeeping in one app. Deposits, client management and expense tracking built for freelance tattoo artists." data-i18n="index.meta.description" data-i18n-attr="content">
+  <meta name="keywords" content="tattoo artist software, tattoo booking app, freelance tattoo artist, tattoo bookkeeping software, tattoo scheduling app, ZZP tattoo, inkLedger">
   <meta name="author" content="inkLedger">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://inkledger.app">
-  <meta property="og:title" content="inkLedger - Book. Ink. Earn." data-i18n="index.meta.og_title" data-i18n-attr="content">
-  <meta property="og:description" content="The all-in-one booking and bookkeeping app built for freelance tattoo artists." data-i18n="index.meta.og_description" data-i18n-attr="content">
+  <meta property="og:title" content="inkLedger — Tattoo Artist Software for Booking, Approvals & Bookkeeping" data-i18n="index.meta.og_title" data-i18n-attr="content">
+  <meta property="og:description" content="Tattoo artist software with smart booking, design approvals, deposit collection & tax-ready bookkeeping. Built for freelance tattoo artists." data-i18n="index.meta.og_description" data-i18n-attr="content">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://inkledger.app">
+  <meta property="og:image" content="https://inkledger.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="inkLedger” Book. Ink. Earn." data-i18n="index.meta.twitter_title" data-i18n-attr="content">
-  <meta name="twitter:description" content="The all-in-one booking and bookkeeping app built for freelance tattoo artists and studios." data-i18n="index.meta.twitter_description" data-i18n-attr="content">
-  <title data-i18n="index.meta.title">inkLedger - Booking & Bookkeeping for Tattoo Artists</title>
+  <meta name="twitter:image" content="https://inkledger.app/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://inkledger.app/">
+  <link rel="alternate" hreflang="nl" href="https://inkledger.app/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://inkledger.app/">
+  <meta name=”twitter:title” content=”inkLedger — Tattoo Artist Software for Booking, Approvals & Bookkeeping” data-i18n=”index.meta.twitter_title” data-i18n-attr=”content”>
+  <meta name=”twitter:description” content=”Tattoo artist software with smart booking, design approvals, deposit collection & tax-ready bookkeeping. Built for freelance tattoo artists.” data-i18n=”index.meta.twitter_description” data-i18n-attr=”content”>
+  <title data-i18n="index.meta.title">inkLedger — Tattoo Artist Software for Booking, Design Approvals & Bookkeeping</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/icon.png">
   <link rel="preload" as="image" href="/IMG_3083.jpg" fetchpriority="high">
@@ -77,6 +82,18 @@
     a { text-decoration: none; color: inherit; }
     .skip-link { position: absolute; top: -100%; left: 16px; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0 0 8px 8px; z-index: 10000; font-weight: 600; transition: top 0.3s; }
     .skip-link:focus { top: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .store-badges { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .store-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 12px; font-family: var(--font-body); font-size: 14px; font-weight: 600; transition: transform 0.2s var(--ease-out), box-shadow 0.2s; }
+    .store-badge:hover { transform: translateY(-2px); }
+    .store-badge svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .store-badge--apple { background: var(--black); color: #fff; }
+    .store-badge--apple:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .store-badge--android { background: transparent; color: var(--gray-muted); border: 1px solid var(--border); cursor: default; font-weight: 400; opacity: 0.7; }
+    .final-cta .store-badges { margin-top: 24px; }
+    .final-cta .store-badge--apple { background: #fff; color: var(--black); }
+    .final-cta .store-badge--apple:hover { box-shadow: 0 4px 20px rgba(255,255,255,0.2); }
+    .final-cta .store-badge--android { border-color: var(--border-dark); color: var(--gray-light); }
     @supports (content-visibility: auto) {
       .features-dark,
       .ecosystem,
@@ -1634,7 +1651,7 @@
       <a href="#faq" data-i18n="index.nav.faq">FAQ</a>
       <a href="/blog">Blog</a>
     </div>
-    <a href="#heroFormContainer" class="nav-cta" data-i18n="index.nav.join_waitlist">Get Early Access</a>
+    <a href="#heroFormContainer" class="nav-cta" data-i18n="index.nav.join_waitlist">Free Download</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1646,12 +1663,13 @@
     <section class="hero" aria-label="Hero">
       <div class="hero-badge hero-anim hero-anim-1">
         <span class="hero-badge-dot"></span>
-        <span data-i18n="index.hero.badge">For artists & studios. Not accountants.</span>
+        <span data-i18n="index.hero.badge">Now on iOS</span>
       </div>
 
       <h1 class="hero-headline hero-anim hero-anim-2" data-i18n="index.hero.headline">
-        KILL THE ADMIN CHAOS. <span style="color:var(--accent);">KEEP THE INK. KEEP THE CASH.</span>
+        YOUR BOOKINGS. YOUR BOOKS. <span style="color:var(--accent);">ONE APP.</span>
       </h1>
+      <p class="sr-only">inkLedger is tattoo artist software that combines booking, design approvals, and bookkeeping for freelance tattoo artists.</p>
 
       <div class="hero-phone-area hero-anim hero-anim-3">
         <!-- Floating transaction cards -->
@@ -1709,7 +1727,7 @@
       </div>
 
       <p class="hero-sub hero-anim hero-anim-4" data-i18n="index.hero.sub">
-        inkLedger is your studio's anti-chaos system: bookings, deposits, expenses, and tax-ready numbers  in one clean place.
+        Tattoo artist software that handles scheduling, deposits, design approvals, and tax-ready bookkeeping — so you never chase a client or a receipt again.
       </p>
 
       <div class="hero-cta-group hero-anim hero-anim-5">
@@ -1735,6 +1753,16 @@
             </button>
           </form>
         </div>
+        <div class="store-badges hero-anim hero-anim-5">
+          <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" class="store-badge store-badge--apple" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <span class="store-badge store-badge--android">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.273l1.615 2.8a.3.3 0 01-.111.408l-.814.47a.3.3 0 01-.41-.11L16.26 3.24c-1.252-.58-2.722-.89-4.26-.89s-3.008.31-4.26.89L6.197 5.84a.3.3 0 01-.41.11l-.814-.47a.3.3 0 01-.111-.408l1.615-2.8C3.833 4.2 1.945 7.47 1.5 11.25h21c-.445-3.78-2.333-7.05-4.977-8.977zM7 8.75a1 1 0 110-2 1 1 0 010 2zm10 0a1 1 0 110-2 1 1 0 010 2zM3.5 12.25v8a1.5 1.5 0 003 0v-8h11v8a1.5 1.5 0 003 0v-8h-17zm-2 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/></svg>
+            Android — Coming Soon
+          </span>
+        </div>
       </div>
     </section>
 
@@ -1743,11 +1771,11 @@
       <div class="features-dark-inner">
         <div class="features-dark-header reveal">
           <div>
-            <p class="fd-eyebrow" data-i18n="index.features.eyebrow">NO FLUFF</p>
-            <h2 class="fd-title" data-i18n="index.features.title">BUILT TO STAY CLEAN</h2>
+            <p class="fd-eyebrow" data-i18n="index.features.eyebrow">WHAT YOU GET</p>
+            <h2 class="fd-title" data-i18n="index.features.title">EVERYTHING YOU NEED. NOTHING YOU DON'T.</h2>
           </div>
           <div class="fd-right">
-            <p class="fd-desc" data-i18n="index.features.desc">Everything you need. None of the busywork. From smart booking to tax-ready bookkeeping, designed to keep your studio running clean.</p>
+            <p class="fd-desc" data-i18n="index.features.desc">Tattoo artist software stripped to what matters. Smart booking, instant deposits, design sign-off, and books that are ready when tax season hits.</p>
             <a href="#heroFormContainer" class="btn-outline-light">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span data-i18n="index.features.dl">Join Waitlist</span>
@@ -1758,36 +1786,36 @@
         <div class="fd-grid">
           <div class="fd-card reveal reveal-d1">
             <div class="fd-card-visual">
-              <img src="/assets/optimized/client-card.jpg" alt="" width="1200" height="792" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/client-card.jpg" alt="inkLedger tattoo artist software client management dashboard" width="1200" height="792" loading="lazy" decoding="async" fetchpriority="low">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item1.title">CLIENT MANAGEMENT</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item1.desc">Clients book directly through your personalized page. Upload design references, pick a slot, pay a deposit  all automatic.</p>
+            <h3 class="fd-card-title" data-i18n="index.features.item1.title">BOOKING & DEPOSITS</h3>
+            <p class="fd-card-desc" data-i18n="index.features.item1.desc">Clients pick a slot, upload references, and pay a deposit through your personal booking page. You wake up to confirmed sessions, not unread DMs.</p>
           </div>
 
           <div class="fd-card reveal reveal-d2">
             <div class="fd-card-visual">
-              <img src="/assets/optimized/revenue-card.jpg" alt="" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/revenue-card.jpg" alt="Revenue tracking and deposit overview in tattoo bookkeeping software" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item2.title">REVENUE INSIGHTS</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item2.desc">Collect deposits upfront, track payments, and manage balances. No more chasing invoices or losing track of who paid what.</p>
+            <h3 class="fd-card-title" data-i18n="index.features.item2.title">REVENUE & PAYMENTS</h3>
+            <p class="fd-card-desc" data-i18n="index.features.item2.desc">See every deposit, balance, and payment in one view. Know exactly who paid, who owes, and where your money is — without opening a spreadsheet.</p>
           </div>
 
           <div class="fd-card fd-card-quote reveal reveal-d3">
             <div class="fd-card-quote-bg">
-              <img src="/assets/optimized/quote-card.jpg" alt="" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/quote-card.jpg" alt="Freelance tattoo artist using inkLedger software in studio" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="fd-card-quote-text">
-              <blockquote data-i18n="index.features.quote">"inkLedger exists because tattoo artists shouldn't have to wrestle spreadsheets to get paid. You became an artist to create  not to chase deposits, untangle calendars, and decode receipts."</blockquote>
-              <cite data-i18n="index.features.quote_author">&mdash; Made in the Netherlands. Built for the hustle.</cite>
+              <blockquote data-i18n="index.features.quote">"We built inkLedger because no tattoo artist should lose a Friday night to bookkeeping. You picked up a machine to create — not to chase invoices."</blockquote>
+              <cite data-i18n="index.features.quote_author">&mdash; Built in the Netherlands. Made for artists everywhere.</cite>
             </div>
           </div>
 
           <div class="fd-card reveal reveal-d4">
             <div class="fd-card-visual">
-              <img src="/assets/optimized/taxes-card.jpg" alt="" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/taxes-card.jpg" alt="Tattoo design approval workflow with magic link in inkLedger" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
             </div>
-            <h3 class="fd-card-title" data-i18n="index.features.item3.title">FEEL FREE.</h3>
-            <p class="fd-card-desc" data-i18n="index.features.item3.desc">See your earnings in real-time. Monthly breakdowns, trends, and projections so you always know where your business stands.</p>
+            <h3 class="fd-card-title" data-i18n="index.features.item3.title">DESIGN APPROVALS</h3>
+            <p class="fd-card-desc" data-i18n="index.features.item3.desc">Send a magic link. Your client reviews the design, leaves feedback, and signs off — timestamped and saved. No screenshots lost in DMs. No "did you see my message?"</p>
           </div>
         </div>
       </div>
@@ -1796,32 +1824,32 @@
     <!-- ••••••••••• ECOSYSTEM (How It Works) ••••••••••• -->
     <section class="ecosystem" id="how" aria-label="How it works">
       <p class="section-eyebrow reveal" data-i18n="index.how.eyebrow">How It Works</p>
-      <h2 class="eco-title reveal reveal-d1" data-i18n="index.how.title">YOUR STUDIO, ON LOCK.</h2>
-      <p class="eco-subtitle reveal reveal-d2" data-i18n="index.how.sub">From first inquiry to tax&#8209;ready numbers  every step of your freelance tattoo business in one place.</p>
+      <h2 class="eco-title reveal reveal-d1" data-i18n="index.how.title">THREE STEPS. ZERO CHAOS.</h2>
+      <p class="eco-subtitle reveal reveal-d2" data-i18n="index.how.sub">From first inquiry to final invoice — tattoo artist software that keeps every step of your freelance business in one clean place.</p>
       <div class="eco-grid">
         <div class="eco-card reveal reveal-d1">
           <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(204,51,0,0.15);color:var(--accent);">&#128197;</div>
-            <div class="eco-ico" style="background:rgba(16,185,129,0.15);color:#10b981;">&#128176;</div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           </div>
-          <h3 class="eco-card-title">SMART BOOKING</h3>
-          <p class="eco-card-text" data-i18n="index.how.card1">Clients book through your personalized page, upload references, pick a slot, and pay a deposit  all in one seamless flow. No more DM chaos.</p>
+          <h3 class="eco-card-title">BOOK</h3>
+          <p class="eco-card-text" data-i18n="index.how.card1">Share your booking page. Clients choose a session, upload references, and lock in with a deposit. Confirmed and organized before you pick up a needle.</p>
         </div>
         <div class="eco-card reveal reveal-d2">
           <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(99,102,241,0.15);color:#6366f1;">&#128221;</div>
-            <div class="eco-ico" style="background:rgba(245,158,11,0.15);color:#f59e0b;">&#128276;</div>
-            <div class="eco-ico" style="background:rgba(236,72,153,0.15);color:#ec4899;">&#9829;</div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           </div>
-          <h3 class="eco-card-title">CLIENT PROFILES &amp; REMINDERS</h3>
-          <p class="eco-card-text" data-i18n="index.how.card2">Full client profiles with history, allergies, references, and session notes. Automatic reminders, aftercare instructions, and follow-up bookings  all organized.</p>
+          <h3 class="eco-card-title">MANAGE</h3>
+          <p class="eco-card-text" data-i18n="index.how.card2">Every client gets a profile — session history, allergies, design notes, references. Automatic reminders before appointments. Aftercare instructions after. Nothing falls through.</p>
         </div>
         <div class="eco-card reveal reveal-d3">
           <div class="eco-card-icons">
-            <div class="eco-ico" style="background:rgba(6,182,212,0.15);color:#06b6d4;">&#128202;</div>
+            <div class="eco-ico" style="background:rgba(100,100,100,0.1);color:#6b6b6b;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           </div>
-          <h3 class="eco-card-title">TAX-READY BOOKKEEPING</h3>
-          <p class="eco-card-text" data-i18n="index.how.card3">Tax-ready bookkeeping built for freelancers. Revenue tracking, expense logging, and quarterly overviews  ready for the Belastingdienst. Export to CSV or PDF anytime.</p>
+          <h3 class="eco-card-title">GET PAID</h3>
+          <p class="eco-card-text" data-i18n="index.how.card3">Revenue in, expenses out, quarterly numbers ready. Export to CSV or PDF for your accountant, Uncle Sam or the Belastingdienst. Bookkeeping that takes minutes, not hours.</p>
         </div>
       </div>
     </section>
@@ -1830,8 +1858,8 @@
     <section class="security" id="community" aria-label="Join the community">
       <div class="security-inner">
         <div class="reveal">
-          <h2 class="sec-title">YOU'RE NOT ALONE IN THIS. <strong>JOIN THE PACK.</strong></h2>
-          <p class="sec-desc">Our tattoo artists are already replacing admin chaos with a studio-first workflow. Join early, shape what we ship next, and secure your spot before public launch.</p>
+          <h2 class="sec-title">YOU'RE NOT THE FIRST. <strong>JOIN THE ARTISTS WHO SWITCHED.</strong></h2>
+          <p class="sec-desc">Tattoo artists across the Netherlands and beyond are replacing spreadsheets and sticky notes with a studio-first workflow. Get in early. Help shape what ships next.</p>
           <div class="sec-features">
             <div class="sec-feature" data-slide="0" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar">
@@ -1841,13 +1869,13 @@
             </div>
             <div class="sec-feature" data-slide="1" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar sec-avatar--blur">
-                <img src="/assets/optimized/avatars/community-03.jpg" alt="" width="256" height="320" loading="lazy" decoding="async" fetchpriority="low">
+                <img src="/assets/optimized/avatars/community-03.jpg" alt="Tattoo artist community member" width="256" height="320" loading="lazy" decoding="async" fetchpriority="low">
               </span>
               <span class="sec-studio-name">Revealed soon<span class="sec-studio-city">Amsterdam</span></span>
             </div>
             <div class="sec-feature" data-slide="2" tabindex="0" role="button" aria-pressed="false">
               <span class="sec-feature-icon sec-avatar sec-avatar--blur">
-                <img src="/assets/optimized/avatars/community-06.jpg" alt="" width="256" height="171" loading="lazy" decoding="async" fetchpriority="low">
+                <img src="/assets/optimized/avatars/community-06.jpg" alt="Tattoo artist community member" width="256" height="171" loading="lazy" decoding="async" fetchpriority="low">
               </span>
               <span class="sec-studio-name">Revealed soon<span class="sec-studio-city">Utrecht</span></span>
             </div>
@@ -1859,10 +1887,10 @@
               <img src="/assets/optimized/community-01.jpg" alt="Luisltattoo, Den Haag" class="sec-slide-img" width="1067" height="1600" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="sec-slide sec-slide--locked" data-index="1">
-              <img src="/assets/optimized/community-03.jpg" alt="" class="sec-slide-img" width="1200" height="1500" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/community-03.jpg" alt="Tattoo artist work from inkLedger community" class="sec-slide-img" width="1200" height="1500" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="sec-slide sec-slide--locked" data-index="2">
-              <img src="/assets/optimized/community-06.jpg" alt="" class="sec-slide-img" width="1200" height="800" loading="lazy" decoding="async" fetchpriority="low">
+              <img src="/assets/optimized/community-06.jpg" alt="Tattoo studio work from inkLedger community" class="sec-slide-img" width="1200" height="800" loading="lazy" decoding="async" fetchpriority="low">
             </div>
             <div class="sec-slide-caption">
               <span class="sec-slide-label">Luisltattoo  Den Haag</span>
@@ -1882,8 +1910,8 @@
       <div class="faq-inner">
         <div class="faq-header">
           <p class="faq-eyebrow reveal" data-i18n="index.faq.eyebrow">FAQ</p>
-          <h2 class="faq-title reveal reveal-d1" data-i18n="index.faq.title">GOT QUESTIONS?</h2>
-          <p class="faq-subtitle reveal reveal-d2" data-i18n="index.faq.sub">Everything you need to know about getting started with inkLedger.</p>
+          <h2 class="faq-title reveal reveal-d1" data-i18n="index.faq.title">QUICK ANSWERS.</h2>
+          <p class="faq-subtitle reveal reveal-d2" data-i18n="index.faq.sub">The stuff you actually want to know before signing up.</p>
         </div>
 
         <div class="faq-list reveal reveal-d3">
@@ -1891,71 +1919,72 @@
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">01</span>
-              <span class="faq-q" data-i18n="index.faq.q1">Is inkLedger free to use?</span>
+              <span class="faq-q" data-i18n="index.faq.q1">Is inkLedger free?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a1">inkLedger is FREE for artists getting started. Premium features like advanced bookkeeping, tax exports, and more are available on paid plans.</p>
+              <p class="faq-a" data-i18n="index.faq.a1">Yes. The core features — booking, client profiles, and basic bookkeeping — are free. Premium features like tax exports, advanced reports, and multi-session management are free for the first users!.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">02</span>
-              <span class="faq-q" data-i18n="index.faq.q2">Can my clients book directly through inkLedger?</span>
+              <span class="faq-q" data-i18n="index.faq.q2">Can clients book directly through inkLedger?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a2">Yes! You get a personalized booking page where clients can browse your portfolio, select a session type, upload reference images, and pay a deposit  all in one flow. Share the link on your Instagram, website, or anywhere.</p>
+              <p class="faq-a" data-i18n="index.faq.a2">Yes. You get a personal booking page. Clients browse your work, pick a session type, upload reference images, and pay a deposit — one flow, one link. Share it on Instagram, your site, or in your bio.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">03</span>
-              <span class="faq-q" data-i18n="index.faq.q3">How does the bookkeeping work for ZZP artists?</span>
+              <span class="faq-q" data-i18n="index.faq.q3">How does bookkeeping work for freelancers?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a3">inkLedger automatically tracks your income and expenses, categorizes transactions, and generates quarterly overviews ready for the Belastingdienst. Export to CSV anytime. It's built specifically for freelance regulations.</p>
+              <p class="faq-a" data-i18n="index.faq.a3">inkLedger tracks income and expenses automatically, categorizes transactions, and builds quarterly overviews. Export-ready for Uncle Sam, the Belastingdienst or your accountant. No accounting degree required.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">04</span>
-              <span class="faq-q" data-i18n="index.faq.q4">Is my data safe and GDPR-compliant?</span>
+              <span class="faq-q" data-i18n="index.faq.q4">Is my data safe?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a4">Absolutely. We use end-to-end encryption, EU-based servers. Your client data and financial records are stored securely and in full compliance with GDPR.</p>
+              <p class="faq-a" data-i18n="index.faq.a4">End-to-end encryption. EU-based servers. Full GDPR compliance. Your client data and financials are locked down.</p>
             </div></div>
           </div>
 
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-num">05</span>
-              <span class="faq-q" data-i18n="index.faq.q5">When will inkLedger launch?</span>
+              <span class="faq-q" data-i18n="index.faq.q5">When does inkLedger launch?</span>
               <span class="faq-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </span>
             </button>
             <div class="faq-body"><div class="faq-body-inner">
-              <p class="faq-a" data-i18n="index.faq.a5">We're currently in closed beta with a select group of artists. Join the waitlist to get early access and help shape the features that matter most to your workflow.</p>
+              <p class="faq-a" data-i18n="index.faq.a5">The iOS app is live now. We're in early access with a growing group of artists. Join to get in and shape what we build next.</p>
             </div></div>
           </div>
 
         </div><!-- /faq-list -->
 
-        <p class="faq-quote reveal" data-i18n="index.faq.quote">"Built by people who actually understand the hustle."</p>
+        <p class="faq-quote reveal" data-i18n="index.faq.quote">"Built by people who actually get the hustle."</p>
+        <p class="faq-blog-link reveal" style="text-align:center;margin-top:24px;"><a href="/blog/inkledger-vs-competitors-2026/" style="color:var(--accent);font-weight:500;text-decoration:underline;">See how inkLedger compares to other tattoo booking platforms &rarr;</a></p>
       </div>
     </section>
 
@@ -1966,14 +1995,24 @@
       <div class="star star-3"></div>
       <div class="star star-4"></div>
 
-      <h2 class="final-cta-title reveal" data-i18n="index.cta.title">READY TO KILL<br>THE CHAOS?</h2>
+      <h2 class="final-cta-title reveal" data-i18n="index.cta.title">YOUR NEXT SESSION<br>STARTS HERE.</h2>
       <div class="reveal reveal-d1">
         <a href="#heroFormContainer" class="btn-accent" id="ctaBtn" data-i18n="index.cta.btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           Get inkLedger for Free
         </a>
       </div>
-      <p style="margin-top:16px;font-size:14px;color:var(--gray);opacity:0.7;" class="reveal reveal-d2" data-i18n="index.cta.sub">Join tattoo artists who refuse spreadsheet hell. Get early access to inkLedger.</p>
+      <p style="margin-top:16px;font-size:14px;color:var(--gray);opacity:0.7;" class="reveal reveal-d2" data-i18n="index.cta.sub">Free tattoo artist software for booking, approvals, and bookkeeping. Available on iOS.</p>
+      <div class="store-badges reveal reveal-d3">
+        <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" class="store-badge store-badge--apple" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on iOS
+        </a>
+        <span class="store-badge store-badge--android">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.273l1.615 2.8a.3.3 0 01-.111.408l-.814.47a.3.3 0 01-.41-.11L16.26 3.24c-1.252-.58-2.722-.89-4.26-.89s-3.008.31-4.26.89L6.197 5.84a.3.3 0 01-.41.11l-.814-.47a.3.3 0 01-.111-.408l1.615-2.8C3.833 4.2 1.945 7.47 1.5 11.25h21c-.445-3.78-2.333-7.05-4.977-8.977zM7 8.75a1 1 0 110-2 1 1 0 010 2zm10 0a1 1 0 110-2 1 1 0 010 2zM3.5 12.25v8a1.5 1.5 0 003 0v-8h11v8a1.5 1.5 0 003 0v-8h-17zm-2 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5zm21 0a1.5 1.5 0 00-1.5 1.5v5a1.5 1.5 0 003 0v-5a1.5 1.5 0 00-1.5-1.5z"/></svg>
+          Android — Coming Soon
+        </span>
+      </div>
     </section>
   </main>
 
@@ -2521,9 +2560,118 @@
     "@type": "SoftwareApplication",
     "name": "inkLedger",
     "url": "https://inkledger.app",
-    "description": "The all-in-one booking and bookkeeping app for freelance tattoo artists.",
+    "description": "Tattoo artist software that combines booking, design approvals & tax-ready bookkeeping in one app for freelance tattoo artists.",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS, Android, Web"
+    "operatingSystem": "iOS, Android, Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Free for artists getting started"
+    },
+    "featureList": [
+      "Client booking & scheduling",
+      "Design approval via magic link",
+      "Deposit collection",
+      "Tax-ready bookkeeping",
+      "Expense tracking",
+      "Client management & profiles",
+      "Quarterly export (CSV/PDF)"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Freelance tattoo artists"
+    },
+    "downloadUrl": "https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341",
+    "installUrl": "https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "inkLedger — Tattoo Booking",
+    "operatingSystem": "iOS",
+    "applicationCategory": "BusinessApplication",
+    "downloadUrl": "https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "inkLedger",
+    "url": "https://inkledger.app",
+    "logo": "https://inkledger.app/icon.png",
+    "description": "Tattoo artist software built in the Netherlands for freelance tattoo artists worldwide.",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "inkLedger",
+    "url": "https://inkledger.app",
+    "inLanguage": ["en", "nl"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://inkledger.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is inkLedger free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The core features — booking, client profiles, and basic bookkeeping — are free. Premium features like tax exports, advanced reports, and multi-session management are free for the first users!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can clients book directly through inkLedger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You get a personal booking page. Clients browse your work, pick a session type, upload reference images, and pay a deposit — one flow, one link. Share it on Instagram, your site, or in your bio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does bookkeeping work for freelancers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "inkLedger tracks income and expenses automatically, categorizes transactions, and builds quarterly overviews. Export-ready for Uncle Sam, the Belastingdienst or your accountant. No accounting degree required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "End-to-end encryption. EU-based servers. Full GDPR compliance. Your client data and financials are locked down."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does inkLedger launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The iOS app is live now. We're in early access with a growing group of artists. Join to get in and shape what we build next."
+        }
+      }
+    ]
   }
   </script>
 </body>
