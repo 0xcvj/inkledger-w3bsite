@@ -566,6 +566,22 @@
       height: 100%;
       object-fit: cover;
     }
+    .fd-card-visual--flow { background: #0f0f0f; padding: 0 24px; }
+    .approval-flow { display: flex; align-items: center; gap: 0; width: 100%; }
+    .af-step { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; min-width: 64px; }
+    .af-icon { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); }
+    .af-step--done .af-icon { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
+    .af-icon--accent { background: var(--accent) !important; color: #fff !important; box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(204,51,0,0.15); }
+    .af-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.35); letter-spacing: 0.02em; white-space: nowrap; }
+    .af-step--done .af-label { color: rgba(255,255,255,0.6); }
+    .af-step--active .af-label { color: var(--accent); font-weight: 700; }
+    .af-time { font-size: 9px; color: rgba(255,255,255,0.2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .af-step--active .af-time { color: rgba(204,51,0,0.6); }
+    .af-connector { flex: 1; height: 2px; background: rgba(255,255,255,0.08); min-width: 12px; margin: 0 4px; margin-bottom: 28px; }
+    .af-connector--done { background: rgba(255,255,255,0.2); }
+    .af-step--pending .af-icon { border: 1.5px dashed rgba(255,255,255,0.15); background: transparent; }
+    .af-step--pending .af-label { color: rgba(255,255,255,0.2); }
+    .af-step--pending .af-time { color: rgba(255,255,255,0.12); }
     .fd-card-title {
       font-family: var(--font-display);
       font-size: 22px;
@@ -1804,8 +1820,32 @@
           </div>
 
           <div class="fd-card reveal reveal-d4">
-            <div class="fd-card-visual">
-              <img src="/assets/optimized/taxes-card.jpg" alt="Ontwerpgoedkeuring flow via magic link" width="1280" height="853" loading="lazy" decoding="async" fetchpriority="low">
+            <div class="fd-card-visual fd-card-visual--flow" aria-label="Ontwerpgoedkeuring status flow">
+              <div class="approval-flow">
+                <div class="af-step af-step--done">
+                  <div class="af-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/><polyline points="17 8 21 4"/><line x1="15" y1="10" x2="21" y2="4"/></svg></div>
+                  <span class="af-label">Geüpload</span>
+                  <span class="af-time">24 mrt, 14:32</span>
+                </div>
+                <div class="af-connector af-connector--done"></div>
+                <div class="af-step af-step--done">
+                  <div class="af-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                  <span class="af-label">Bekeken</span>
+                  <span class="af-time">25 mrt, 09:15</span>
+                </div>
+                <div class="af-connector af-connector--done"></div>
+                <div class="af-step af-step--active">
+                  <div class="af-icon af-icon--accent"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <span class="af-label">Goedgekeurd</span>
+                  <span class="af-time">25 mrt, 11:48</span>
+                </div>
+                <div class="af-connector"></div>
+                <div class="af-step af-step--pending">
+                  <div class="af-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                  <span class="af-label">Geboekt</span>
+                  <span class="af-time">Wachtend</span>
+                </div>
+              </div>
             </div>
             <h3 class="fd-card-title" data-i18n="index.features.item3.title">ONTWERPGOEDKEURING</h3>
             <p class="fd-card-desc" data-i18n="index.features.item3.desc">Stuur een magic link. Je klant bekijkt het ontwerp, geeft feedback en tekent af — met tijdstempel en opgeslagen. Geen screenshots kwijt in DM's. Geen "heb je m'n bericht gezien?"</p>
