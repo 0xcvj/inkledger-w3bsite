@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Deletion — INKLEDGER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #faf5f0;
+      color: #0b0b0b;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      margin-bottom: 40px;
+      color: #0b0b0b;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      color: #6b6b6b;
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      margin-top: 36px;
+    }
+
+    .steps {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 48px;
+      margin-bottom: 24px;
+      min-height: 36px;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background: #cc3300;
+      color: #faf5f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    .steps li strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .steps li p {
+      color: #6b6b6b;
+      font-size: 15px;
+    }
+
+    .data-section {
+      background: #f5efe8;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 36px;
+    }
+
+    .data-section h2 {
+      margin-top: 0;
+    }
+
+    .data-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .data-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e8e2db;
+      font-size: 15px;
+      color: #6b6b6b;
+    }
+
+    .data-list li:last-child {
+      border-bottom: none;
+    }
+
+    .data-list li::before {
+      content: '×';
+      color: #cc3300;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .warning {
+      background: rgba(204, 51, 0, 0.06);
+      border-left: 3px solid #cc3300;
+      padding: 16px 20px;
+      margin-top: 36px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      color: #6b6b6b;
+    }
+
+    .warning strong {
+      color: #0b0b0b;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid #e8e2db;
+      color: #6b6b6b;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #cc3300;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .timeframe {
+      display: inline-block;
+      background: #f5efe8;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b6b6b;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">INKLEDGER</div>
+
+    <h1>How to Delete Your Account</h1>
+    <p class="subtitle">Follow these steps to permanently delete your INKLEDGER account and all associated data.</p>
+
+    <h2>Steps to delete your account</h2>
+    <ol class="steps">
+      <li>
+        <strong>Open INKLEDGER</strong>
+        <p>Launch the INKLEDGER app on your device.</p>
+      </li>
+      <li>
+        <strong>Go to your Profile</strong>
+        <p>Tap the profile icon in the top-right corner of the dashboard.</p>
+      </li>
+      <li>
+        <strong>Scroll to the bottom</strong>
+        <p>Scroll down to find the <strong>Delete Account</strong> button in red.</p>
+      </li>
+      <li>
+        <strong>Confirm deletion (step 1 of 2)</strong>
+        <p>You will be asked if you are sure. Tap <strong>Continue</strong> to proceed.</p>
+      </li>
+      <li>
+        <strong>Final confirmation (step 2 of 2)</strong>
+        <p>A second confirmation will appear. Tap <strong>Delete permanently</strong> to complete the process.</p>
+      </li>
+    </ol>
+
+    <span class="timeframe">Account is deleted immediately upon confirmation</span>
+
+    <div class="data-section">
+      <h2>What gets deleted</h2>
+      <ul class="data-list">
+        <li>Your profile and account credentials</li>
+        <li>All bookings and booking history</li>
+        <li>Financial transactions and records</li>
+        <li>Blocked dates and availability settings</li>
+        <li>Uploaded images (avatar and designs)</li>
+        <li>Push notification tokens</li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <strong>This action is permanent</strong>
+      Once your account is deleted, all data is permanently removed and cannot be recovered. Make sure to export or save any records you need before proceeding.
+    </div>
+
+    <div class="contact">
+      <p>Need help or want to request deletion without app access?<br>
+        Contact us at <a href="mailto:support@inkledger.app">support@inkledger.app</a></p>
+    </div>
+  </div>
+</body>
+</html>
