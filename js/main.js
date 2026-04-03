@@ -161,8 +161,25 @@
     openPrefs();
   });
 
-  // Hero interactions (parallax + cursor glow)
+  // Scroll-reveal observer
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal, .reveal-card');
+  if (revealEls.length && !reducedMotion) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { observer.observe(el); });
+  } else {
+    // Reduced motion or no observer — show everything immediately
+    revealEls.forEach(function(el) { el.style.opacity = '1'; });
+  }
+
+  // Hero interactions (parallax + cursor glow)
   var hero = document.querySelector('[aria-label="Hero"]');
   var phoneWrap = hero && hero.querySelector('[data-hero-phone]');
 
