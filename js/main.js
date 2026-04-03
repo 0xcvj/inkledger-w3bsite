@@ -161,4 +161,51 @@
     openPrefs();
   });
 
+  // Hero interactions (parallax + cursor glow)
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.querySelector('[aria-label="Hero"]');
+  var phoneWrap = hero && hero.querySelector('[data-hero-phone]');
+
+  if (hero && !reducedMotion) {
+    // Cursor glow — update CSS custom properties
+    hero.addEventListener('mousemove', function(e) {
+      var rect = hero.getBoundingClientRect();
+      hero.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width * 100).toFixed(1) + '%');
+      hero.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height * 100).toFixed(1) + '%');
+    });
+  }
+
+  if (phoneWrap && !reducedMotion) {
+    // Activate idle float after entrance finishes
+    setTimeout(function() {
+      phoneWrap.classList.add('phone-alive');
+      var frame = phoneWrap.querySelector('.phone-frame');
+      if (frame) frame.classList.add('phone-frame-alive');
+    }, 1600);
+
+    // Mouse parallax on phone
+    var cx = 0, cy = 0, tx = 0, ty = 0, raf = null;
+    hero.addEventListener('mousemove', function(e) {
+      var rect = hero.getBoundingClientRect();
+      tx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      ty = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+    hero.addEventListener('mouseleave', function() {
+      tx = 0; ty = 0;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+    function tick() {
+      raf = null;
+      cx += (tx - cx) * 0.07;
+      cy += (ty - cy) * 0.07;
+      phoneWrap.style.transform =
+        'translate3d(' + (cx * 12).toFixed(2) + 'px,' + (cy * 8).toFixed(2) + 'px,0) ' +
+        'rotateY(' + (cx * 2.5).toFixed(2) + 'deg) rotateX(' + (-cy * 2).toFixed(2) + 'deg)';
+      if (Math.abs(tx - cx) > 0.002 || Math.abs(ty - cy) > 0.002) {
+        raf = requestAnimationFrame(tick);
+      }
+    }
+  }
+
 })();
