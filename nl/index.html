@@ -78,6 +78,14 @@
     }
     body.menu-open #navLinks a { font-size: 18px; color: #fff; }
     body.menu-open { overflow: hidden; }
+    /* Nav shrink on scroll (desktop) */
+    @media (min-width: 768px) {
+      .nav-full { transition: gap 0.4s ease, padding 0.4s ease; }
+      .nav-full #navLinks { transition: opacity 0.3s ease, max-width 0.4s ease, gap 0.3s ease; overflow: hidden; }
+      .nav-full.nav-compact { gap: 12px; padding-left: 12px; padding-right: 12px; }
+      .nav-full.nav-compact #navLinks { opacity: 0; max-width: 0; gap: 0; pointer-events: none; }
+    }
+
     .nav-toggle-bar { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s ease; }
     .nav-toggle.open .nav-toggle-bar:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
     .nav-toggle.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
@@ -162,8 +170,9 @@
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4l2.5 1.448a1 1 0 0 1 0 1.49l-2.5 1.448-2.635-2.635 2.635-2.751zM5.864 2.658L16.8 9.49l-2.302 2.302-8.634-8.634z"/></svg>
             Download op Android
           </a>
+        </div>
+      </div>
 
-          
       <div class="relative z-10 mt-16 w-full max-w-xs mx-auto opacity-0 animate-phone-enter animation-delay-650" style="perspective: 800px;">
         <div data-hero-phone class="will-change-transform">
           <div class="phone-frame bg-white rounded-[2.75rem] border-[7px] border-[#1a1a1a] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.12),0_16px_32px_rgba(0,0,0,0.08)]">

@@ -161,6 +161,20 @@
     openPrefs();
   });
 
+  // Nav compact on scroll (desktop)
+  var nav = document.querySelector('.nav-full');
+  if (nav) {
+    var compactThreshold = 80;
+    var isCompact = false;
+    window.addEventListener('scroll', function() {
+      var scrolled = window.scrollY > compactThreshold;
+      if (scrolled !== isCompact) {
+        isCompact = scrolled;
+        nav.classList.toggle('nav-compact', scrolled);
+      }
+    }, { passive: true });
+  }
+
   // Scroll-reveal observer
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var revealEls = document.querySelectorAll('.reveal, .reveal-card');
