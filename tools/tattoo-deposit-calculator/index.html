@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tattoo Deposit Calculator — Free Tool for Tattoo Artists | inkLedger</title>
+  <meta name="description" content="Calculate the right deposit amount for any tattoo session. Get a ready-to-send DM message for your client. Free, no signup required.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://inkledger.app/tools/tattoo-deposit-calculator">
+  <meta property="og:title" content="Tattoo Deposit Calculator — Free Tool for Tattoo Artists">
+  <meta property="og:description" content="Calculate the right deposit for any tattoo session. Get a copy-pasteable client message. Free, no signup.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inkledger.app/tools/tattoo-deposit-calculator">
+  <meta property="og:image" content="https://inkledger.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tattoo Deposit Calculator — Free Tool for Tattoo Artists">
+  <meta name="twitter:image" content="https://inkledger.app/assets/og-image.png">
+  <link rel="icon" type="image/png" href="/assets/adaptive-icon.png">
+  <link rel="apple-touch-icon" href="/assets/adaptive-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/output.css">
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied' });
+  </script>
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-3FQYVJ5RRM"></script>
+  <script type="text/plain" data-consent="analytics">
+    gtag('js', new Date());
+    gtag('config', 'G-3FQYVJ5RRM');
+  </script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_WshcTxtUlLCWRd8G65zwZzAZcoxXrZjiJtnuiN1gUSO', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2026-01-30'
+    })
+  </script>
+
+  <style>
+    body.menu-open .nav-full {
+      position: fixed; inset: 0; transform: none;
+      border-radius: 0; width: 100%; height: 100%;
+      background: rgba(9,9,11,0.97); backdrop-filter: blur(20px);
+      flex-direction: column; justify-content: center; align-items: center;
+      top: 0; left: 0;
+    }
+    body.menu-open .nav-logo-wrap { position: absolute; top: 16px; left: 16px; }
+    body.menu-open .nav-cta-wrap { position: absolute; top: 16px; right: 56px; }
+    body.menu-open .nav-toggle-wrap { position: absolute; top: 16px; right: 12px; }
+    body.menu-open #navLinks {
+      display: flex !important; flex-direction: column;
+      align-items: center; justify-content: center; gap: 28px;
+    }
+    body.menu-open #navLinks a { font-size: 18px; color: #fff; }
+    body.menu-open { overflow: hidden; }
+    .nav-toggle-bar { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s ease; }
+    .nav-toggle.open .nav-toggle-bar:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .nav-toggle.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    .nav-toggle.open .nav-toggle-bar:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+    /* Range slider styling */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #e4e4e7;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #cc3300;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(204, 51, 0, 0.3);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 0 4px 14px rgba(204, 51, 0, 0.4);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #cc3300;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 8px rgba(204, 51, 0, 0.3);
+    }
+
+    /* Copied toast */
+    .toast {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      pointer-events: none;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Tattoo Deposit Calculator",
+    "description": "Calculate the right deposit amount for any tattoo session. Get a ready-to-send DM message for your client.",
+    "url": "https://inkledger.app/tools/tattoo-deposit-calculator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "inkLedger",
+      "url": "https://inkledger.app"
+    }
+  }
+  </script>
+</head>
+<body class="font-sans bg-surface text-surface-dark">
+
+  <!-- NAVIGATION -->
+  <nav class="nav-full fixed top-4 left-1/2 -translate-x-1/2 z-[1000] bg-[#09090b]/95 rounded-full px-3 py-2 pl-4 flex items-center gap-5 shadow-[0_4px_24px_rgba(0,0,0,0.2)] border border-white/[0.06]" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo-wrap flex items-center gap-2 shrink-0" aria-label="inkLedger home">
+      <span class="w-7 h-7 rounded-lg overflow-hidden flex items-center justify-center bg-white/10">
+        <img src="/assets/adaptive-icon.png" alt="inkLedger" class="w-full h-full object-contain">
+      </span>
+    </a>
+    <div id="navLinks" class="hidden md:flex gap-1 items-center">
+      <a href="/#features" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap">Features</a>
+      <a href="/#how" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap">How It Works</a>
+      <a href="/tools" class="text-sm text-white bg-white/10 px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap">Tools</a>
+      <a href="/blog" class="text-sm text-white/60 hover:text-white px-3.5 py-1.5 rounded-full transition-colors whitespace-nowrap">Blog</a>
+    </div>
+    <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" target="_blank" rel="noopener" class="nav-cta-wrap text-[13px] font-medium text-white bg-white/10 border border-white/15 px-4 py-1.5 rounded-full hover:bg-white/[0.18] transition-all whitespace-nowrap">Download</a>
+    <button class="nav-toggle md:hidden flex flex-col gap-1 cursor-pointer bg-transparent border-none p-1.5 relative z-[1001]" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </nav>
+
+  <main id="main" role="main">
+
+    <!-- HEADER -->
+    <section class="pt-28 pb-10 px-6">
+      <div class="max-w-2xl mx-auto">
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm text-muted">
+            <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/tools" class="hover:text-accent transition-colors">Tools</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="font-medium text-surface-dark">Deposit Calculator</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3">Know exactly what deposit to&nbsp;charge</h1>
+        <p class="text-muted text-base leading-relaxed max-w-lg">Enter your session price, pick a percentage, and get the deposit amount plus a ready-to-send message for your client. Takes about 10 seconds.</p>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="pb-20 px-6">
+      <div class="max-w-2xl mx-auto">
+        <div class="rounded-2xl border border-border bg-white p-6 md:p-8">
+
+          <!-- Currency selector -->
+          <div class="mb-6">
+            <label for="currency" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">Currency</label>
+            <select id="currency" class="w-full max-w-[160px] px-3 py-2.5 rounded-lg border border-border bg-surface text-sm font-medium focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors">
+              <option value="EUR" data-symbol="&euro;">EUR (&euro;)</option>
+              <option value="USD" data-symbol="$">USD ($)</option>
+              <option value="GBP" data-symbol="&pound;">GBP (&pound;)</option>
+              <option value="CAD" data-symbol="CA$">CAD (CA$)</option>
+              <option value="AUD" data-symbol="A$">AUD (A$)</option>
+            </select>
+          </div>
+
+          <!-- Session price -->
+          <div class="mb-6">
+            <label for="sessionPrice" class="block text-xs font-semibold uppercase tracking-wider text-muted mb-2">Session Price</label>
+            <div class="relative">
+              <span id="currencyPrefix" class="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted font-medium text-lg pointer-events-none">&euro;</span>
+              <input
+                type="number"
+                id="sessionPrice"
+                inputmode="decimal"
+                min="0"
+                step="25"
+                value="500"
+                class="w-full pl-10 pr-4 py-3.5 rounded-xl border border-border text-2xl font-bold bg-surface focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+                aria-describedby="sessionPriceHint"
+              >
+            </div>
+            <p id="sessionPriceHint" class="text-xs text-muted-light mt-1.5">Total quoted price for the session</p>
+          </div>
+
+          <!-- Deposit percentage -->
+          <div class="mb-8">
+            <div class="flex items-center justify-between mb-2">
+              <label for="depositPct" class="block text-xs font-semibold uppercase tracking-wider text-muted">Deposit Percentage</label>
+              <span id="pctDisplay" class="text-sm font-bold text-accent tabular-nums">30%</span>
+            </div>
+            <input
+              type="range"
+              id="depositPct"
+              min="5"
+              max="100"
+              step="5"
+              value="30"
+              aria-describedby="depositPctHint"
+            >
+            <div class="flex justify-between text-[11px] text-muted-light mt-1.5">
+              <span>5%</span>
+              <span>50%</span>
+              <span>100%</span>
+            </div>
+            <p id="depositPctHint" class="text-xs text-muted-light mt-1">Most tattoo artists charge 20-50% upfront</p>
+          </div>
+
+          <!-- DEPOSIT RANGE GUIDANCE -->
+          <div class="mb-8 rounded-xl bg-accent/[0.04] border border-accent/10 p-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-accent/70 mb-3">Quick reference</p>
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div>
+                <p class="text-sm font-bold text-surface-dark">20&ndash;30%</p>
+                <p class="text-[11px] text-muted leading-snug mt-0.5">Repeat clients,<br>smaller pieces</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-surface-dark">40&ndash;50%</p>
+                <p class="text-[11px] text-muted leading-snug mt-0.5">New clients,<br>custom work</p>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-surface-dark">50&ndash;100%</p>
+                <p class="text-[11px] text-muted leading-snug mt-0.5">Large pieces,<br>full-day sessions</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESULT -->
+          <div class="rounded-xl bg-surface-dark text-white p-6 mb-6">
+            <div class="text-xs font-semibold uppercase tracking-wider text-white/50 mb-1">Deposit Amount</div>
+            <div id="depositResult" class="text-4xl md:text-5xl font-extrabold tracking-tight tabular-nums">&euro;150</div>
+            <div id="remainderNote" class="text-sm text-white/50 mt-2">&euro;350 remaining at the session</div>
+          </div>
+
+          <!-- DM MESSAGE -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-muted">Ready-to-Send Client Message</span>
+              <button
+                id="copyBtn"
+                type="button"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-accent-hover transition-colors cursor-pointer bg-transparent border-0 p-0"
+                aria-label="Copy message to clipboard"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9.75a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" /></svg>
+                Copy
+              </button>
+            </div>
+            <div
+              id="dmMessage"
+              class="rounded-xl bg-surface border border-border p-4 text-sm leading-relaxed text-surface-dark/80 whitespace-pre-line select-all"
+              role="region"
+              aria-label="Copy-pasteable deposit message"
+            ></div>
+            <div id="copyToast" class="toast mt-2 text-xs font-medium text-accent text-center">Copied to clipboard</div>
+          </div>
+
+        </div>
+
+        <!-- FAQ / SEO CONTENT -->
+        <div class="mt-16 max-w-2xl">
+          <h2 class="text-2xl font-bold mb-2">Tattoo Deposit Questions, Answered</h2>
+          <p class="text-sm text-muted mb-8">The stuff most artists figure out the hard way.</p>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-semibold text-base mb-2">How much should a tattoo deposit be?</h3>
+              <p class="text-sm text-muted leading-relaxed">Most tattoo artists charge between 20% and 50% of the session price as a deposit. Smaller pieces often work fine with a flat rate (like &euro;50-100), while larger multi-session projects typically use a percentage. The key is covering your time if the client no-shows.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-base mb-2">Is a tattoo deposit refundable?</h3>
+              <p class="text-sm text-muted leading-relaxed">That's up to you. Many artists treat deposits as non-refundable to protect against last-minute cancellations, but allow rescheduling within a reasonable window (48-72 hours). Whatever your policy is, make it clear upfront.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-base mb-2">When should I collect the deposit?</h3>
+              <p class="text-sm text-muted leading-relaxed">Collect deposits as soon as the appointment is confirmed and before you start designing. This protects the time you spend on custom work. Most artists use bank transfer, payment apps, or dedicated booking tools like <a href="/" class="text-accent hover:underline">inkLedger</a>.</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-base mb-2">Should the deposit go toward the final price?</h3>
+              <p class="text-sm text-muted leading-relaxed">Yes, almost always. The deposit is deducted from the total session cost. So if a session costs &euro;500 and the deposit was &euro;150, the client pays &euro;350 at the appointment. This calculator shows both amounts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOFT CTA -->
+        <div class="mt-16 rounded-2xl bg-surface-dark text-white p-8 text-center">
+          <p class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-3">When you're ready to stop copy-pasting</p>
+          <h2 class="text-xl font-bold mb-2">Let your clients book and pay the deposit themselves</h2>
+          <p class="text-sm text-white/60 leading-relaxed mb-6 max-w-md mx-auto">inkLedger gives you a booking link that collects deposits, sends confirmations, and handles reminders. Built for tattoo artists, not salons.</p>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="https://apps.apple.com/us/app/inkledger-tattoo-booking/id6759845341" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white text-sm font-semibold rounded-full hover:bg-accent-hover transition-colors">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              Download on iOS
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.inkledger.app" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white text-sm font-semibold rounded-full border border-white/15 hover:bg-white/[0.18] transition-colors">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4l2.5 1.448a1 1 0 0 1 0 1.49l-2.5 1.448-2.635-2.635 2.635-2.751zM5.864 2.658L16.8 9.49l-2.302 2.302-8.634-8.634z"/></svg>
+              Download on Android
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-dark border-t border-border-dark py-12 px-6 md:px-12 lg:px-20" role="contentinfo">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+      <div>
+        <div class="flex items-center gap-2 mb-5">
+          <div class="w-6 h-6 rounded-md overflow-hidden bg-white/10"><img src="/assets/adaptive-icon.png" alt="inkLedger" class="w-full h-full object-contain"></div>
+        </div>
+        <ul class="flex flex-col gap-2">
+          <li><a href="/" class="text-sm text-white/50 hover:text-white transition-colors">Home</a></li>
+          <li><a href="/tools" class="text-sm text-white/50 hover:text-white transition-colors">Tools</a></li>
+          <li><a href="/blog" class="text-sm text-white/50 hover:text-white transition-colors">Blog</a></li>
+          <li><a href="/#features" class="text-sm text-white/50 hover:text-white transition-colors">Features</a></li>
+          <li><a href="mailto:support@inkledger.app" class="text-sm text-white/50 hover:text-white transition-colors">Support</a></li>
+          <li><a href="/privacy.html" class="text-sm text-white/50 hover:text-white transition-colors">Privacy</a> &amp; <a href="/terms.html" class="text-sm text-white/50 hover:text-white transition-colors">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var priceInput = document.getElementById('sessionPrice');
+    var pctSlider = document.getElementById('depositPct');
+    var pctDisplay = document.getElementById('pctDisplay');
+    var depositResult = document.getElementById('depositResult');
+    var remainderNote = document.getElementById('remainderNote');
+    var dmMessage = document.getElementById('dmMessage');
+    var copyBtn = document.getElementById('copyBtn');
+    var copyToast = document.getElementById('copyToast');
+    var currencySelect = document.getElementById('currency');
+    var currencyPrefix = document.getElementById('currencyPrefix');
+
+    var symbols = { EUR: '\u20ac', USD: '$', GBP: '\u00a3', CAD: 'CA$', AUD: 'A$' };
+    var currencyNames = { EUR: 'EUR', USD: 'USD', GBP: 'GBP', CAD: 'CAD', AUD: 'AUD' };
+
+    function getSymbol() {
+      return symbols[currencySelect.value] || currencySelect.value;
+    }
+
+    function formatMoney(amount) {
+      var sym = getSymbol();
+      var rounded = Math.round(amount);
+      return sym + rounded.toLocaleString();
+    }
+
+    function update() {
+      var price = parseFloat(priceInput.value) || 0;
+      var pct = parseInt(pctSlider.value, 10);
+      var deposit = Math.round(price * pct / 100);
+      var remainder = Math.round(price - deposit);
+
+      pctDisplay.textContent = pct + '%';
+      depositResult.textContent = formatMoney(deposit);
+      remainderNote.textContent = formatMoney(remainder) + ' remaining at the session';
+      currencyPrefix.textContent = getSymbol();
+
+      var msg = 'Hey! Excited to work on this piece with you.\n\n'
+        + 'Here\u2019s the breakdown:\n'
+        + '\u2022 Session total: ' + formatMoney(price) + '\n'
+        + '\u2022 Deposit to hold your spot: ' + formatMoney(deposit) + ' (' + pct + '%)\n'
+        + '\u2022 Remaining on the day: ' + formatMoney(remainder) + '\n\n'
+        + 'The deposit is non-refundable, but if you need to reschedule, just give me at least 48 hours notice and I\u2019ll move it to your new date.\n\n'
+        + 'Any questions, just ask!';
+      dmMessage.textContent = msg;
+    }
+
+    priceInput.addEventListener('input', update);
+    pctSlider.addEventListener('input', update);
+    currencySelect.addEventListener('change', update);
+
+    // Auto-detect currency from locale
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      var locale = navigator.language || '';
+      if (tz.indexOf('Europe/London') > -1 || locale.indexOf('en-GB') > -1) {
+        currencySelect.value = 'GBP';
+      } else if (tz.indexOf('America') > -1) {
+        if (tz.indexOf('Toronto') > -1 || tz.indexOf('Vancouver') > -1 || locale.indexOf('en-CA') > -1) {
+          currencySelect.value = 'CAD';
+        } else {
+          currencySelect.value = 'USD';
+        }
+      } else if (tz.indexOf('Australia') > -1 || locale.indexOf('en-AU') > -1) {
+        currencySelect.value = 'AUD';
+      }
+    } catch (e) {}
+
+    update();
+
+    // Copy to clipboard
+    copyBtn.addEventListener('click', function() {
+      var text = dmMessage.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showToast);
+      } else {
+        var range = document.createRange();
+        range.selectNodeContents(dmMessage);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        try { document.execCommand('copy'); showToast(); } catch (e) {}
+        sel.removeAllRanges();
+      }
+    });
+
+    var toastTimer;
+    function showToast() {
+      copyToast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function() { copyToast.classList.remove('show'); }, 2000);
+    }
+  })();
+  </script>
+</body>
+</html>
