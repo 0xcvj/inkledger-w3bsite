@@ -25,7 +25,7 @@
   <title data-i18n="index.meta.title">inkLedger — Tattoo Artist Software for Booking, Design Approvals & Bookkeeping</title>
   <link rel="icon" type="image/png" href="/assets/adaptive-icon.png">
   <link rel="apple-touch-icon" href="/assets/adaptive-icon.png">
-  <link rel="preload" as="image" href="/assets/IMG_3083.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/IMG_3083.webp" fetchpriority="high" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
@@ -205,18 +205,21 @@
         <div data-hero-phone class="will-change-transform">
           <div class="phone-frame bg-white rounded-[2.75rem] border-[7px] border-[#1a1a1a] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.12),0_16px_32px_rgba(0,0,0,0.08)]">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-[#1a1a1a] rounded-b-2xl z-10"></div>
-            <img
-              src="/assets/IMG_3083.jpg"
-              alt="inkLedger app dashboard"
-              data-i18n="index.hero.phone_alt"
-              data-i18n-attr="alt"
-              width="1170"
-              height="2532"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-              class="w-full h-full object-cover object-top"
-            >
+            <picture>
+              <source srcset="/assets/IMG_3083.webp" type="image/webp">
+              <img
+                src="/assets/IMG_3083.jpg"
+                alt="inkLedger app dashboard"
+                data-i18n="index.hero.phone_alt"
+                data-i18n-attr="alt"
+                width="1170"
+                height="2532"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                class="w-full h-full object-cover object-top"
+              >
+            </picture>
           </div>
         </div>
       </div>
