@@ -77,6 +77,9 @@
       --accent-hover: #b83200;
       --accent-glow: rgba(204, 51, 0, 0.28);
       --accent-subtle: rgba(204, 51, 0, 0.08);
+      --cta: #1f1f23;
+      --cta-hover: #2d2d33;
+      --cta-glow: rgba(31, 31, 35, 0.22);
       --text-sm: clamp(13px, 0.9vw, 15px);
       --border: rgba(0,0,0,0.08);
       --border-dark: rgba(255,255,255,0.08);
@@ -280,7 +283,7 @@
 
     .blog-article .cta-button {
       display: inline-block;
-      background: var(--accent);
+      background: var(--cta);
       color: #fff;
       padding: 16px 40px;
       text-decoration: none;
@@ -292,9 +295,9 @@
     }
 
     .blog-article .cta-button:hover {
-      background: var(--accent-hover);
+      background: var(--cta-hover);
       transform: translateY(-2px);
-      box-shadow: 0 12px 32px var(--accent-glow);
+      box-shadow: 0 12px 32px var(--cta-glow);
     }
 
     /* Hero image */

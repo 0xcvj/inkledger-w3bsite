@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #fafafa;
+  --color-surface: #f7f4ee;
   --color-surface-dark: #09090b;
   --color-surface-card: #141414;
   --color-accent: #cc3300;
   --color-accent-hover: #b82e00;
   --color-accent-glow: rgba(204, 51, 0, 0.25);
   --color-accent-subtle: rgba(204, 51, 0, 0.08);
+  --color-cta: #1f1f23;
+  --color-cta-hover: #2d2d33;
+  --color-cta-glow: rgba(31, 31, 35, 0.18);
+  --color-cta-on-dark: #f7f4ee;
+  --color-cta-on-dark-hover: #ffffff;
   --color-muted: #71717a;
   --color-muted-light: #a1a1aa;
   --color-border: rgba(0, 0, 0, 0.08);
@@ -200,9 +205,9 @@
   --mouse-x: 50%;
   --mouse-y: 30%;
   background:
-    radial-gradient(circle 280px at var(--mouse-x) var(--mouse-y), rgba(204,51,0,0.035), transparent 70%),
-    radial-gradient(ellipse 500px 500px at 30% 20%, rgba(204,51,0,0.05), transparent 70%),
-    radial-gradient(ellipse 350px 350px at 70% 80%, rgba(204,51,0,0.03), transparent 70%),
+    radial-gradient(circle 280px at var(--mouse-x) var(--mouse-y), rgba(31,31,35,0.035), transparent 70%),
+    radial-gradient(ellipse 500px 500px at 30% 20%, rgba(31,31,35,0.045), transparent 70%),
+    radial-gradient(ellipse 350px 350px at 70% 80%, rgba(31,31,35,0.03), transparent 70%),
     var(--color-surface);
   background-size: 100% 100%, 200% 200%, 200% 200%, 100% 100%;
   animation: hero-glow-drift 14s ease-in-out infinite;
@@ -215,7 +220,7 @@
 }
 .hero-ink-blob {
   position: absolute;
-  background: radial-gradient(circle, rgba(204,51,0,0.04), transparent 70%);
+  background: radial-gradient(circle, rgba(31,31,35,0.035), transparent 70%);
   filter: blur(50px);
   pointer-events: none;
   z-index: 0;
