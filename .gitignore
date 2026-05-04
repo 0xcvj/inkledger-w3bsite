@@ -6,3 +6,18 @@ node_modules/
 .claude/
 .tmp-chrome-profile/
 docs/
+
+# Local agent instructions (not part of the site)
+CLAUDE.md
+
+# Playwright MCP scratch (snapshots, traces, screenshots)
+.playwright-mcp/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+.vscode/
+.idea/
